@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+	WHERE THINGS ARE DEFINED IN THIS FILE:
+
+	Layers are added in the map.on('load') call towards the end.
+
+	For a layer to appear in the legend, it must have a corresponding <li> in <ul class='legend-labels'>, and the id for that item has to be given to addPointLayer() or addVectorLayer() as the legendID property.
+	For a legend item to show the right icon, there must be a corresponding rule set in css/ryht-legislative-style.css
+
+	For a layer to appear in the Zoom to Districts control, it must have a polygon layer (even if that's kept invisible) and have two corresponding definitions:
+		1) a <select> element defined in the section of <div id="mySidenav"> that's labelled with the comment: !--Drop down controls--
+		2) a populateZoomControl() line in the runWhenLoadComplete() function
+-->
+
+	<head>
+		<meta charset='utf-8' />
+		<title>Ballard 4Culture Oral History Map</title>
+		<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+		<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+		<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+		<link href="css/ballard-4culture-style.css" rel="stylesheet" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<style>
+			body { margin:0; padding:0; }
+			#map { position:absolute; top:0; bottom:0; width:100%; }
+			.mapboxgl-popup {
+				max-width: 400px;
+				font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+			}
+		</style>
+
+<!-- load functions & object definitions that we'll call later -->
+		<script src='scripts/functions.js'></script>
+
+	</head>
+
+	<body>
+
+	<!--BEGIN FLYOUT FOR 'ZOOM TO LAYERS'-->
+
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<p>
+				<br /><br /><br />
+			</p>
+			<p class="moreinfo">
+				Use the drop-down menus below to zoom to a <span id="house-district-reference">person</span><span id="senate-district-reference">Senate</span>  of your choice.
+				<br /><br />
+
+				<!--Drop down controls-->
+
+				<select id="people-control" onchange="zoomToPolygon('state-house-districts', this.value, 'house_dist');"></select>
+				<select id="places-control" onchange="zoomToPolygon('state-senate-districts', this.value, 'senate_dist');"></select>
+
+				<!-- People/Places switcher -->
+
+				<p onClick="zoomToPolygon('', '-108,25,-88,37,0', '');" class="zoomoutlink"><span id="texas_icon" style="cursor:pointer"></span>Show all of Ballard
+				</p>
+
+				<p id="switch-to-senate-districts" class="districtswitcher">
+					<input type="radio" checked="true">
+						<span class="checkmark"></span>Texas <b>House</b> Districts.
+
+					<br />
+
+					<a href="index.html?districts=senate"><input type="radio"  style="cursor:pointer" onclick="javascript:window.location.href='index.html?districts=senate'; return false;"/>
+						<span class="checkmark"></span>Texas <b>Senate</b> Districts.</a>
+				</p>
+
+				<p id="switch-to-house-districts" class="districtswitcher">
+					<input type="radio" checked="true">
+						<span class="checkmark"></span>Texas <b>Senate</b> Districts.
+
+					<br />
+
+					<a href="index.html?districts=house"><input type="radio"  style="cursor:pointer" onclick="javascript:window.location.href='index.html?districts=house'; return false;"/>
+						<span class="checkmark"></span>Texas <b>House</b> Districts.</a>
+				</p>
+			</p>
+
+			<!--Program logos and descriptions-->
+
+			<br />
+
+			<div class="content">
+				<p class="programs">Through <a href="https://www.raiseyourhandtexas.org/foundation/raising-school-leaders/" class="programlink" target="_blank">Raising School Leaders</a>, Raise Your Hand Texas and the Raise Your Hand Texas Foundation have sent more than 1,000 school principals, school district teams, and other public education stakeholders to leadership development and coaching programs at Harvard University and other colleges and education organizations across the country. To date, our total investment in the program has exceeded +$15 million.</p>
+			</div>
+
+			<br>
+
+			<p class="moreinfo"><a href="https://www.ballardhistory.org/contact/" target="_blank">Contact</a> the <a href="https://www.ballardhistory.org/" target="_blank">Ballard Historical Society</a>
+				<br/><br/>
+				<a href="https://www.ballardhistory.org/" target="_blank"><img src="images/bhs_logo.svg"  width="150" height="77"/></a>
+				<br/><br/>
+				Map produced by <a href="http://www.coregis.net/" target="_blank">CoreGIS</a>.
+			</p>
+		</div> <!-- end of div id="mySidenav" class="sidenav" -->
+
+		<div id="main">
+
+			<div id="about">
+				<span style="font-size:16px;cursor:pointer" onclick="openNav()">&#9776; Zoom to People and Places</span>
+			</div>
+
+		<!--END FLYOUT FOR 'ZOOM TO LAYERS'-->
+
+		<!--BEGIN SUMMARY STATS APPEAR/DISAPPEAR WINDOW
+				This bit of code creates the temporary window that appears above the legend
+				and displays the summary stats for the selected district-->
+
+			<div class='stats' id='statsBox'>
+				<div class='stats-title'>
+					Number of Programs in
+					<br />
+					<span class="select" id="stats.districtType"></span> District <span class="select" id="stats.districtName"></span>
+					<br />
+					By <span class="select" id="stats.year"></span>
+				</div>
+				<div class='stats-scale'>
+					<ul class='stats-labels'>
+<!-- for maintenance: always make the id of these = count.layerName because that's what the updateStatsBox() function looks for -->
+						<li>Raising Blended Learners:  <span class="count.rbl" id="count.raising-blended-learners-campuses-points"></span></li>
+						<li>Charles Butt Scholars: <span class="count.cbs" id="count.charles-butt-scholars-points"></span></li>
+						<li>Partner Universities: <span class="count.ihe" id="count.raising-texas-teachers-points"></span></li>
+						<li>Raising School Leaders: <span class="count.rsl" id="count.raising-school-leaders-points"></span></li>
+					</ul>
+				</div> <!-- end of div class='stats-scale' -->
+			</div>
+
+		<!--END SUMMARY STATS APPEAR/DISAPPER WINDOW-->
+
+
+
+			<div id='map'></div>
+
+			<div class='legend'>
+				<div class='legend-title'>Click on a layer name below to toggle its visibility</div>
+				<div class='legend-scale'>
+					<ul class='legend-labels'>
+						<li onClick="showHideLayer('people-points', markerNames=['people_locations']);"><span id="raising_blended_learners_campuses"></span>People</li>
+						<li onClick="showHideLayer('raising-school-leaders-points', markerNames=['raising_school_leaders']);"><span id="raising_school_leaders"></span>Places</li>
+					</ul>
+
+
+				</div> <!-- end of div class='legend-scale' -->
+				<div class='legend-source'>Source: <a href="https://www.ballardhistory.org/" target="_blank">Ballard Historical Society</a></div>
+				<div class='map-credit'>Map design by <a href="http://www.coregis.net/" target="_blank">CORE GIS</a></div>
+			</div> <!-- end of div id="legend" -->
+		</div> <!-- end of div id="main" -->
+
+<!-- JS that needs the above elements to be declared before it runs -->
+		<script src='scripts/onload.js'></script>
+
+	</body>
+</html>

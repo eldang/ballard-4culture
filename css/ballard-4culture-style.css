@@ -1,0 +1,536 @@
+/* your theme's styles */
+body {
+	padding:0;
+	margin:0;
+}
+
+/*This formatting is for the  name of the fields in the pop-up*/
+span.varname{
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	color: #363535;
+}
+
+/*This is formatting for the text that follows the label*/
+span.attribute {
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	color: #5b5b5b;
+	margin-top: 0;
+    margin-bottom: 0;
+}
+
+.attribute a {
+    /*padding: 8px 8px 8px 32px;*/
+    text-decoration: none;
+	font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #cca71a;
+    transition: 0.3s
+}
+
+/*This changes the size of the image in the popup*/
+img {
+	max-height:  100%;
+	max-width:  100%;
+}
+
+.mapboxgl-popup-content {
+	max-width: 300px;
+}
+
+.zoom {
+	background-color: #ffffff;
+	opacity:.8;
+	border: 1px solid #989797;
+	width: 225px;
+	text-align: left;
+	padding: 10px;
+    position: fixed;
+	z-index : 1;
+    left: 0;
+	bottom: 0;
+	font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+	font-weight: normal;
+	color: #363635;
+	text-decoration: none;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	overflow: hidden; /*planning ahead to clear floats*/
+}
+
+.legend, .stats {
+	background-color: rgba(255, 255, 255, 0.7);
+	border: 1px solid rgba(190, 188, 188, 1);
+	color: rgba(82, 82, 80, 1);
+	width: 225px;
+	font-weight: normal;
+	text-decoration: none;
+	overflow: hidden; /*planning ahead to clear floats*/
+	font-family: "Montserrat", helvetica, arial, sans-serif;
+	text-align: left;
+}
+
+.legend {
+	padding: 10px;
+  position: fixed;
+	z-index: 1;
+  right: 0;
+	bottom: 0;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+
+.stats {
+	opacity: 0;
+	transition: opacity 1.5s;
+	-webkit-transition: opacity 1.5s;
+	padding: 10px;
+	padding-right: 0px;
+  position: fixed;
+	z-index : 1;
+  right: 0;
+	bottom: 10;
+	margin-right: 10px;
+	margin-top: 10px;
+/*	margin-bottom: 20px; */
+}
+
+.stats-title {
+	position:relative;
+	bottom:0;
+	right:0;
+  text-align: left;
+  margin-bottom: 5px;
+	font-family: "Montserrat", helvetica, arial, sans-serif;
+  font-weight: bold;
+  font-size: 90%;
+}
+.stats .stats-scale ul {
+   margin: 0;
+   margin-bottom: 5px;
+   padding: 0;
+   float: left;
+   list-style: none;
+}
+  .stats .stats-scale ul li {
+    font-size: 75%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 22px;
+    margin-bottom: 2px;
+    }
+  .stats ul.stats-labels li span {
+    display: block;
+    float: right;
+    height: 14px;
+    width: 24px;
+    margin-right: 0px;
+    margin-left: 10px;
+    border: 0px solid #999;
+    }
+
+ul{
+	list-style-type:none;
+	font-size:
+}
+
+.legend-title {
+	position:relative;
+	bottom:0;
+	right:0;
+    text-align: left;
+    margin-bottom: 5px;
+	font-family: "Montserrat", helvetica, arial, sans-serif;
+    font-weight: bold;
+    font-size: 90%;
+    }
+  .legend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .legend .legend-scale ul li {
+    font-size: 13px;
+    list-style: none;
+    margin-left: 0;
+    line-height: 20px;
+    margin-bottom: 2px;
+    }
+  .legend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 14px;
+    width: 24px;
+    margin-right: 5px;
+    margin-left: 0px;
+    border: 0px solid #999;
+    }
+  .legend ul.legend-labels li ul { /* to indent nested lists in the legend */
+  	margin-left: 1em;
+  }
+
+	.inactive {
+		opacity: 0.25;
+	}
+
+#raising_blended_learners
+{
+	background:url(../markers/raising_blended_learners_campuses.svg) left center;
+	width:28px;
+	height:12px;
+	display: block;
+	float: left;
+}
+#raising_blended_learners_campuses
+{
+	background:url(../markers/raising_blended_learners_campuses_eye_circle.svg) left center;
+	width:28px;
+	height:12px;
+	display: block;
+	float: left;
+}
+#charles_butt_scholars
+{
+	background:url(../markers/charles_butt_scholars_eye_circle.svg) left center;
+	width:28px;
+	height:14px;
+	display: block;
+	float: left;
+}
+#charles_butt_scholars_icon
+{
+	background:url(../markers/charles_butt_scholars_circle.svg) left center;
+	width: 14px;
+	height: 14px;
+	display: block;
+	float: left;
+	background-position: right;
+}
+#raising_texas_teachers
+{
+	background:url(../markers/raising_texas_teachers_eye_circle.svg) left center;
+	width:28px;
+	height:14px;
+	display: block;
+	float: left;
+}
+#raising_texas_teachers_icon
+{
+	background:url(../markers/raising_texas_teachers_circle.svg) left center;
+	width:14px;
+	height:14px;
+	display: block;
+	float: left;
+	background-position: right;
+}
+#raising_school_leaders
+{
+	background:url(../markers/raising_school_leaders_eye_circle.svg) left center;
+	width:28px;
+	height:14px;
+	display: block;
+	float: left;
+}
+#districts_of_innovation
+{
+	background:url(../markers/districts_of_innovation.svg) left center;
+	width:14px;
+	height:14px;
+	display: block;
+	float: left;
+}
+#districts_of_innovation_poly
+{
+	background:url(../markers/districts_of_innovation_poly.svg) left center;
+	width:11px;
+	height:16px;
+	display: block;
+	float: left;
+}
+#texas_school_districts
+{
+	background:url(../markers/texas_school_districts.svg) left center;
+	width:11px;
+	height:16px;
+	display: block;
+	float: left;
+}
+#state_house_districts
+{
+	background:url(../markers/state_house_districts.svg) left center;
+	width:11px;
+	height:16px;
+	display: block;
+	float: left;
+}
+#state_senate_districts
+{
+	background:url(../markers/state_senate_districts.svg) left center;
+	width:11px;
+	height:16px;
+	display: block;
+	float: left;
+}
+
+#texas_icon
+{
+	background:url(../images/texas.svg) left center;
+	width:26px;
+	height:22px;
+	display: block;
+	float: left;
+}
+
+  .legend .legend-source {
+    font-size: 70%;
+    color: #999;
+    clear: both;
+    }
+
+  .legend .map-credit {
+    font-size: 70%;
+    color: #999;
+    clear: both;
+    }
+
+  .legend a {
+    color: #777;
+    }
+
+	a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+
+/* Use this to style the 'Zoom to Districts' pop-out */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #ffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    /*padding-top: 60px;*/
+}
+
+/*.sidenav p {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s
+}*/
+
+p.navtitle {
+    padding: 20px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+	font-weight: bold;
+    color: #b1d4cb;
+    display: block;
+    transition: 0.3s
+}
+
+img  {
+background-color: transparent;
+border: none;
+}
+
+p.moreinfo  {
+  padding: 8px 8px 8px 32px;
+  background: #ffff;
+  color:#4a4a4a;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size:14px;
+ /* width:auto !important;*/
+}
+
+/* I'm starting this as a copy of .moreinfo, with just the top & bottom padding removed */
+p.districtswitcher, p.zoomoutlink  {
+  padding: 0px 8px 0px 32px;
+  background: #ffff;
+  color:#4a4a4a;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size:14px;
+ /* width:auto !important;*/
+}
+
+p.districtswitcher  {
+	display: none; /* leave this as display:none because the code in the page will make the right control visible */
+}
+
+p.zoomoutlink {
+	display: block;
+}
+
+/* some text that just needs to be hidden by default so the code can activate the context-appropriate option */
+span#house-district-reference, span#senate-district-reference {
+	display: none;
+}
+
+p.programs  {
+  padding: 8px 8px 8px 32px;
+  background: #ffff;
+  color:#4a4a4a;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size:10px;
+ /* width:auto !important;*/
+}
+
+ .sidenav .programlink {
+    /*padding: 8px 8px 8px 32px;*/
+    text-decoration: none;
+	font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #cca71a;
+    transition: 0.3s
+}
+
+.sidenav img {
+	width: 240px;
+	padding: 0px 30px;
+}
+
+.sidenav p.moreinfo img {
+	padding: 0px;
+}
+
+ .content .programlink {
+    /*padding: 8px 8px 8px 32px;*/
+    text-decoration: none;
+	font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #cca71a;
+    transition: 0.3s
+}
+
+.sidenav .svg_old {
+
+}
+
+.sidenav a {
+    /*padding: 8px 8px 8px 32px;*/
+    text-decoration: none;
+	font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #cca71a;
+    transition: 0.3s
+}
+
+.content a {
+    /*padding: 8px 8px 8px 32px;*/
+    text-decoration: none;
+	font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #cca71a;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #a1a1a1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 28px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 0px;
+}
+
+#about {
+	/*transition: margin-left .5s;
+    padding: 16px;*/
+	font-family: "Montserrat", Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #ffff;
+	filter: alpha(opacity = 0);
+    position:fixed;
+	padding:5px 5px 5px 5px;
+	left:20px;
+	top:20px;
+    display:block;
+    z-index:2;
+    background:#cca71a;
+	overflow: auto;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #949494;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #fffff;
+}
+
+button.collapsible  {
+  padding: 8px 8px 8px 32px;
+  background: #ffff;
+  color:#4a4a4a;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size:12px;
+ /* width:auto !important;*/
+  }
+
+/*Styling for hr in pop-ups*/
+
+hr.divider {
+  border-top: 1px dotted #bdbfc1;
+}
