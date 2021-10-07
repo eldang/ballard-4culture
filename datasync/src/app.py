@@ -6,6 +6,12 @@ from src import google
 
 
 LOGLEVEL = 'DEBUG'
+# get these by inspecting the sharing link in Google Drive.  The ID is the
+# whole sequence between (e.g.) https://docs.google.com/spreadsheets/d/
+# and /edit
+FILE_IDS = {
+    'spreadsheet': '122PnHx_kzVnvxOaExUeuA0OeZthBYkqqYeRR7e-B7jk'
+}
 
 
 
@@ -20,12 +26,12 @@ logger = logging.getLogger(__name__)
 def sync() -> None:
     logger.setLevel(LOGLEVEL)
     logger.info('Starting run')
-    tmpDirName = 'temp_' + time.strftime('%Y%m%d_%H%m_%S')
-    logger.debug('Creating temp directory: ' + tmpDirName)
-    os.mkdir(tmpDirName)
-    scopes = ['https://www.googleapis.com/auth/drive.metadata.readonly']
-    creds = google.auth(scopes, LOGLEVEL)
-    os.rmdir(tmpDirName)
+    tmpDir = 'temp_' + time.strftime('%Y%m%d_%H%M_%S')
+    logger.debug('Creating temp directory: ' + tmpDir)
+    os.mkdir(tmpDir)
+    data = google.readSheet(tmpDir, FILE_IDS['spreadsheet'], LOGLEVEL)
+    print(data)
+    # os.rmdir(tmpDir)
     logger.info('Run complete')
 
 
