@@ -3,3 +3,4 @@
 datasync/token.json
 datasync/client_secret*.json
 datasync/credentials.json
+datasync/tokens/*
