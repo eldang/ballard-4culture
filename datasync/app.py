@@ -31,11 +31,20 @@ def googleAuth(scopes: [str]) -> Credentials:
     creds = None
     if os.path.exists('token.json'):
         creds = Credentials.from_authorized_user_file('token.json', scopes)
-    if not creds or not creds.valid:
+    if creds and creds.valid:
+        logger.debug('Using existing Google login session')
+    else:
         if creds and creds.expired and creds.refresh_token:
+            logger.debug('Refreshing existing Google login')
             creds.refresh(Request())
         else:
-            flow = InstalledAppFlow.from_client_secrets_file('credentials.json', scopes)
+            logger.info(
+                'No existing Google login session found, so you\'ll be ' +
+                'redirected to a browser window to log in'
+            )
+            flow = InstalledAppFlow.from_client_secrets_file(
+                'credentials.json', scopes
+            )
             creds = flow.run_local_server(port=0)
         with open('token.json', 'w') as token:
             token.write(creds.to_json())
