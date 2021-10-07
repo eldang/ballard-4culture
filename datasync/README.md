@@ -1,8 +1,12 @@
 # Data synchronisation script
 
-## Installation
+## Requirements
 
-[`pipenv`](https://docs.pipenv.org/en/latest/) is strongly recommended, to manage Python dependencies without conflicts with other projects.
+* Python 3.9
+* A Google account with read access to the data sheet and all the attachment media directories
+* [`pipenv`](https://docs.pipenv.org/en/latest/) is strongly recommended, to manage Python dependencies without conflicts with other projects.
+
+## Installation
 
 ### Setting up pipenv itself
 
@@ -15,6 +19,8 @@
 ## Running
 
 `pipenv run python ./app.py`
+
+You may be asked to log in to Google Drive, if this is the first time you're running the script or if it's been a while.
 
 ## Development
 
