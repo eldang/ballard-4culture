@@ -7,10 +7,11 @@ from googleapiclient.http import MediaIoBaseDownload
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
+from openpyxl import load_workbook
 
 
 SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive.readonly', 'https://www.googleapis.com/auth/spreadsheets.readonly']
-
+SHEETS = ['people', 'places', 'people to places', 'people to materials']
 
 logger = logging.getLogger(__name__)
 
@@ -61,9 +62,41 @@ def _saveSheet(tmpDir: str, id: str) -> str:
     return tmpFile
 
 
+# see https://gist.github.com/mdellavo/853413#gistcomment-2856851 for discussion
+def _XLSXDictReader(fileName: str, sheetName: str = None):
+  book = load_workbook(fileName)
+  # if there's no sheet name specified, try to get the active sheet.  This will work reliably for workbooks with only one sheet; unpredictably if there are multiple worksheets present.
+  if sheetName is None:
+    sheet = book.active
+  elif sheetName not in book.sheetnames:
+    print(sheetName, "not found in", fileName)
+    exit()
+  else:
+    sheet = book[sheetName]
+
+  rows = sheet.max_row + 1
+  cols = sheet.max_column + 1
+
+  def cleanValue(s):
+    if s == None:
+      return ''
+    else:
+      return str(s).strip()
+
+  def item(i, j):
+    return (
+      cleanValue(sheet.cell(row=1, column=j).value),
+      cleanValue(sheet.cell(row=i, column=j).value)
+    )
+
+  return (dict(item(i,j) for j in range(1, cols)) for i in range(2, rows))
+
 
 
 def readSheet(tmpDir: str, id: str, log: str) -> {}:
     logger.setLevel(log)
     tmpFile = _saveSheet(tmpDir, id)
-    return {}
+    content = {}
+    for sheet in SHEETS:
+        content[sheet] = _XLSXDictReader(tmpFile, sheet)
+    return content
