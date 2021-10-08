@@ -12,8 +12,17 @@ from google.oauth2.credentials import Credentials
 from openpyxl import load_workbook
 
 
-SCOPES = ['https://www.googleapis.com/auth/drive.metadata.readonly', 'https://www.googleapis.com/auth/drive.readonly', 'https://www.googleapis.com/auth/spreadsheets.readonly']
-SHEETS = ['people', 'places', 'people to places', 'people to materials']
+SCOPES = [
+    'https://www.googleapis.com/auth/drive.metadata.readonly',
+    'https://www.googleapis.com/auth/drive.readonly',
+    'https://www.googleapis.com/auth/spreadsheets.readonly'
+]
+SHEETS = [
+    'people',
+    'places',
+    'people to places',
+    'people to materials'
+]
 
 logger = logging.getLogger(__name__)
 
