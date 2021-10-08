@@ -145,6 +145,7 @@ def _dataJoin(people: {}, places: {}, links: []):
             )
         elif person in unjoinedPeople:
             unjoinedPeople.remove(person)
+            nJoinedPeople += 1
         if place not in places.keys():
             raise RuntimeError(
                 'Place ID ' + row['place_id'] +
@@ -152,12 +153,11 @@ def _dataJoin(people: {}, places: {}, links: []):
             )
         elif place in unjoinedPlaces:
             unjoinedPlaces.remove(place)
+            nJoinedPlaces +=1
         if place not in people[person]['places']:
             people[person]['places'].append(place)
-            nJoinedPeople += 1
         if person not in places[place]['people']:
             places[place]['people'].append(person)
-            nJoinedPlaces +=1
     if unjoinedPeople != []:
         logger.warning('The following people have no associated places:')
         for i in unjoinedPeople:
