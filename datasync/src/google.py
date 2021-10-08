@@ -173,6 +173,7 @@ def fetchMedia(tmpDir: str, people: {}, fileIDs: {}, log: str) -> {}:
     logger.setLevel(log)
     updated = {}
     fresh = 0
+    stale = 0
     gDrive = _auth()
     for fileType in ['mp3', 'images', 'transcripts', 'other_media']:
         updated[fileType] = []
@@ -189,6 +190,7 @@ def fetchMedia(tmpDir: str, people: {}, fileIDs: {}, log: str) -> {}:
             # print(fileType, original)
             if not os.path.isfile(original):
                 download = True
+                fresh = fresh + 1
                 logger.debug('Fetching ' + file['name'])
             else:
                 mtime = float(datetime.datetime.strptime(
@@ -200,9 +202,17 @@ def fetchMedia(tmpDir: str, people: {}, fileIDs: {}, log: str) -> {}:
                         'Replacing ' + file['name'] + ' as remote is newer.'
                     )
                     download = True
+                    stale = stale + 1
             if download:
                 updated[fileType].append(
                     _downloadFile(gDrive, tmpDir, fileType, file)
                 )
+    if fresh + stale > 0:
+        logger.info(
+            'Downloaded ' + str(fresh) + ' new files and replaced ' +
+            str(stale) + ' outdated ones.'
+        )
+    else:
+        logger.info('Found no media files in need of downloading.')
     return updated
 
