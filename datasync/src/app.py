@@ -30,21 +30,20 @@ def sync() -> None:
     tmpDir = 'temp_' + time.strftime('%Y%m%d_%H%M_%S')
     logger.debug('Creating temp directory: ' + tmpDir)
     os.mkdir(tmpDir)
-    content = google.readSheet(tmpDir, FILE_IDS['spreadsheet'], LOGLEVEL)
-    data = {}
-    data['people'] = _processPeople(content['people'])
-    print(data)
+    data = google.readSheet(tmpDir, FILE_IDS['spreadsheet'], LOGLEVEL)
+    people = _processPeople(data['people'])
+    places = _processPlaces(data['places'])
+    print(places)
     shutil.rmtree(tmpDir)
     logger.info('Run complete')
 
 
 
 
-def _processPeople(people) -> [{}]:
-    result = []
+def _processPeople(people) -> {}:
+    result = {}
     for row in people:
         person = {
-            'id': row['people_id'],
             'name': row['name'],
             'description': row['description'],
             'year_born': row['year born'],
@@ -91,9 +90,25 @@ def _processPeople(people) -> [{}]:
                 person['employers'].append(row[key])
             elif 'Family Profession' in key and row[key] != '':
                 person['family_professions'].append(row[key])
-        result.append(person)
+        result[int(row['people_id'])] = person
+    logger.debug('Processed ' + str(len(result)) + ' "people" rows')
     return result
 
+
+
+def _processPlaces(places) -> {}:
+    result = {}
+    for row in places:
+        print(row)
+        place = {
+            'type': row['type'],
+            'address': row['address'],
+            'lat': float(row['lat']),
+            'long': float(row['long']),
+            'name': row['place name'].replace('_', ' ')
+        }
+        result[int(float(row['place_id']))] = place
+    return result
 
 
 
