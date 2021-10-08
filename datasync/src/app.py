@@ -10,9 +10,13 @@ from src import google
 LOGLEVEL = 'DEBUG'
 # get these by inspecting the sharing link in Google Drive.  The ID is the
 # whole sequence between (e.g.) https://docs.google.com/spreadsheets/d/
-# and /edit
+# and /edit or between https://drive.google.com/drive/folders/ and ?usp=sharing
 FILE_IDS = {
-    'spreadsheet': '122PnHx_kzVnvxOaExUeuA0OeZthBYkqqYeRR7e-B7jk'
+    'spreadsheet': '122PnHx_kzVnvxOaExUeuA0OeZthBYkqqYeRR7e-B7jk',
+    'mp3': '1t2ZBOf-3ixjSyDoLtmJf_t-XBpwP2Zfj',
+    'images': '1JQsg96WdZrjb6otbvL0eRSBequGnZcay',
+    'transcripts': '1Zv0k_76iRj7Nl70d2xaMZduw-qKvoJrG',
+    'other_media': '1qA7AlI83glWavg-hCAYVAs27UN2VD5NJ'
 }
 OUTPUT_FILES = {
     'people': 'people.json',
@@ -46,7 +50,8 @@ def sync() -> None:
     with open(os.path.join(tmpDir, OUTPUT_FILES['places']), 'w') as f:
         f.write(json.dumps(_makeGeoJSON(places), indent='\t'))
     logger.info('Wrote ' + OUTPUT_FILES['places'])
-    _moveFiles(tmpDir)
+    mediaDirs = google.fetchMedia(tmpDir, people, FILE_IDS, LOGLEVEL)
+    _moveFiles(tmpDir, mediaDirs)
     # shutil.rmtree(tmpDir)
     logger.info('Run complete')
 
@@ -74,10 +79,10 @@ def _processPeople(people: []) -> {}:
             'bhs_grad': False,
             'bhs_year': None,
             'heritage': [],
-            'audio': [],
-            'transcript': row['transcript'],
-            'photos': [],
-            'other_materials': [],
+            'mp3': [],
+            'transcripts': [row['transcript']],
+            'images': [],
+            'other_media': [],
             'places': [],
             'employers': [],
             'family_professions': [],
@@ -100,11 +105,11 @@ def _processPeople(people: []) -> {}:
             person['bhs_grad'] = True
         for key in row.keys():
             if 'audio' in key and '.' in row[key]:
-                person['audio'].append(row[key])
+                person['mp3'].append(row[key])
             elif 'photo' in key and '.' in row[key]:
-                person['photos'].append(row[key])
+                person['images'].append(row[key])
             elif key == 'other materials' and '.' in row[key]:
-                person['other_materials'].append(row[key])
+                person['other_media'].append(row[key])
             elif 'heritage' in key and row[key] != '':
                 for entry in row[key].split('_'):
                     if entry not in person['heritage']:
@@ -143,8 +148,8 @@ def _addMaterials(people: {}, materials: []) -> {}:
         if row['people_id'] != '':
             currentPerson = int(float(row['people_id']))
         item = row['other_materials']
-        if item != '' and item not in people[currentPerson]['other_materials']:
-            people[currentPerson]['other_materials'].append(item)
+        if item != '' and item not in people[currentPerson]['other_media']:
+            people[currentPerson]['other_media'].append(item)
             n = n + 1
     logger.debug('Added ' + str(n) +' additional materials to person entries')
     return people
@@ -221,9 +226,12 @@ def _makeGeoJSON(places: {}) -> {}:
 
 
 
-def _moveFiles(tmpDir: str) -> None:
+def _moveFiles(tmpDir: str, mediaDirs: {}) -> None:
     for key in OUTPUT_FILES.keys():
         shutil.copy(os.path.join(tmpDir, OUTPUT_FILES[key]), '../data')
+    for key in mediaDirs.keys():
+        for file in mediaDirs[key]:
+            shutil.copy(file, '../' + key)
 
 
 if __name__ == '__main__':

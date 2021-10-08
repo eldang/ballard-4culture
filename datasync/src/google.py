@@ -1,3 +1,4 @@
+import datetime
 import io
 import logging
 import os
@@ -59,7 +60,9 @@ def _saveSheet(tmpDir: str, id: str) -> str:
         done = False
         while done is False:
             status, done = downloader.next_chunk()
-            logger.debug("Download %d%%." % int(status.progress() * 100))
+            logger.debug(
+                "Fetching spreadsheet %d%%." % int(status.progress() * 100)
+            )
     return tmpFile
 
 
@@ -127,3 +130,79 @@ def readSheet(tmpDir: str, id: str, log: str) -> {}:
     for sheet in SHEETS:
         content[sheet] = _dropBlankRows(_XLSXDictReader(tmpFile, sheet))
     return content
+
+
+
+def _listDir(gDrive, folder: str, needles: [str]) -> [{}]:
+    files = []
+    page_token = None
+    query = "'" + folder + "' in parents and ("
+    for needle in needles:
+        query += "name = '" + needle + "' or "
+    query = query[:-4] + ')'
+    while True:
+        response = gDrive.files().list(
+            q = query,
+            pageSize=10,
+            fields="nextPageToken, files(id, name, mimeType, modifiedTime)",
+            pageToken = page_token
+        ).execute()
+        files += response.get('files', [])
+        page_token = response.get('nextPageToken', None)
+        if page_token is None:
+            break
+    return files
+
+
+
+def _downloadFile(gDrive, tmpDir: str, folder: str, file: {}) -> str:
+    tmpFile = os.path.join(tmpDir, folder, file['name'])
+    request = gDrive.files().get_media(fileId = file['id'])
+    with io.FileIO(tmpFile, 'wb') as outFile:
+        downloader = MediaIoBaseDownload(outFile, request)
+        done = False
+        while done is False:
+            status, done = downloader.next_chunk()
+            logger.debug("Download %d%%." % int(status.progress() * 100))
+    return tmpFile
+
+
+
+
+def fetchMedia(tmpDir: str, people: {}, fileIDs: {}, log: str) -> {}:
+    logger.setLevel(log)
+    updated = {}
+    fresh = 0
+    gDrive = _auth()
+    for fileType in ['mp3', 'images', 'transcripts', 'other_media']:
+        updated[fileType] = []
+        os.mkdir(os.path.join(tmpDir, fileType))
+        needles = []
+        for i in people.keys():
+            for item in people[i][fileType]:
+                if item not in needles:
+                    needles.append(item)
+        files = _listDir(gDrive, fileIDs[fileType], needles)
+        for file in files:
+            download = False
+            original = os.path.join('../' + fileType, file['name'])
+            # print(fileType, original)
+            if not os.path.isfile(original):
+                download = True
+                logger.debug('Fetching ' + file['name'])
+            else:
+                mtime = float(datetime.datetime.strptime(
+                    file['modifiedTime'],
+                    "%Y-%m-%dT%H:%M:%S.%fZ").strftime("%s")
+                )
+                if os.path.getmtime(original) < mtime:
+                    logger.debug(
+                        'Replacing ' + file['name'] + ' as remote is newer.'
+                    )
+                    download = True
+            if download:
+                updated[fileType].append(
+                    _downloadFile(gDrive, tmpDir, fileType, file)
+                )
+    return updated
+
