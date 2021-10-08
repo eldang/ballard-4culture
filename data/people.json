@@ -1,0 +1,1650 @@
+{
+	"1": {
+		"name": "Doris Anderson",
+		"description": "Born an Olson, Doris Anderson was Ballard-born (BHS '33) and provided for her family as a barkeep at Pete's Place on Ballard Ave for almost 30 years. \"No matter the owner it was always 'Pete's Place.'\"",
+		"year_born": 1914,
+		"gender": "F",
+		"other_names": "Olson",
+		"birthplace": "Ballard",
+		"occupation": "barkeep",
+		"employer": "Petes_Place",
+		"born_in_ballard": true,
+		"profession": "Bartender",
+		"ballard_childhood": true,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": true,
+		"bhs_year": "1934",
+		"heritage": [
+			"Norwegian",
+			"Swedish"
+		],
+		"mp3": [
+			"01_Anderson_Doris_January_1988.audio.mp3",
+			"01_Anderson_Doris_March_1988.audio.mp3"
+		],
+		"transcripts": [
+			"01_Anderson_Doris_transcript.pdf"
+		],
+		"images": [],
+		"other_media": [],
+		"places": [
+			101,
+			102
+		],
+		"employers": [
+			"Petes_Place"
+		],
+		"family_professions": [
+			"Grocery",
+			"Millworker"
+		]
+	},
+	"2": {
+		"name": "Robert Batley",
+		"description": "Robert Batley of Batley Mill later worked for aptly named Phoenix Shingle.",
+		"year_born": 1920,
+		"gender": "M",
+		"other_names": "Batley",
+		"birthplace": "Ballard",
+		"occupation": "mill worker",
+		"employer": "Phoenix_Shingle",
+		"born_in_ballard": true,
+		"profession": "Millworker",
+		"ballard_childhood": true,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"English"
+		],
+		"mp3": [
+			"02_Batley_Robert_audio.mp3"
+		],
+		"transcripts": [
+			"02_Batley_Robert_transcript.pdf"
+		],
+		"images": [],
+		"other_media": [
+			"02_Batley_Robert Jr_Article_01.pdf",
+			"02_Batley_Robert Jr_Article_02.pdf"
+		],
+		"places": [
+			103,
+			104,
+			160
+		],
+		"employers": [
+			"Phoenix_Shingle"
+		],
+		"family_professions": [
+			"Mill",
+			"Millworker"
+		]
+	},
+	"3": {
+		"name": "Marjorie Chapin",
+		"description": "Daugher of a shingleweaver, niece to the Ray, of Ray's Cafe, Marjorie was a professional woman, with Electrical Women's Round Table. Family had grocery at 64th & 36th.",
+		"year_born": 1914,
+		"gender": "F",
+		"other_names": "Chapin",
+		"birthplace": "Ballard",
+		"occupation": "home_economist",
+		"employer": "Seattle_Times",
+		"born_in_ballard": true,
+		"profession": "Home Economist",
+		"ballard_childhood": true,
+		"legacy_business_connection": "Ray's Boathouse",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": true,
+		"bhs_year": null,
+		"heritage": [
+			"English",
+			"Pennsylvania Dutch",
+			"Irish"
+		],
+		"mp3": [
+			"03_Chapin_Marjorie_audio.mp3"
+		],
+		"transcripts": [
+			"03_Chapin_Marjorie_transcript.pdf"
+		],
+		"images": [],
+		"other_media": [
+			"03_Chapin_Marjorie_Article_01.pdf",
+			"03_Chapin_Marjorie_Article_02.pdf",
+			"03_Chapin_Marjorie_Article_03.pdf"
+		],
+		"places": [
+			105,
+			106,
+			164,
+			172
+		],
+		"employers": [
+			"Seattle_Times",
+			"Darigold"
+		],
+		"family_professions": [
+			"Shingleweaver",
+			"Grocery",
+			"Dairy"
+		]
+	},
+	"4": {
+		"name": "Mabel Chapman",
+		"description": "Mabel Bird Chapman's family built many Ballard homes. She was a professional woman, a realtor.",
+		"year_born": 1895,
+		"gender": "F",
+		"other_names": "Bird",
+		"birthplace": "Vandalia_Missouri",
+		"occupation": "realtor",
+		"employer": "Royal_Realty",
+		"born_in_ballard": false,
+		"profession": "Realtor",
+		"ballard_childhood": true,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": true,
+		"bhs_year": "Dropped out",
+		"heritage": [
+			"English"
+		],
+		"mp3": [
+			"04_Chapman_Mabel_audio.mp3"
+		],
+		"transcripts": [
+			"04_Chapman_Mabel_transcript.pdf"
+		],
+		"images": [],
+		"other_media": [],
+		"places": [
+			107,
+			171
+		],
+		"employers": [
+			"Royal_Realty"
+		],
+		"family_professions": [
+			"St. Paul & Tacoma Lumber Compnay"
+		]
+	},
+	"5": {
+		"name": "Ray Christensen",
+		"description": "Ray grew up in Ballard, worked at Stimson Mill and was a 25-year fireman with Seattle Fire Dept.",
+		"year_born": 1921,
+		"gender": "M",
+		"other_names": "Christensen",
+		"birthplace": "Ballard",
+		"occupation": "fireman",
+		"employer": "Seattle_Fire_Department",
+		"born_in_ballard": true,
+		"profession": "",
+		"ballard_childhood": true,
+		"legacy_business_connection": "Stimson Mill",
+		"association": "",
+		"cht_mhb": "Classic Home Tour",
+		"bhs_grad": true,
+		"bhs_year": null,
+		"heritage": [
+			"Danish"
+		],
+		"mp3": [
+			"05_Christensen_Ray_audio.mp3"
+		],
+		"transcripts": [
+			"05_Christensen_Ray_background.pdf"
+		],
+		"images": [],
+		"other_media": [
+			"05_Christensen_Ray_Article_01.pdf"
+		],
+		"places": [
+			172,
+			108,
+			109,
+			163
+		],
+		"employers": [
+			"Seattle_Fire_Department"
+		],
+		"family_professions": [
+			"Mill"
+		]
+	},
+	"6": {
+		"name": "Florence Cole",
+		"description": "From a German family, Wiedemann, Florence shares memories of Ballard Beach and her Ballard childhood.",
+		"year_born": 1921,
+		"gender": "F",
+		"other_names": "Wiedemann",
+		"birthplace": "Canada",
+		"occupation": "comptometer",
+		"employer": "Sears",
+		"born_in_ballard": false,
+		"profession": "",
+		"ballard_childhood": true,
+		"legacy_business_connection": "Stimson Mill",
+		"association": "Ballard Beach",
+		"cht_mhb": "",
+		"bhs_grad": true,
+		"bhs_year": "Dropped out",
+		"heritage": [
+			"German",
+			"English"
+		],
+		"mp3": [
+			"06_Cole_Florence_audio.mp3"
+		],
+		"transcripts": [
+			"06_Cole_Florence_transcript.pdf"
+		],
+		"images": [
+			"06_Cole_Florence_photo_01.jpg",
+			"06_Cole_Florence_photo_02.jpg"
+		],
+		"other_media": [],
+		"places": [
+			110,
+			160,
+			163
+		],
+		"employers": [
+			"Sears",
+			"Wisefelds"
+		],
+		"family_professions": [
+			"Mill",
+			"Saw Pilot"
+		]
+	},
+	"7": {
+		"name": "Louis-and-Mary Complita",
+		"description": "The third generation of this Yugoslavian family still lives at the same address, overlooking Ray's Boathouse.",
+		"year_born": 1906,
+		"gender": "M",
+		"other_names": "Complita",
+		"birthplace": "Oregon",
+		"occupation": "machinist",
+		"employer": "Ballard_Locks",
+		"born_in_ballard": false,
+		"profession": "",
+		"ballard_childhood": true,
+		"legacy_business_connection": "Ray's Boathouse",
+		"association": "Ballard Beach",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"Yugoslavian"
+		],
+		"mp3": [
+			"07_Complita_Louis_Mary_audio.mp3"
+		],
+		"transcripts": [
+			"07_Complita_Louis_transcript.pdf"
+		],
+		"images": [
+			"07_Complita_Louis_photo_01.jpg",
+			"07_Complita_Louis_photo_02-third-from-left_top_row_Louis_Garfield_1947.jpg"
+		],
+		"other_media": [
+			"07_Complita_Louis_Article_01.pdf",
+			"07_Complita_Louis_Article_02.pdf",
+			"07_Complita_Louis_Article_03.pdf"
+		],
+		"places": [
+			163,
+			111,
+			112,
+			164
+		],
+		"employers": [
+			"Ballard_Locks"
+		],
+		"family_professions": []
+	},
+	"8": {
+		"name": "Hazel Ann Cornelius",
+		"description": "Part of the Skotdal Dairy family, Hazel Ann was a Carnegie Library regular in childhood.",
+		"year_born": 1918,
+		"gender": "F",
+		"other_names": "Skotdal",
+		"birthplace": "Crown_Hill",
+		"occupation": "mother",
+		"employer": "",
+		"born_in_ballard": false,
+		"profession": "",
+		"ballard_childhood": true,
+		"legacy_business_connection": "Skotdal Dairy",
+		"association": "Carnegie Library",
+		"cht_mhb": "",
+		"bhs_grad": true,
+		"bhs_year": "1936",
+		"heritage": [
+			"Norwegian",
+			"German"
+		],
+		"mp3": [
+			"08_Cornelius_Hazel_audio.mp3"
+		],
+		"transcripts": [
+			"08_Cornelius_Hazel_transcript.pdf"
+		],
+		"images": [],
+		"other_media": [
+			"08_Cornelius_Hazel_house summary.pdf",
+			"08_Cornelius_Hazel_obituary.pdf"
+		],
+		"places": [
+			113,
+			178
+		],
+		"employers": [],
+		"family_professions": [
+			"Dairy Farming"
+		]
+	},
+	"9": {
+		"name": "Francis Coughlin",
+		"description": "Francis worked as a meatcutter in Ballard, and remembers growing up Irish Catholic in Ballard.",
+		"year_born": 1911,
+		"gender": "M",
+		"other_names": "Coughlin",
+		"birthplace": "Bremerton_Washington",
+		"occupation": "meatcutter",
+		"employer": "Fryes_Meat_Market",
+		"born_in_ballard": false,
+		"profession": "",
+		"ballard_childhood": true,
+		"legacy_business_connection": "",
+		"association": "Catholic Church",
+		"cht_mhb": "",
+		"bhs_grad": true,
+		"bhs_year": "1936",
+		"heritage": [
+			"Irish",
+			"English"
+		],
+		"mp3": [
+			"09_Coughlin_Francis_audio.mp3"
+		],
+		"transcripts": [
+			"09_Coughlin_Francis_transcript.pdf"
+		],
+		"images": [],
+		"other_media": [],
+		"places": [
+			165,
+			114
+		],
+		"employers": [
+			"Fryes_Meat_Market"
+		],
+		"family_professions": []
+	},
+	"10": {
+		"name": "Kitty Grace Crawford",
+		"description": "Kitty Grace was a newspaperwoman all of her life.",
+		"year_born": 1908,
+		"gender": "F",
+		"other_names": "Crawford",
+		"birthplace": "Washington",
+		"occupation": "newspaperwoman",
+		"employer": "Ballard_Tribune",
+		"born_in_ballard": false,
+		"profession": "Journalism",
+		"ballard_childhood": true,
+		"legacy_business_connection": "Ballard Tribune",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": true,
+		"bhs_year": null,
+		"heritage": [],
+		"mp3": [
+			"10_Crawford_Francis_Kitty_Grace_audio.mp3"
+		],
+		"transcripts": [
+			"10_Crawford_Kitty_Grace_transcript.pdf"
+		],
+		"images": [],
+		"other_media": [
+			"10_Crawford_Kitty_Article_01.pdf",
+			"10_Crawford_Kitty_Article_02.pdf"
+		],
+		"places": [
+			115
+		],
+		"employers": [
+			"Ballard_Tribune",
+			"Puget_Sound_News"
+		],
+		"family_professions": []
+	},
+	"11": {
+		"name": "Esther Crossett",
+		"description": "Esther Crossett's family had a grocery on Ballard Avenue.",
+		"year_born": 1904,
+		"gender": "F",
+		"other_names": "Berner",
+		"birthplace": "Ballard",
+		"occupation": "",
+		"employer": "Rhodes_Department_Store",
+		"born_in_ballard": true,
+		"profession": "",
+		"ballard_childhood": true,
+		"legacy_business_connection": "",
+		"association": "Ballard Avenue",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"Hungarian"
+		],
+		"mp3": [
+			"11_Crossett_Esther_1991_August_15_parts_1_2_audio.mp3",
+			"11_Crossett_Esther_1991_August_15_parts_3_4_audio.mp3"
+		],
+		"transcripts": [
+			"11_Crossett_Esther_partial_transcript.pdf"
+		],
+		"images": [],
+		"other_media": [
+			"11_Crossett_Esther_Article_01.pdf"
+		],
+		"places": [
+			116,
+			117,
+			160,
+			163
+		],
+		"employers": [
+			"Rhodes_Department_Store"
+		],
+		"family_professions": [
+			"Grocer"
+		]
+	},
+	"12": {
+		"name": "Ray Denend",
+		"description": "Noted local musican (banjo player) Ray recalls the Ballard bars where he played, before settling down as a locksmith.",
+		"year_born": 1914,
+		"gender": "M",
+		"other_names": "Moen",
+		"birthplace": "Ballard",
+		"occupation": "musician",
+		"employer": "Seattle_Cedar",
+		"born_in_ballard": true,
+		"profession": "Locksmith",
+		"ballard_childhood": true,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": true,
+		"bhs_year": "Dropped out",
+		"heritage": [
+			"American"
+		],
+		"mp3": [
+			"12_Dened_Ray_audio.mp3"
+		],
+		"transcripts": [
+			"12_Dened_Ray_transcript.pdf"
+		],
+		"images": [
+			"12_Denend_Ray_photo_01.jpg",
+			"12_Denend_Ray_photo_02.jpg",
+			"12_Denend_Ray_photo_03.jpg",
+			"12_Denend_Ray_photo_04.jpg",
+			"12_Denend_Ray_photo_05.jpg"
+		],
+		"other_media": [
+			"12_Denend_Ray_house summary.pdf"
+		],
+		"places": [
+			118
+		],
+		"employers": [
+			"Seattle_Cedar"
+		],
+		"family_professions": [
+			"Fishermen",
+			"Musicians"
+		]
+	},
+	"13": {
+		"name": "Thomas Dunstan",
+		"description": "This architect designed many PNW homes but lived in one in Ballard that is also on its Top 160 Mapping Historic Ballard map.",
+		"year_born": 1919,
+		"gender": "M",
+		"other_names": "",
+		"birthplace": "",
+		"occupation": "architect",
+		"employer": "",
+		"born_in_ballard": false,
+		"profession": "Architect",
+		"ballard_childhood": false,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "Top 160",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"American"
+		],
+		"mp3": [],
+		"transcripts": [
+			"13_Dunstan_Thomas_background.pdf"
+		],
+		"images": [
+			"13_Dunstan_Thomas_photo_01.jpeg",
+			"13_Dunstan_Thomas_photo_02.jpeg"
+		],
+		"other_media": [
+			"13_Dunstan_Thomas_Article_01.pdf",
+			"13_Dunstan_Thomas_obituary.pdf",
+			"13_Dunstan_Thomas_house summary.pdf"
+		],
+		"places": [],
+		"employers": [],
+		"family_professions": []
+	},
+	"14": {
+		"name": "Dorothy Fosberg",
+		"description": "Born Dorothy Jordan to an Icelandic-Irish union, Dorothy worked at Club Tavern on Ballard Avenue many years. Club Tavern is a Seattle Historical Site.",
+		"year_born": 1906,
+		"gender": "F",
+		"other_names": "Jordan",
+		"birthplace": "Bellingham_Washington",
+		"occupation": "barkeep",
+		"employer": "Club_Tavern",
+		"born_in_ballard": false,
+		"profession": "Bartender",
+		"ballard_childhood": true,
+		"legacy_business_connection": "",
+		"association": "Ballard Avenue",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"Icelandic",
+			"Irish"
+		],
+		"mp3": [
+			"14_Fosberg_Dorothy_audio.mp3"
+		],
+		"transcripts": [
+			"14_Fosberg_Dorothy_transcript.pdf"
+		],
+		"images": [],
+		"other_media": [
+			"14_Fosberg_Dorothy_Article_01.pdf"
+		],
+		"places": [
+			120,
+			121
+		],
+		"employers": [
+			"Club_Tavern",
+			"Owl_Tavern",
+			"American Can Company"
+		],
+		"family_professions": []
+	},
+	"15": {
+		"name": "June-and-Tony Gasparovich",
+		"description": "June and her husband Tony were longtime teachers and was known as the famous coach.",
+		"year_born": 1914,
+		"gender": "F",
+		"other_names": "Shinkle",
+		"birthplace": "",
+		"occupation": "teacher",
+		"employer": "Whitman_Middle_School",
+		"born_in_ballard": false,
+		"profession": "",
+		"ballard_childhood": false,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"Yugoslavian"
+		],
+		"mp3": [
+			"15_Gasparovich_June_audio.mp3"
+		],
+		"transcripts": [
+			"15_Gasparovich_June_partial_transcript.pdf"
+		],
+		"images": [],
+		"other_media": [
+			"15_Gasparovich_June_Article_01.pdf",
+			"15_Gasparovich_June_obituary.pdf"
+		],
+		"places": [
+			122,
+			123
+		],
+		"employers": [
+			"Whitman_Middle_School"
+		],
+		"family_professions": []
+	},
+	"16": {
+		"name": "Eli Thomas Hamblet Family",
+		"description": "Eli was a missionary and Ballard Pioneer. His wife Mary daughter of First Nations Chief. Many streets near Ballard High School are named for their children.",
+		"year_born": 1820,
+		"gender": "M",
+		"other_names": "",
+		"birthplace": "",
+		"occupation": "missionary",
+		"employer": "",
+		"born_in_ballard": false,
+		"profession": "Missionary",
+		"ballard_childhood": false,
+		"legacy_business_connection": "",
+		"association": "Ballard Pioneer",
+		"cht_mhb": "Top 160",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"English"
+		],
+		"mp3": [],
+		"transcripts": [
+			""
+		],
+		"images": [
+			"16_Family_Hamblet_Eli_photo_01.jpg",
+			"16_Family_Hamblet_Eli_photo_02.jpg",
+			"16_Family_Hamblet_Eli_photo_03.jpg"
+		],
+		"other_media": [
+			"16_Family_Hamblet_Eli_Article_01.pdf",
+			"16_Family_Hamblet_Eli_Article_02.pdf",
+			"16_Family_Hamblet_Eli_Article_03.pdf",
+			"16_Family_Hamblet_Eli_Article_04.pdf",
+			"16_Family_Hamblet_Eli_Article_05.pdf",
+			"16_Family_Hamblet_Eli_Article_06.pdf",
+			"16_Family_Hamblet_Eli_house summary.pdf",
+			"16_Family_Hamblet_Mary_1887_King County_Census.pdf"
+		],
+		"places": [
+			124
+		],
+		"employers": [],
+		"family_professions": [
+			"Homesteader"
+		]
+	},
+	"17": {
+		"name": "Izetta Spearman Hatcher",
+		"description": "An African-American family known for its corner garden, the siblings all had distinguished careers and one home is still in the family. \"Sure I was different. I was Black.\"",
+		"year_born": 1923,
+		"gender": "F",
+		"other_names": "Spearman",
+		"birthplace": "Ballard",
+		"occupation": "nurse",
+		"employer": "",
+		"born_in_ballard": true,
+		"profession": "Nurse",
+		"ballard_childhood": true,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": true,
+		"bhs_year": "1941",
+		"heritage": [
+			"African-American"
+		],
+		"mp3": [
+			"17_Hatcher_Izetta_Spearman_audio.mp3"
+		],
+		"transcripts": [
+			"17_Hatcher_Izetta_Spearman_transcript.pdf"
+		],
+		"images": [
+			"17_Hatcher_Izetta_photo_01_MOHAI.jpg",
+			"17_Hatcher_Izetta Spearman_Austin_photo_02.jpg",
+			"17_Hatcher_Izetta Spearman_Florise_photo_03.jpg",
+			"17_Hatcher_Izetta Spearman_photo_04.jpg",
+			"17_Hatcher_Izetta Spearman_photo_05.jpg"
+		],
+		"other_media": [
+			"17_Hatcher_Izetta_Article_01.pdf",
+			"17_Hatcher_Izetta_Article_02.pdf",
+			"17_Hatcher_Izetta_Article_03.pdf",
+			"17_Hatcher_Izetta_Article_04.pdf",
+			"17_Hatcher_Izetta_1920_US_Census.jpg",
+			"17_Hatcher_Izetta_1930_US_Census.jpg",
+			"17_Hatcher_Izetta_1940_US_Census.jpg",
+			"17_Hatcher_Izetta Spearman_Florise_obituary.pdf",
+			"17_Hatcher_Izetta Spearman_Austin_marriage_certificate.jpg"
+		],
+		"places": [
+			125,
+			161
+		],
+		"employers": [],
+		"family_professions": []
+	},
+	"18": {
+		"name": "Vivian Jacobsen",
+		"description": "From a French-Irish boatbuilding family, Vivian Herron Jacobsen had a Ballard childhood.",
+		"year_born": 1901,
+		"gender": "F",
+		"other_names": "Herron",
+		"birthplace": "Eau_Claire_Wisconsin",
+		"occupation": "candy_machine_operator",
+		"employer": "Imperial_Candy",
+		"born_in_ballard": false,
+		"profession": "",
+		"ballard_childhood": true,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": true,
+		"bhs_year": "Attended one year",
+		"heritage": [
+			"French",
+			"Canadian",
+			"Irish"
+		],
+		"mp3": [
+			"18_Jacobsen_Vivian_Herron_A_audio.mp3",
+			"18_Jacobsen_Vivian_Herron_B_audio.mp3"
+		],
+		"transcripts": [
+			"18_Jacobsen_Vivian_Herron_transcript.pdf"
+		],
+		"images": [],
+		"other_media": [],
+		"places": [
+			163,
+			126,
+			127,
+			128
+		],
+		"employers": [
+			"Imperial_Candy"
+		],
+		"family_professions": [
+			"Builder",
+			"Fisherman"
+		]
+	},
+	"19": {
+		"name": "Axel & Lucille Johnson",
+		"description": "Ballard childhood with memories of sawmills, the old Ballard Bridge and Swedish, Irish, Norwegian, Polish schooldays",
+		"year_born": 1909,
+		"gender": "Married",
+		"other_names": "Moran",
+		"birthplace": "",
+		"occupation": "",
+		"employer": "",
+		"born_in_ballard": false,
+		"profession": "Farming",
+		"ballard_childhood": true,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"Swedish",
+			"Norwegian"
+		],
+		"mp3": [
+			"19_Johnson_Axel_Lucille_A_audio.mp3",
+			"19_Johnson_Axel_Lucille_B_audio.mp3",
+			"19_Johnson_Axel_Lucille_C_audio.mp3"
+		],
+		"transcripts": [
+			"19_Johnson_Axel & Lucille_background.pdf"
+		],
+		"images": [],
+		"other_media": [],
+		"places": [
+			129,
+			130,
+			162
+		],
+		"employers": [],
+		"family_professions": []
+	},
+	"20": {
+		"name": "Isak & Jakobina Johnson",
+		"description": "Icelandic-born, he was an architect, she was famous writer/poet/translator. Lived in two of most historic homes, and raised 5 sons.",
+		"year_born": 1888,
+		"gender": "Married",
+		"other_names": "",
+		"birthplace": "Iceland",
+		"occupation": "Poetess",
+		"employer": "",
+		"born_in_ballard": false,
+		"profession": "Poetess",
+		"ballard_childhood": false,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"Icelandic"
+		],
+		"mp3": [],
+		"transcripts": [
+			"20_Johnson_Isak & Jakobina_background.pdf"
+		],
+		"images": [
+			"20_Johnson_Isak & Jakobina_photo_01.jpeg",
+			"20_Johnson_Isak & Jakobina_photo_02.jpeg"
+		],
+		"other_media": [
+			"20_Johnson_Isak & Jakobina_Article_01.pdf",
+			"20_Johnson_Isak & Jakobina_Article_02.pdf",
+			"20_Johnson_Isak & Jakobina_Article_03.pdf",
+			"20_Johnson_Isak & Jakobina_Article_04.pdf",
+			"20_Johnson_Isak & Jakobina_Article_05.pdf",
+			"20_Johnson_Isak & Jakobina_historical summary.pdf"
+		],
+		"places": [
+			131,
+			132
+		],
+		"employers": [],
+		"family_professions": [
+			"Architect"
+		]
+	},
+	"21": {
+		"name": "Henry & Ida Johnson",
+		"description": "Family history by Jeanette Reynolds. House still stands!",
+		"year_born": 1859,
+		"gender": "Married",
+		"other_names": "",
+		"birthplace": "Finland",
+		"occupation": "",
+		"employer": "",
+		"born_in_ballard": false,
+		"profession": "",
+		"ballard_childhood": false,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"Finnish"
+		],
+		"mp3": [],
+		"transcripts": [
+			"21_Johnson_Henry & Ida_house background.pdf"
+		],
+		"images": [],
+		"other_media": [],
+		"places": [
+			133
+		],
+		"employers": [],
+		"family_professions": []
+	},
+	"22": {
+		"name": "Jessie Kidd",
+		"description": "Iconic, historic home was owned by this hardworking Scottish laundress.",
+		"year_born": 1859,
+		"gender": "F",
+		"other_names": "Kidd",
+		"birthplace": "",
+		"occupation": "laundress",
+		"employer": "",
+		"born_in_ballard": false,
+		"profession": "Laundry Worker",
+		"ballard_childhood": false,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"Scottish"
+		],
+		"mp3": [],
+		"transcripts": [
+			"22_Kidd_Jessie_background.pdf"
+		],
+		"images": [
+			"22_Kidd_Jessie_photo_01.jpeg",
+			"22_Kidd_Jessie_photo_02.jpg"
+		],
+		"other_media": [
+			"22_Kidd_Jessie_Article_01.pdf",
+			"22_Kidd_Jessie_Article_02.pdf",
+			"22_Kidd_Madge_death_certificate.jpg",
+			"22_Kidd_Jessie_obituary.pdf"
+		],
+		"places": [
+			134
+		],
+		"employers": [],
+		"family_professions": [
+			"Landlord"
+		]
+	},
+	"23": {
+		"name": "Anna & Frank Kvam",
+		"description": "Sister & brother reminisce of old Ballard Bridge, raw milk, chicken sales and living near St. Alphonsus.",
+		"year_born": 1887,
+		"gender": "Married",
+		"other_names": "Jensen",
+		"birthplace": "",
+		"occupation": "",
+		"employer": "",
+		"born_in_ballard": false,
+		"profession": "",
+		"ballard_childhood": false,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [],
+		"mp3": [
+			"23_Kvam_Anna_Jensen_audio.mp3"
+		],
+		"transcripts": [
+			"23_Kvam_Anna_transcript.pdf"
+		],
+		"images": [],
+		"other_media": [],
+		"places": [
+			135,
+			165
+		],
+		"employers": [],
+		"family_professions": []
+	},
+	"24": {
+		"name": "Sakaye Matsuda",
+		"description": "Matsudas were one of the first Japanese-American families to own a home in Ballard. He worked for Bolcom at his residence. Matsudas owned 32nd St. business. Children attended Webster & BHS. Interned in Minidoka. Son Frank was in the 442nd Regiment and awarded Congressional Gold Medal.",
+		"year_born": null,
+		"gender": "M",
+		"other_names": "",
+		"birthplace": "Japan",
+		"occupation": "",
+		"employer": "",
+		"born_in_ballard": false,
+		"profession": "Gardener",
+		"ballard_childhood": false,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"Japanese"
+		],
+		"mp3": [],
+		"transcripts": [
+			"24_Matsuda_Sakaye_background.pdf"
+		],
+		"images": [
+			"24_Matsuda_Sakaye_ photo_01.jpg",
+			"24_Matsuda_Sakaye_ photo_02.jpg",
+			"24_Matsuda_Sakaye_ photo_03.jpg",
+			"24_Matsuda_Sakaye_daughter_Sally_photo_04.jpg",
+			"24_Matsuda_Sakaye_photo_05.JPG"
+		],
+		"other_media": [
+			"24_Matsuda_Sakaye_Article_01.pdf",
+			"24_Matsuda_Sakaye_Article_02.pdf",
+			"24_Matsuda_Sakaye_Article_03.pdf",
+			"24_Matsuda_Frank_obituary.pdf",
+			"24_Matsuda_Frank_draft card.pdf"
+		],
+		"places": [
+			136,
+			137,
+			138,
+			139,
+			158
+		],
+		"employers": [],
+		"family_professions": [
+			"Drycleaning"
+		]
+	},
+	"25": {
+		"name": "Veida Metcalf",
+		"description": "\"I didn't need an organization to liberate me, I was born liberated.\" Attorney With Ballard & Greenwood childhood. Father (Morrow) was a renegade Catholic who wanted to have land. He cleared 10 acres.",
+		"year_born": 1902,
+		"gender": "F",
+		"other_names": "Morrow",
+		"birthplace": "Ballard",
+		"occupation": "attorney",
+		"employer": "",
+		"born_in_ballard": true,
+		"profession": "Truck gardening",
+		"ballard_childhood": false,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": true,
+		"bhs_year": "1917",
+		"heritage": [],
+		"mp3": [
+			"25_Metcalf_Veida_audio.mp3"
+		],
+		"transcripts": [
+			"25_Metcalf_Veida_transcript.pdf"
+		],
+		"images": [
+			"25_Metcalf_Veida_photo_01.jpg"
+		],
+		"other_media": [
+			"25_Metcalf_Veida_Article_01.pdf",
+			"25_Metcalf_Veida_Article_02.pdf",
+			"25_Metcalf_Veida_details.pdf"
+		],
+		"places": [
+			140
+		],
+		"employers": [],
+		"family_professions": [
+			"Newspaper_editor"
+		]
+	},
+	"26": {
+		"name": "Agnes Minear",
+		"description": "Born to Ballard Pioneer Hugh Kath (produce farmer) Agnes tap danced her Ballard childhood and remained musical.",
+		"year_born": 1902,
+		"gender": "F",
+		"other_names": "Kath",
+		"birthplace": "Ballard",
+		"occupation": "loan_officer",
+		"employer": "",
+		"born_in_ballard": true,
+		"profession": "",
+		"ballard_childhood": true,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"German"
+		],
+		"mp3": [
+			"26_Minear_Agnes_audio.mp3"
+		],
+		"transcripts": [
+			"26_Minear_Agnes_transcript.pdf"
+		],
+		"images": [
+			"26_Minear_Agnes_ photo_01.jpg",
+			"26_Minear_Agnes_ photo02.jpg",
+			"26_Minear_Agnes_ photo_03.jpg"
+		],
+		"other_media": [
+			"26_ Minear_Agnes_Article_01.pdf"
+		],
+		"places": [
+			141
+		],
+		"employers": [],
+		"family_professions": []
+	},
+	"27": {
+		"name": "Martin Nowicki",
+		"description": "Blacksmith and 1st Chairman of Polish-American Club. House still stands.",
+		"year_born": 1840,
+		"gender": "M",
+		"other_names": "",
+		"birthplace": "Poland",
+		"occupation": "blacksmith",
+		"employer": "",
+		"born_in_ballard": false,
+		"profession": "",
+		"ballard_childhood": false,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"Polish",
+			"Poland"
+		],
+		"mp3": [],
+		"transcripts": [
+			""
+		],
+		"images": [
+			"27_Nowicki_Martin_photo_01.jpg",
+			"27_Nowicki_Martin_photo_02.jpg",
+			"27_Nowicki_Martin_photo_03.jpg",
+			"27_Nowicki_Martin_photo_04.jpg",
+			"27_Nowicki_Martin_photo_05.jpg"
+		],
+		"other_media": [
+			"27_Nowicki_Martin_house summary.pdf",
+			"27_Nowicki_Martin_Article_01.jpg",
+			"27_Nowicki_Martin_Article_02.jpg"
+		],
+		"places": [
+			142,
+			143
+		],
+		"employers": [],
+		"family_professions": []
+	},
+	"28": {
+		"name": "Bernice Jonson Olson",
+		"description": "Known as \"barracuda of Ballard\" the family law business is in its 5th generation.",
+		"year_born": 1914,
+		"gender": "F",
+		"other_names": "Olson",
+		"birthplace": "",
+		"occupation": "attorney",
+		"employer": "Jonson_Law",
+		"born_in_ballard": false,
+		"profession": "Attorney",
+		"ballard_childhood": false,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"Swedish",
+			"Norwegian"
+		],
+		"mp3": [
+			"28_Olson_Bernice_Jonson_audio.mp3"
+		],
+		"transcripts": [
+			"28_Olson_Bernice_Jonson_transcript"
+		],
+		"images": [
+			"28_Olson_Bernice_ and_Olson_men_photo_01.jpg"
+		],
+		"other_media": [
+			"28_Jonson_Bernice_obituary.pdf"
+		],
+		"places": [
+			144
+		],
+		"employers": [
+			"Jonson_Law"
+		],
+		"family_professions": [
+			"Attorneys",
+			"Pharmacy"
+		]
+	},
+	"30": {
+		"name": "Ted & Ruth Peterson",
+		"description": "Marine diver, politician, this Swedish family's legacy lives on in Ballard Bell. Ted interviewed his mom Ruth.",
+		"year_born": 1904,
+		"gender": "M",
+		"other_names": "",
+		"birthplace": "Ballard",
+		"occupation": "state senator",
+		"employer": "Washington State",
+		"born_in_ballard": false,
+		"profession": "politician",
+		"ballard_childhood": true,
+		"legacy_business_connection": "",
+		"association": "Ballard Bell",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"Swedish"
+		],
+		"mp3": [],
+		"transcripts": [
+			"30_Peterson_Ruth_transcript.pdf"
+		],
+		"images": [
+			"30_Peterson_Ted_photo_01.jpg",
+			"30_Peterson_Ted_photo_02.jpg",
+			"30_Peterson_Ted_photo_03.jpg",
+			"30_Peterson_Ted_photo_04.jpg",
+			"30_Peterson_Ted_photo_05.jpg",
+			"30_Peterson_Ted_photo_06.jpg",
+			"30_Peterson_Ted_photo_07.jpg"
+		],
+		"other_media": [
+			"30_Peterson_Ted_Article_01.pdf",
+			"30_Peterson_Ted_book_excerpt_01.pdf",
+			"30_Peterson_Ted_book_excerpt_02.pdf",
+			"30_Peterson_Ted_obituary.pdf"
+		],
+		"places": [
+			146,
+			160,
+			163,
+			166
+		],
+		"employers": [
+			"Washington State"
+		],
+		"family_professions": []
+	},
+	"33": {
+		"name": "Anna Sortland",
+		"description": "Worked from age 13 on. Played in a string band. Cows, blackberries (120 quarts!), North Beach, a house full of cousins.",
+		"year_born": 1906,
+		"gender": "F",
+		"other_names": "Larsen",
+		"birthplace": "Wisconsin",
+		"occupation": "",
+		"employer": "",
+		"born_in_ballard": false,
+		"profession": "",
+		"ballard_childhood": false,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [],
+		"mp3": [
+			"33_Sortland_Anna_audio.mp3"
+		],
+		"transcripts": [
+			"33_Sortland_Anna_transcript.pdf"
+		],
+		"images": [],
+		"other_media": [],
+		"places": [
+			149
+		],
+		"employers": [],
+		"family_professions": []
+	},
+	"34": {
+		"name": "Dorothy Starr",
+		"description": "\"I wish a had a dollar for every footprint I put on Ballard Beach or Golden Gardens, I'd be a millionaire.\" From cute baby at Pike Place Market to father losing home in Depression, dancing through her teens and living near St. Al's.",
+		"year_born": 1912,
+		"gender": "F",
+		"other_names": "Dawley",
+		"birthplace": "Ballard",
+		"occupation": "",
+		"employer": "",
+		"born_in_ballard": true,
+		"profession": "",
+		"ballard_childhood": true,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"Siberia"
+		],
+		"mp3": [
+			"34_Starr_Dorothy_audio.mp3"
+		],
+		"transcripts": [
+			"34_Starr_Dorothy_transcript.pdf"
+		],
+		"images": [],
+		"other_media": [
+			"34_Starr_Dorothy_Article_01.pdf",
+			"34_Starr_Dorothy_Article_02.pdf",
+			"34_Starr_Walter_draft_card.pdf"
+		],
+		"places": [
+			160,
+			148,
+			150,
+			163,
+			165,
+			171
+		],
+		"employers": [],
+		"family_professions": []
+	},
+	"35": {
+		"name": "Jerrine Strom",
+		"description": "Her mom Lydia McClean was in first BHS graduation class. House was near the reservoir pre-annexation.",
+		"year_born": 1920,
+		"gender": "F",
+		"other_names": "Peterson",
+		"birthplace": "Ballard",
+		"occupation": "",
+		"employer": "American Can Company",
+		"born_in_ballard": true,
+		"profession": "",
+		"ballard_childhood": true,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"Norwegian",
+			"Scottish"
+		],
+		"mp3": [],
+		"transcripts": [
+			"35_Strom_Jerrine_transcript.pdf"
+		],
+		"images": [],
+		"other_media": [],
+		"places": [
+			151,
+			160
+		],
+		"employers": [
+			"American Can Company"
+		],
+		"family_professions": [
+			"Dairy Farm",
+			"Shingle Weaver",
+			"Purse Seiner"
+		]
+	},
+	"36": {
+		"name": "James Taylor",
+		"description": "Lived next to Jessie Kidd. African-American dogcatcher.House still stands.",
+		"year_born": 1881,
+		"gender": "M",
+		"other_names": "",
+		"birthplace": "South_Carolina",
+		"occupation": "dogcatcher",
+		"employer": "City_of_Seattle",
+		"born_in_ballard": false,
+		"profession": "Dogcatcher",
+		"ballard_childhood": false,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"African-American"
+		],
+		"mp3": [],
+		"transcripts": [
+			"36_Taylor_James_background.pdf"
+		],
+		"images": [],
+		"other_media": [
+			"36_Taylor_James_Article_01.pdf",
+			"36_Taylor_James_Article_02.pdf",
+			"36_Taylor_James_Article_03.pdf",
+			"36_Taylor_James_Article_04.pdf",
+			"36_Taylor_James_Article_05.pdf",
+			"36_Taylor_James_Article_06.pdf"
+		],
+		"places": [
+			152
+		],
+		"employers": [
+			"City_of_Seattle"
+		],
+		"family_professions": []
+	},
+	"37": {
+		"name": "Frank Thompson_HelenCahill",
+		"description": "Born at home to fishing families they stayed Ballard.",
+		"year_born": 1914,
+		"gender": "M",
+		"other_names": "Hansen",
+		"birthplace": "Fremont",
+		"occupation": "drug_store_worker",
+		"employer": "Lincoln_Pharmacy",
+		"born_in_ballard": true,
+		"profession": "",
+		"ballard_childhood": false,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": true,
+		"bhs_year": "1932",
+		"heritage": [
+			"Norwegian"
+		],
+		"mp3": [],
+		"transcripts": [
+			"37_Thompson_Frank_transcript.pdf"
+		],
+		"images": [],
+		"other_media": [],
+		"places": [
+			153,
+			154,
+			167
+		],
+		"employers": [
+			"Lincoln_Pharmacy"
+		],
+		"family_professions": [
+			"Fishermen",
+			"boat_builders"
+		]
+	},
+	"38": {
+		"name": "Maxine Tuck",
+		"description": "Maxine dishes on Polish Town, mill fires, working at \"Boeings,\" anti-Japanese sentiment after Pearl Harbor, Crazy Mary, her dad working for Bolcom and a lifetime in Ballard.",
+		"year_born": 1923,
+		"gender": "F",
+		"other_names": "Shallow",
+		"birthplace": "Ballard",
+		"occupation": "",
+		"employer": "Seattle_City_Light",
+		"born_in_ballard": true,
+		"profession": "",
+		"ballard_childhood": true,
+		"legacy_business_connection": "",
+		"association": "St. Alphonsus",
+		"cht_mhb": "",
+		"bhs_grad": true,
+		"bhs_year": null,
+		"heritage": [
+			"Polish",
+			"German"
+		],
+		"mp3": [
+			"38_Tuck_Maxine_audio.mp3"
+		],
+		"transcripts": [
+			"38_Tuck_Maxine_Shallow_transcript.pdf"
+		],
+		"images": [
+			"38_Tuck_Maxine_photo_01_cedar_mill_fire_1958.jpg"
+		],
+		"other_media": [],
+		"places": [
+			155,
+			159,
+			165
+		],
+		"employers": [
+			"Seattle_City_Light"
+		],
+		"family_professions": [
+			"Lumber",
+			"Balcom Mill"
+		]
+	},
+	"39": {
+		"name": "Mary Lou Wilson",
+		"description": "Ballard Beach, blackberries, visiting German grandmother and Miss Lund at Carnegie Library.",
+		"year_born": 1920,
+		"gender": "F",
+		"other_names": "Hoyt",
+		"birthplace": "Ballard",
+		"occupation": "",
+		"employer": "",
+		"born_in_ballard": true,
+		"profession": "",
+		"ballard_childhood": true,
+		"legacy_business_connection": "Carnegie",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"German"
+		],
+		"mp3": [
+			"39_Wilson_MaryLou_audio.mp3"
+		],
+		"transcripts": [
+			"39_Wilson_MaryLou_transcript.pdf"
+		],
+		"images": [],
+		"other_media": [],
+		"places": [],
+		"employers": [],
+		"family_professions": []
+	},
+	"40": {
+		"name": "Margaret Wandrey",
+		"description": "Ballard pioneer who wrote \"Four Bridges to Seattle:Old Ballard 1853-1907\"",
+		"year_born": 1893,
+		"gender": "F",
+		"other_names": "Bjornson",
+		"birthplace": "Ballard",
+		"occupation": "Ballard historian",
+		"employer": "",
+		"born_in_ballard": true,
+		"profession": "Writer",
+		"ballard_childhood": false,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"Icelandic"
+		],
+		"mp3": [],
+		"transcripts": [
+			"40_Wandrey_Margaret_transcript.pdf"
+		],
+		"images": [],
+		"other_media": [
+			"40_Ballard_Pioneers_Wandrey_Margaret_Article_01.pdf",
+			"40_Bjornson_Anna_sister_of_Wandrey_Margaret_Article_02.pdf",
+			"40_Bjornson_father-of-Wandrey_Margaret_Article_03.pdf"
+		],
+		"places": [
+			168,
+			170
+		],
+		"employers": [],
+		"family_professions": []
+	},
+	"41": {
+		"name": "Louise Wylie",
+		"description": "Lynn & Morris Moen interview Aunt Louise about growing up in Ballard, and being only one in family to graduate.",
+		"year_born": 1895,
+		"gender": "F",
+		"other_names": "Moen",
+		"birthplace": "Ballard",
+		"occupation": "wife",
+		"employer": "American Can Company",
+		"born_in_ballard": true,
+		"profession": "",
+		"ballard_childhood": true,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": true,
+		"bhs_year": "1915",
+		"heritage": [
+			"Norwegian"
+		],
+		"mp3": [
+			"41_Wylie_Louise_A_audio.mp3",
+			"41_Wylie_Louise_B_audio.mp3"
+		],
+		"transcripts": [
+			"41_Wylie_Louise_transcript.pdf"
+		],
+		"images": [],
+		"other_media": [],
+		"places": [
+			156,
+			157
+		],
+		"employers": [
+			"American Can Company"
+		],
+		"family_professions": []
+	},
+	"42": {
+		"name": "Mary Complita",
+		"description": "\"My obituary will say Mary Gale Complita because there are so many Mary's.\" Runner-up for Mrs. Ballard contest.",
+		"year_born": 1908,
+		"gender": "F",
+		"other_names": "",
+		"birthplace": "California",
+		"occupation": "",
+		"employer": "",
+		"born_in_ballard": false,
+		"profession": "",
+		"ballard_childhood": false,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"Yugoslavian"
+		],
+		"mp3": [
+			"07_Complita_Louis_Mary_audio.mp3"
+		],
+		"transcripts": [
+			""
+		],
+		"images": [],
+		"other_media": [],
+		"places": [],
+		"employers": [],
+		"family_professions": []
+	},
+	"44": {
+		"name": "Mary Hamblet",
+		"description": "Daughter of Chief of the Kitsalas, one of the various Tshumshian tribes in Metlakatla, British Columbia. Mary Avenue is named for her, and Alonzo for her son.",
+		"year_born": 1840,
+		"gender": "F",
+		"other_names": "Chief of Kitsalas Tribe Tsumshian",
+		"birthplace": "Metlakatla, BC",
+		"occupation": "matriarch",
+		"employer": "",
+		"born_in_ballard": false,
+		"profession": "Mother",
+		"ballard_childhood": false,
+		"legacy_business_connection": "",
+		"association": "",
+		"cht_mhb": "",
+		"bhs_grad": false,
+		"bhs_year": null,
+		"heritage": [
+			"Native Alaskan",
+			"Tsumshian"
+		],
+		"mp3": [],
+		"transcripts": [
+			""
+		],
+		"images": [],
+		"other_media": [],
+		"places": [],
+		"employers": [],
+		"family_professions": []
+	}
+}

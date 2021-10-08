@@ -1,0 +1,7 @@
+
+*.DS_Store
+datasync/token.json
+datasync/client_secret*.json
+datasync/credentials.json
+datasync/tokens/*
+datasync/temp_*

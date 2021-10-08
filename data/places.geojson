@@ -1,0 +1,1280 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 101,
+				"type": "",
+				"address": "6518 26 Ave NW, Seattle WA, 98107",
+				"people": [
+					1
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3894652,
+					47.676471
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 102,
+				"type": "business",
+				"address": "5445 Ballard Ave NW, Seattle WA,",
+				"people": [
+					1
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3861111,
+					47.66833330000001
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 103,
+				"type": "",
+				"address": "1752 NW 57 St., Seattle WA, 98107",
+				"people": [
+					2
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3811384,
+					47.6704125
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 104,
+				"type": "business",
+				"address": "4455 Shilshole Ave NW, Seattle WA, 98107",
+				"people": [
+					2
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3753887,
+					47.661081
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 105,
+				"type": "",
+				"address": "7339 25 Ave NW, Seattle WA, 98117",
+				"people": [
+					3
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3889668,
+					47.68249
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 106,
+				"type": "",
+				"address": "2852 NW 56 St., Seattle WA, 98107",
+				"people": [
+					3
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3949258,
+					47.6696563
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 107,
+				"type": "",
+				"address": "6550 16 Ave NW, Seattle WA, 98117",
+				"people": [
+					4
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3775858,
+					47.67740209999999
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 108,
+				"type": "",
+				"address": "3002 NW 60 St., Seattle WA, 98107",
+				"people": [
+					5
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3958239,
+					47.6724569
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 109,
+				"type": "",
+				"address": "3018 NW 59 St., Seattle WA, 98107",
+				"people": [
+					5
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3966361,
+					47.6718154
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 110,
+				"type": "",
+				"address": "8024 27 Ave NW, Seattle WA 98117",
+				"people": [
+					6
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3906146,
+					47.68757
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 111,
+				"type": "",
+				"address": "3615 NW 62 St., Seattle WA, 98107",
+				"people": [
+					7
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.4043219,
+					47.6737614
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 112,
+				"type": "",
+				"address": "6001 Seaview Ave NW, Seattle WA, 98107",
+				"people": [
+					7
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.4061696,
+					47.6720957
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 113,
+				"type": "",
+				"address": "9732 12 Ave NW, Seattle WA, 98117",
+				"people": [
+					8
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3710945,
+					47.7011938
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 114,
+				"type": "",
+				"address": "2235 NW 61 St., Seattle WA, 98107",
+				"people": [
+					9
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3861901,
+					47.6728869
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 115,
+				"type": "",
+				"address": "7752 20 Ave NW, Seattle WA, 98117",
+				"people": [
+					10
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.381829,
+					47.6865696
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 116,
+				"type": "",
+				"address": "2430 NW 64 St., Seattle WA, 98107",
+				"people": [
+					11
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.389103,
+					47.675517
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 117,
+				"type": "business",
+				"address": "4739 Ballard Ave NW, Seattle WA, 98107",
+				"people": [
+					11
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3801915,
+					47.6634597
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 118,
+				"type": "",
+				"address": "1723 NW 64 St., Seattle WA, 98107",
+				"people": [
+					12
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.379991,
+					47.6750113
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 120,
+				"type": "",
+				"address": "6019 6th Ave NW, Seattle WA, 98107",
+				"people": [
+					14
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3642967,
+					47.67297749999999
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 121,
+				"type": "business",
+				"address": "5144 Ballard Ave NW, Seattle WA, 98107",
+				"people": [
+					14
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3818854,
+					47.665544
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 122,
+				"type": "school",
+				"address": "1810 NW 65 St., Seattle WA, 98117",
+				"people": [
+					15
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3804807,
+					47.6765526
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 123,
+				"type": "school",
+				"address": "1418 NW 65 St., Seattle WA, 98117",
+				"people": [
+					15
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.374338,
+					47.676859
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 124,
+				"type": "",
+				"address": "6734 12th NW, Seattle WA, 98117",
+				"people": [
+					16
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3716327,
+					47.6788415
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 125,
+				"type": "",
+				"address": "7334 12th NW, Seattle WA, 98117",
+				"people": [
+					17
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3711259,
+					47.6824856
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 126,
+				"type": "",
+				"address": "2832 NW 63 St., Seattle WA, 98107",
+				"people": [
+					18
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3944497,
+					47.67465019999999
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 127,
+				"type": "",
+				"address": "6552 Earl Ave NW, Seattle WA, 98117",
+				"people": [
+					18
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3916192,
+					47.6773882
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 128,
+				"type": "",
+				"address": "3038 NW 64 St., Seattle WA, 98107",
+				"people": [
+					18
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3973618,
+					47.6753599
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 129,
+				"type": "",
+				"address": "7044 Jones Ave NW, Seattle WA, 98117",
+				"people": [
+					19
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3861934,
+					47.68077419999999
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 130,
+				"type": "",
+				"address": "8353 21 Ave NW, Seattle WA, 98117",
+				"people": [
+					19
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3835798,
+					47.6902202
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 131,
+				"type": "",
+				"address": "8025 25 Ave NW, Seattle WA, 98117",
+				"people": [
+					20
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3890191,
+					47.687602
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 132,
+				"type": "",
+				"address": "3208 NW 59 St., Seattle WA, 98107",
+				"people": [
+					20
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.398722,
+					47.6715853
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 133,
+				"type": "",
+				"address": "1429 NW 51 St., Seattle WA, 98107",
+				"people": [
+					21
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3748785,
+					47.6655323
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 134,
+				"type": "",
+				"address": "1031 NW 65 St., Seattle WA, 98107",
+				"people": [
+					22
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3711857,
+					47.6758202
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 135,
+				"type": "",
+				"address": "326 NW 51 St., Seattle WA, 98107",
+				"people": [
+					23
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.36185,
+					47.665947
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 136,
+				"type": "",
+				"address": "2840 NW 69 St., Seattle WA, 98117",
+				"people": [
+					24
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3948727,
+					47.6788909
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 137,
+				"type": "business",
+				"address": "6403 32 Ave NW, Seattle WA, 98107",
+				"people": [
+					24
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3986332,
+					47.6750101
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 138,
+				"type": "",
+				"address": "8031 32 Ave NW, Seattle WA, 98117",
+				"people": [
+					24
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3993105,
+					47.6877402
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 139,
+				"type": "",
+				"address": "2853 NW 69 St., Seattle. WA, 98117",
+				"people": [
+					24
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3952381,
+					47.6785504
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 140,
+				"type": "",
+				"address": "8500 Greenwood Ave N, Seattle WA",
+				"people": [
+					25
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3549794,
+					47.6907587
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 141,
+				"type": "",
+				"address": "8830 31 Ave NW, Seattle WA, 98117",
+				"people": [
+					26
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3966495,
+					47.6933056
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 142,
+				"type": "",
+				"address": "6756 22 Ave NW, Seattle WA, 98117",
+				"people": [
+					27
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3839661,
+					47.679376
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 143,
+				"type": "Polish Hall",
+				"address": "2025 NW 62nd Street, Seattle WA, 98107",
+				"people": [
+					27
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.383437,
+					47.6736361
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 144,
+				"type": "business",
+				"address": "1734 NW Market St., Seattle WA, 98107",
+				"people": [
+					28
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3803147,
+					47.6689528
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 146,
+				"type": "",
+				"address": "7710 31 Ave NW, Seattle WA, 98117",
+				"people": [
+					30
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3966659,
+					47.6853156
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 148,
+				"type": "",
+				"address": "2249 NW 62 St., Seattle WA, 98107",
+				"people": [
+					34
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3867608,
+					47.6736283
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 149,
+				"type": "",
+				"address": "7346 21 Ave NW, Seattle WA, 98117",
+				"people": [
+					33
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3829925,
+					47.6826532
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 150,
+				"type": "",
+				"address": "357 NW 77 St., Seattle WA, 98117",
+				"people": [
+					34
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3631673,
+					47.6845249
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 151,
+				"type": "",
+				"address": "7351 24 Ave NW, Seattle WA, 98117",
+				"people": [
+					35
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3878283,
+					47.6828741
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 152,
+				"type": "",
+				"address": "1027 NW 65 St., Seattle WA, 98107",
+				"people": [
+					36
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3709489,
+					47.6758092
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 153,
+				"type": "",
+				"address": "2637 NW 59 St., Seattle WA, 98107",
+				"people": [
+					37
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3917552,
+					47.6714275
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 154,
+				"type": "",
+				"address": "2848 NW 60 St., Seattle WA 98107",
+				"people": [
+					37
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3950567,
+					47.672443
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 155,
+				"type": "",
+				"address": "367 NW 58 St., Seattle WA, 98107",
+				"people": [
+					38
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3617412,
+					47.6707426
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 156,
+				"type": "",
+				"address": "6212 NW 63 St., Seattle WA, 98107",
+				"people": [
+					41
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3983606,
+					47.67443129999999
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 157,
+				"type": "",
+				"address": "6513 32 Ave NW, Seattle WA, 98117",
+				"people": [
+					41
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3986795,
+					47.67621219999999
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 158,
+				"type": "",
+				"address": "8041 32 Ave NW, Seattle WA, 98117",
+				"people": [
+					24
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3992776,
+					47.6880037
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 159,
+				"type": "",
+				"address": "938 NW 51st St., Seattle WA,  98107",
+				"people": [
+					38
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3702952,
+					47.6659927
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 160,
+				"type": "Park",
+				"address": "8498 Seaview Pl NW, Seattle, WA 98117",
+				"people": [
+					2,
+					6,
+					11,
+					30,
+					34,
+					35
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.40397,
+					47.6917734
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 161,
+				"type": "Library",
+				"address": "2026 NW Market St., Seattle, WA 98107",
+				"people": [
+					17
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3834251,
+					47.6689391
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 162,
+				"type": "School",
+				"address": "3015 NW 68 St., Seattle, WA 98117",
+				"people": [
+					19
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3967225,
+					47.6780133
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 163,
+				"type": "Beach",
+				"address": "6411 Seaview Ave NW, WA 98107",
+				"people": [
+					5,
+					6,
+					7,
+					11,
+					18,
+					30,
+					34
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.4082844,
+					47.6752686
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 164,
+				"type": "Business",
+				"address": "6049 Seaview Avenue NW, WA 98107",
+				"people": [
+					3,
+					7
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.4076549,
+					47.6733702
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 165,
+				"type": "Church",
+				"address": "5816 15th Ave NW, Seattle, WA 98107",
+				"people": [
+					9,
+					23,
+					34,
+					38
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3749689,
+					47.67117469999999
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 166,
+				"type": "Park",
+				"address": "5400 Ballard Ave NW, Seattle, WA 98107",
+				"people": [
+					30
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3848845,
+					47.667873
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 167,
+				"type": "Business",
+				"address": "7023 27 Ave NW, Seattle, WA 98117",
+				"people": [
+					37
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3911193,
+					47.68020509999999
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 169,
+				"type": "",
+				"address": "5140 Ballard Avenue NW, Seattle, WA 98107",
+				"people": []
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.381808,
+					47.66551630000001
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 168,
+				"type": "",
+				"address": "6739 26th Ave NW, Seattle, WA 98117",
+				"people": [
+					40
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3900767,
+					47.67886170000001
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 170,
+				"type": "",
+				"address": "7307 27th NW, Seattle, WA 98117",
+				"people": [
+					40
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3911469,
+					47.68156880000001
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 171,
+				"type": "Clubhouse",
+				"address": "3003 NW 66 St., Seattle, WA 98117",
+				"people": [
+					4,
+					34
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3960521,
+					47.6763741
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 172,
+				"type": "Apartments",
+				"address": "3040 NW Market St., WA 98107",
+				"people": [
+					3,
+					5
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3977294,
+					47.66894010000001
+				]
+			}
+		},
+		{
+			"type": "Feature",
+			"properties": {
+				"id": 178,
+				"type": "",
+				"address": "9715 8th Ave NW, Seattle, WA 98117",
+				"people": [
+					8
+				]
+			},
+			"geometry": {
+				"type": "Point",
+				"coordinates": [
+					-122.3663302,
+					47.7005519
+				]
+			}
+		}
+	]
+}
