@@ -46,6 +46,7 @@ def sync() -> None:
     with open(os.path.join(tmpDir, OUTPUT_FILES['places']), 'w') as f:
         f.write(json.dumps(_makeGeoJSON(places), indent='\t'))
     logger.info('Wrote ' + OUTPUT_FILES['places'])
+    _moveFiles(tmpDir)
     # shutil.rmtree(tmpDir)
     logger.info('Run complete')
 
@@ -194,7 +195,6 @@ def _dataJoin(people: {}, places: {}, links: []):
 
 
 
-
 def _makeGeoJSON(places: {}) -> {}:
     features = []
     for i in places.keys():
@@ -219,6 +219,11 @@ def _makeGeoJSON(places: {}) -> {}:
         "features": features
     }
 
+
+
+def _moveFiles(tmpDir: str) -> None:
+    for key in OUTPUT_FILES.keys():
+        shutil.copy(os.path.join(tmpDir, OUTPUT_FILES[key]), '../data')
 
 
 if __name__ == '__main__':
