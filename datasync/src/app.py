@@ -52,7 +52,7 @@ def sync() -> None:
     logger.info('Wrote ' + OUTPUT_FILES['places'])
     mediaDirs = google.fetchMedia(tmpDir, people, FILE_IDS, LOGLEVEL)
     _moveFiles(tmpDir, mediaDirs)
-    # shutil.rmtree(tmpDir)
+    shutil.rmtree(tmpDir)
     logger.info('Run complete')
 
 

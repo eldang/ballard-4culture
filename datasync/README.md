@@ -20,7 +20,7 @@
 
 ## Running
 
-`pipenv run python ./app.py`
+`pipenv run python src/app.py`
 
 You may be asked to log in to Google Drive, if this is the first time you're running the script or if it's been a while.
 
