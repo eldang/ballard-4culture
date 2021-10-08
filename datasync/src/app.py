@@ -15,7 +15,8 @@ FILE_IDS = {
     'spreadsheet': '122PnHx_kzVnvxOaExUeuA0OeZthBYkqqYeRR7e-B7jk'
 }
 OUTPUT_FILES = {
-    'people': 'people.json'
+    'people': 'people.json',
+    'places': 'places.geojson'
 }
 
 
@@ -40,7 +41,11 @@ def sync() -> None:
     places = _processPlaces(data['places'])
     people, places = _dataJoin(people, places, data['people to places'])
     with open(os.path.join(tmpDir, OUTPUT_FILES['people']), 'w') as f:
-        f.write(json.dumps(people))
+        f.write(json.dumps(people, indent='\t'))
+    logger.info('Wrote ' + OUTPUT_FILES['people'])
+    with open(os.path.join(tmpDir, OUTPUT_FILES['places']), 'w') as f:
+        f.write(json.dumps(_makeGeoJSON(places), indent='\t'))
+    logger.info('Wrote ' + OUTPUT_FILES['places'])
     # shutil.rmtree(tmpDir)
     logger.info('Run complete')
 
@@ -108,7 +113,7 @@ def _processPeople(people: []) -> {}:
             elif 'Family Profession' in key and row[key] != '':
                 person['family_professions'].append(row[key])
         result[int(float(row['people_id']))] = person
-    logger.debug('Processed ' + str(len(result)) + ' person enties')
+    logger.info('Processed ' + str(len(result)) + ' person enties')
     return result
 
 
@@ -125,7 +130,7 @@ def _processPlaces(places: []) -> {}:
             'people': []
         }
         result[int(float(row['place_id']))] = place
-    logger.debug('Processed ' + str(len(result)) + ' place entries')
+    logger.info('Processed ' + str(len(result)) + ' place entries')
     return result
 
 
@@ -181,11 +186,38 @@ def _dataJoin(people: {}, places: {}, links: []):
         logger.warning('The following places have no associated people:')
         for i in unjoinedPlaces:
             print(str(i) + ': ' + str(places[i]))
-    logger.debug(
+    logger.info(
         'Connected ' + str(nJoinedPeople) + ' people to places and ' +
         str(nJoinedPlaces) + ' places to people.'
     )
     return people, places
+
+
+
+
+def _makeGeoJSON(places: {}) -> {}:
+    features = []
+    for i in places.keys():
+        place = places[i]
+        geom = {
+            "type": "Point",
+            "coordinates": [place['long'], place['lat']]
+        }
+        props = {
+            'id': i,
+            'type': place['type'],
+            'address': place['address'],
+            'people': place['people']
+        }
+        features.append({
+            'type': 'Feature',
+            'properties': props,
+            'geometry': geom
+        })
+    return {
+        "type": "FeatureCollection",
+        "features": features
+    }
 
 
 
