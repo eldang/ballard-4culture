@@ -1,3 +1,4 @@
+import json
 import logging
 import os
 import shutil
@@ -12,6 +13,9 @@ LOGLEVEL = 'DEBUG'
 # and /edit
 FILE_IDS = {
     'spreadsheet': '122PnHx_kzVnvxOaExUeuA0OeZthBYkqqYeRR7e-B7jk'
+}
+OUTPUT_FILES = {
+    'people': 'people.json'
 }
 
 
@@ -35,7 +39,9 @@ def sync() -> None:
     people = _addMaterials(people, data['people to materials'])
     places = _processPlaces(data['places'])
     people, places = _dataJoin(people, places, data['people to places'])
-    shutil.rmtree(tmpDir)
+    with open(os.path.join(tmpDir, OUTPUT_FILES['people']), 'w') as f:
+        f.write(json.dumps(people))
+    # shutil.rmtree(tmpDir)
     logger.info('Run complete')
 
 
@@ -47,7 +53,7 @@ def _processPeople(people: []) -> {}:
         person = {
             'name': row['name'],
             'description': row['description'],
-            'year_born': row['year born'],
+            'year_born': None,
             'gender': row['gender'],
             'other_names': row['other names'],
             'birthplace': row['place of birth'],
@@ -60,7 +66,7 @@ def _processPeople(people: []) -> {}:
             'association': row['Association'],
             'cht_mhb': row['CHT_MHB'],
             'bhs_grad': False,
-            'bhs_year': row['BHS year'].replace('_', ' '),
+            'bhs_year': None,
             'heritage': [],
             'audio': [],
             'transcript': row['transcript'],
@@ -71,6 +77,15 @@ def _processPeople(people: []) -> {}:
             'family_professions': [],
             'places': []
         }
+        if row['year born'] != '':
+            person['year_born'] = int(float(row['year born']))
+        if row['BHS year'] != '':
+            person['bhs_year'] = row['BHS year'].replace('_', ' ')
+            try: # round number to int if it's a number
+                float(person['bhs_year'])
+                person['bhs_year'] = str(int(float(person['bhs_year'])))
+            except: # don't raise an error if not, because some rows have notes
+                pass
         if 'Y' in row['born in Ballard']:
             person['born_in_ballard'] = True
         if 'Y' in row['ballard childhood']:
