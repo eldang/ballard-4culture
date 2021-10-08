@@ -1,6 +1,7 @@
 import io
 import logging
 import os
+import sys
 
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
@@ -64,32 +65,58 @@ def _saveSheet(tmpDir: str, id: str) -> str:
 
 # see https://gist.github.com/mdellavo/853413#gistcomment-2856851 for discussion
 def _XLSXDictReader(fileName: str, sheetName: str = None):
-  book = load_workbook(fileName)
-  # if there's no sheet name specified, try to get the active sheet.  This will work reliably for workbooks with only one sheet; unpredictably if there are multiple worksheets present.
-  if sheetName is None:
-    sheet = book.active
-  elif sheetName not in book.sheetnames:
-    print(sheetName, "not found in", fileName)
-    exit()
-  else:
-    sheet = book[sheetName]
-
-  rows = sheet.max_row + 1
-  cols = sheet.max_column + 1
-
-  def cleanValue(s):
-    if s == None:
-      return ''
+    book = load_workbook(fileName)
+    # if there's no sheet name specified, try to get the active sheet.
+    # This will work reliably for workbooks with only one sheet;
+    # unpredictably if there are multiple worksheets present.
+    if sheetName is None:
+        sheet = book.active
+    elif sheetName not in book.sheetnames:
+        logger.error(sheetName, "not found in", fileName)
+        exit()
     else:
-      return str(s).strip()
+        sheet = book[sheetName]
+    rows = sheet.max_row + 1
+    cols = sheet.max_column + 1
 
-  def item(i, j):
-    return (
-      cleanValue(sheet.cell(row=1, column=j).value),
-      cleanValue(sheet.cell(row=i, column=j).value)
-    )
+    def cleanValue(s):
+        if s == None:
+            return ''
+        else:
+            return str(s).strip()
 
-  return (dict(item(i,j) for j in range(1, cols)) for i in range(2, rows))
+    headers = []
+    for j in range (1, cols):
+        header = cleanValue(sheet.cell(row=1, column=j).value)
+        if header not in headers:
+            headers.append(header)
+        else:
+            for k in range(1, sys.maxsize):
+                if (header + '_' + str(k)) not in headers:
+                    headers.append(header + '_' + str(k))
+                    break
+
+    def item(i, j):
+        return (
+            headers[j-1],
+            cleanValue(sheet.cell(row=i, column=j).value)
+        )
+
+    return (dict(item(i,j) for j in range(1, cols)) for i in range(2, rows))
+
+
+
+def _dropBlankRows(sheet) -> [{}]:
+    rows = []
+    for row in sheet:
+        found = False
+        for key in row.keys():
+            if row[key] != '':
+                found = True
+                break
+        if found:
+            rows.append(row)
+    return rows
 
 
 
@@ -97,6 +124,7 @@ def readSheet(tmpDir: str, id: str, log: str) -> {}:
     logger.setLevel(log)
     tmpFile = _saveSheet(tmpDir, id)
     content = {}
+    data = {}
     for sheet in SHEETS:
-        content[sheet] = _XLSXDictReader(tmpFile, sheet)
+        content[sheet] = _dropBlankRows(_XLSXDictReader(tmpFile, sheet))
     return content
