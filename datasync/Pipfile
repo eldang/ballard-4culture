@@ -4,9 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-google-api-python-client = "*"
-google-auth-oauthlib = "*"
-openpyxl = "*"
+google-api-python-client = "==2.24.0"
+google-auth-oauthlib = "==0.4.6"
+openpyxl = "==3.0.9"
 
 [dev-packages]
 
