@@ -34,6 +34,7 @@ def sync() -> None:
     people = _processPeople(data['people'])
     people = _addMaterials(people, data['people to materials'])
     places = _processPlaces(data['places'])
+    people, places = _dataJoin(people, places, data['people to places'])
     shutil.rmtree(tmpDir)
     logger.info('Run complete')
 
@@ -67,7 +68,8 @@ def _processPeople(people: []) -> {}:
             'other_materials': [],
             'places': [],
             'employers': [],
-            'family_professions': []
+            'family_professions': [],
+            'places': []
         }
         if 'Y' in row['born in Ballard']:
             person['born_in_ballard'] = True
@@ -104,7 +106,8 @@ def _processPlaces(places: []) -> {}:
             'address': row['address'],
             'lat': float(row['lat']),
             'long': float(row['long']),
-            'name': row['place name'].replace('_', ' ')
+            'name': row['place name'].replace('_', ' '),
+            'people': []
         }
         result[int(float(row['place_id']))] = place
     logger.debug('Processed ' + str(len(result)) + ' place entries')
@@ -124,6 +127,50 @@ def _addMaterials(people: {}, materials: []) -> {}:
             n = n + 1
     logger.debug('Added ' + str(n) +' additional materials to person entries')
     return people
+
+
+
+def _dataJoin(people: {}, places: {}, links: []):
+    unjoinedPeople = list(people.keys())
+    unjoinedPlaces = list(places.keys())
+    nJoinedPeople = 0
+    nJoinedPlaces = 0
+    for row in links:
+        person = int(float(row['person']))
+        place = int(float(row['place_id']))
+        if person not in people.keys():
+            raise RuntimeError(
+                'Person ID ' + row['person'] +
+                ' in "people to places" not found in "people".'
+            )
+        elif person in unjoinedPeople:
+            unjoinedPeople.remove(person)
+        if place not in places.keys():
+            raise RuntimeError(
+                'Place ID ' + row['place_id'] +
+                ' in "people to places" not found in "places".'
+            )
+        elif place in unjoinedPlaces:
+            unjoinedPlaces.remove(place)
+        if place not in people[person]['places']:
+            people[person]['places'].append(place)
+            nJoinedPeople += 1
+        if person not in places[place]['people']:
+            places[place]['people'].append(person)
+            nJoinedPlaces +=1
+    if unjoinedPeople != []:
+        logger.warning('The following people have no associated places:')
+        for i in unjoinedPeople:
+            print(str(i) + ': ' + str(people[i]))
+    if unjoinedPlaces != []:
+        logger.warning('The following places have no associated people:')
+        for i in unjoinedPlaces:
+            print(str(i) + ': ' + str(places[i]))
+    logger.debug(
+        'Connected ' + str(nJoinedPeople) + ' people to places and ' +
+        str(nJoinedPlaces) + ' places to people.'
+    )
+    return people, places
 
 
 

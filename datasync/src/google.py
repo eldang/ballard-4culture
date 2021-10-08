@@ -72,8 +72,7 @@ def _XLSXDictReader(fileName: str, sheetName: str = None):
     if sheetName is None:
         sheet = book.active
     elif sheetName not in book.sheetnames:
-        logger.error(sheetName, "not found in", fileName)
-        exit()
+        raise RuntimeError(sheetName, "not found in", fileName)
     else:
         sheet = book[sheetName]
     rows = sheet.max_row + 1
