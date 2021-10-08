@@ -32,15 +32,15 @@ def sync() -> None:
     os.mkdir(tmpDir)
     data = google.readSheet(tmpDir, FILE_IDS['spreadsheet'], LOGLEVEL)
     people = _processPeople(data['people'])
+    people = _addMaterials(people, data['people to materials'])
     places = _processPlaces(data['places'])
-    print(places)
     shutil.rmtree(tmpDir)
     logger.info('Run complete')
 
 
 
 
-def _processPeople(people) -> {}:
+def _processPeople(people: []) -> {}:
     result = {}
     for row in people:
         person = {
@@ -90,16 +90,15 @@ def _processPeople(people) -> {}:
                 person['employers'].append(row[key])
             elif 'Family Profession' in key and row[key] != '':
                 person['family_professions'].append(row[key])
-        result[int(row['people_id'])] = person
-    logger.debug('Processed ' + str(len(result)) + ' "people" rows')
+        result[int(float(row['people_id']))] = person
+    logger.debug('Processed ' + str(len(result)) + ' person enties')
     return result
 
 
 
-def _processPlaces(places) -> {}:
+def _processPlaces(places: []) -> {}:
     result = {}
     for row in places:
-        print(row)
         place = {
             'type': row['type'],
             'address': row['address'],
@@ -108,8 +107,23 @@ def _processPlaces(places) -> {}:
             'name': row['place name'].replace('_', ' ')
         }
         result[int(float(row['place_id']))] = place
+    logger.debug('Processed ' + str(len(result)) + ' place entries')
     return result
 
+
+
+def _addMaterials(people: {}, materials: []) -> {}:
+    currentPerson = None
+    n = 0
+    for row in materials:
+        if row['people_id'] != '':
+            currentPerson = int(float(row['people_id']))
+        item = row['other_materials']
+        if item != '' and item not in people[currentPerson]['other_materials']:
+            people[currentPerson]['other_materials'].append(item)
+            n = n + 1
+    logger.debug('Added ' + str(n) +' additional materials to person entries')
+    return people
 
 
 
