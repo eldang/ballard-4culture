@@ -2,9 +2,61 @@
 body {
 	padding:0;
 	margin:0;
+	font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+    overflow: hidden;
 }
 
-/*This formatting is for the  name of the fields in the pop-up*/
+div#map {
+	  z-index: 1;
+	  height: 100%;
+	  width: calc(100% - 260px);
+	  position: absolute;
+	  left: 260px;
+	  top: 0;
+	  right: 0;
+	  bottom:0;
+}
+
+/* This formatting is for straight GL JS and may be superseded by EG's super cool fillpopup_ function down the road */
+.mapboxgl-popup-content {
+  font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+  padding: 0;
+  width: 180px;
+}
+
+.mapboxgl-popup-close-button {
+  display: none;
+}
+
+.mapboxgl-popup-content h3 {
+  background: #cca71a;
+  color: #fff;
+  margin: 0;
+  padding: 10px;
+  border-radius: 3px 3px 0 0;
+  font-weight: 700;
+  margin-top: -15px;
+}
+
+.mapboxgl-popup-content h4 {
+  margin: 0;
+  padding: 10px;
+  font-weight: 400;
+}
+
+.mapboxgl-popup-content div {
+  padding: 10px;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
+  margin-top: 15px;
+}
+
+.mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
+  border-bottom-color: #91c949;
+}
+
+/*This formatting is for the  name of the fields in the pop-up if they are put in place using EGs fillpopup_ function in onload.js*/
 span.varname{
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 	font-size: 12px;
@@ -182,114 +234,6 @@ ul{
 		opacity: 0.25;
 	}
 
-#raising_blended_learners
-{
-	background:url(../markers/raising_blended_learners_campuses.svg) left center;
-	width:28px;
-	height:12px;
-	display: block;
-	float: left;
-}
-#raising_blended_learners_campuses
-{
-	background:url(../markers/raising_blended_learners_campuses_eye_circle.svg) left center;
-	width:28px;
-	height:12px;
-	display: block;
-	float: left;
-}
-#charles_butt_scholars
-{
-	background:url(../markers/charles_butt_scholars_eye_circle.svg) left center;
-	width:28px;
-	height:14px;
-	display: block;
-	float: left;
-}
-#charles_butt_scholars_icon
-{
-	background:url(../markers/charles_butt_scholars_circle.svg) left center;
-	width: 14px;
-	height: 14px;
-	display: block;
-	float: left;
-	background-position: right;
-}
-#raising_texas_teachers
-{
-	background:url(../markers/raising_texas_teachers_eye_circle.svg) left center;
-	width:28px;
-	height:14px;
-	display: block;
-	float: left;
-}
-#raising_texas_teachers_icon
-{
-	background:url(../markers/raising_texas_teachers_circle.svg) left center;
-	width:14px;
-	height:14px;
-	display: block;
-	float: left;
-	background-position: right;
-}
-#raising_school_leaders
-{
-	background:url(../markers/raising_school_leaders_eye_circle.svg) left center;
-	width:28px;
-	height:14px;
-	display: block;
-	float: left;
-}
-#districts_of_innovation
-{
-	background:url(../markers/districts_of_innovation.svg) left center;
-	width:14px;
-	height:14px;
-	display: block;
-	float: left;
-}
-#districts_of_innovation_poly
-{
-	background:url(../markers/districts_of_innovation_poly.svg) left center;
-	width:11px;
-	height:16px;
-	display: block;
-	float: left;
-}
-#texas_school_districts
-{
-	background:url(../markers/texas_school_districts.svg) left center;
-	width:11px;
-	height:16px;
-	display: block;
-	float: left;
-}
-#state_house_districts
-{
-	background:url(../markers/state_house_districts.svg) left center;
-	width:11px;
-	height:16px;
-	display: block;
-	float: left;
-}
-#state_senate_districts
-{
-	background:url(../markers/state_senate_districts.svg) left center;
-	width:11px;
-	height:16px;
-	display: block;
-	float: left;
-}
-
-#texas_icon
-{
-	background:url(../images/texas.svg) left center;
-	width:26px;
-	height:22px;
-	display: block;
-	float: left;
-}
-
   .legend .legend-source {
     font-size: 70%;
     color: #999;
@@ -322,7 +266,20 @@ a:active {
     text-decoration: underline;
 }
 
-/* Use this to style the 'Zoom to Districts' pop-out */
+/* This code makes the sidenav 'always on' */
+.sidenav {
+  height: 100%;
+  width: 260px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ffff;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Use this to make the fixed sidenav a fly-out
 .sidenav {
     height: 100%;
     width: 0;
@@ -333,8 +290,7 @@ a:active {
     background-color: #ffff;
     overflow-x: hidden;
     transition: 0.5s;
-    /*padding-top: 60px;*/
-}
+}*/
 
 /*.sidenav p {
     padding: 8px 8px 8px 32px;
@@ -361,7 +317,7 @@ border: none;
 }
 
 p.moreinfo  {
-  padding: 8px 8px 8px 32px;
+  padding: 8px 48px 8px 32px;
   background: #ffff;
   color:#4a4a4a;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
@@ -471,7 +427,7 @@ p.programs  {
 	/*transition: margin-left .5s;
     padding: 16px;*/
 	font-family: "Montserrat", Arial, Helvetica, sans-serif;
-	font-weight: normal;
+	font-weight: 700;
 	color: #ffff;
 	filter: alpha(opacity = 0);
     position:fixed;
