@@ -19,7 +19,6 @@ map.addControl(new mapboxgl.NavigationControl(), 'bottom-left');
 var originalZoomLevel = map.getZoom();
 
 /* add places data from derived geojson*/
-
 map.on('load', () => {
 	map.addSource('places', {
 		type: 'geojson',
@@ -39,6 +38,24 @@ map.on('load', () => {
 		}
 	});
 });
+
+/* load the derived people.json and make it available as a global data structure */
+var people = {};
+var request = new XMLHttpRequest();
+request.open('GET', 'data/people.json', true);
+request.onreadystatechange = function() {
+	if (request.readyState === 4) { // 4 = "ready"
+		if (request.status === 200) { // https://httpstatusdogs.com/200-ok
+			people = JSON.parse(request.response);
+		} else {
+			console.log('request failed:', request)
+		}
+	}
+};
+request.send(null);
+
+
+
 /*
 *****************************************************
 This is where we will put code for the popups for the point layer(s)
@@ -55,8 +72,8 @@ map.on('click', 'places-layer', (e) => {
 	const coordinates = e.features[0].geometry.coordinates.slice();
 	/*const address = e.features[0].properties.address;
 	const id = e.features[0].properties.id;*/
-	var p = e.features[0].properties;
-	console.log(p);
+	let p = e.features[0].properties;
+	console.log(p, people);
 
 	// Ensure that if the map is zoomed out such that multiple
 	// copies of the feature are visible, the popup appears
