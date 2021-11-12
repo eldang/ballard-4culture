@@ -609,19 +609,38 @@ function addVectorLayer(map, params) {
 }
 
 
+function parseTextField(data, fieldName, replacements=[]) {
+	let html = '';
+	if (typeof(data) !== undefined) {
+		if (fieldName !== '') {
+			html += '<span class="varname">' + fieldName + '</span>: ';
+		}
+		if (replacements.length > 0) {
+			data = data.replaceAll(replacements[0], replacements[1]);
+		}
+		html += data + '<br />';
+	}
+	return html;
+};
 
 
-// These are the popups for the polygon district layers, using Eldan's House/Senate 'show' logic
-// When a click event occurs on a feature in the unioned districts layer, open a popup for
-// the correct district type at the location of the click, with description HTML from its properties.
+
+// Popups for a place, also listing all the people at that place
 function fillpopup(data) {
-	var html = "<span class='varname'>";
-// the shorthand in this next line is just a compressed if...then.
-// "if showHouseDistricts is true then use the first string, else the second"
-	html += showHouseDistricts ? "House District: " : "Senate District: ";
-	html += "</span><span class='attribute'>";
-	html += showHouseDistricts ? data.HseDistNum : data.SenDistNum;
-	html += "</span>";
+	let ids = JSON.parse(data.people);
+	let html = "<h3>" + data.address + '</h3>';
+	for (i in ids) {
+		let person = people[ids[i]];
+		console.log(person);
+		html += '<h4>' + person.name + '</h4>';
+		html += '<p>';
+		html += parseTextField(person['description'], '');
+		html += parseTextField(person['birthplace'], 'Birthplace', ['_', ' ']);
+		html += parseTextField(person['year_born'], 'Born');
+		html += '</p>';
+		// 	'<p><h4>'  + p.id + '</h4></p>';
+	}
+
 	return html; //this will return the string to the calling function
 }
 

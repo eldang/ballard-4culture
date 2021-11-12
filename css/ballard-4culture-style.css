@@ -41,10 +41,10 @@ div#map {
 .mapboxgl-popup-content h4 {
   margin: 0;
   padding: 10px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
-.mapboxgl-popup-content div {
+.mapboxgl-popup-content p {
   padding: 10px;
 }
 

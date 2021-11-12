@@ -44,7 +44,7 @@ var people = {};
 var request = new XMLHttpRequest();
 request.open('GET', 'data/people.json', true);
 request.onreadystatechange = function() {
-	if (request.readyState === 4) { // 4 = "ready"
+	if (request.readyState === 4) { // 4 = "ready".  This event will also fire on 2 and 3, which we just ignore.
 		if (request.status === 200) { // https://httpstatusdogs.com/200-ok
 			people = JSON.parse(request.response);
 		} else {
@@ -73,7 +73,6 @@ map.on('click', 'places-layer', (e) => {
 	/*const address = e.features[0].properties.address;
 	const id = e.features[0].properties.id;*/
 	let p = e.features[0].properties;
-	console.log(p, people);
 
 	// Ensure that if the map is zoomed out such that multiple
 	// copies of the feature are visible, the popup appears
@@ -86,7 +85,7 @@ map.on('click', 'places-layer', (e) => {
  //similarly, all other attributes will be styled with h4 in the css
 	new mapboxgl.Popup()
 		.setLngLat(coordinates)
-		.setHTML("<h3>" + p.address + '</h3><p><h4>'  + p.id + '</h4></p>')
+		.setHTML(fillpopup(p))
 		.addTo(map);
 });
 
