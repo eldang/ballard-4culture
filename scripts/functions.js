@@ -611,7 +611,7 @@ function addVectorLayer(map, params) {
 
 function parseTextField(data, fieldName, replacements=[]) {
 	let html = '';
-	if (typeof(data) !== undefined) {
+	if (typeof(data) !== undefined && data !== null && data !== '') {
 		if (fieldName !== '') {
 			html += '<span class="varname">' + fieldName + '</span>: ';
 		}
