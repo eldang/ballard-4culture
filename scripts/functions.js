@@ -652,6 +652,27 @@ function parseLink(data, subdir, fieldName) {
 }
 
 
+function parseLinkArray(data, subdir, fieldName) {
+	let html = '';
+	if (data !== '') {
+		html += '<a href="' + subdir + '/' + data + '">'
+		html += fieldName ? fieldName : 'Link';
+		html += '</a><br />';
+	}
+	if (data.length > 0) {
+		if (fieldName !== undefined) {
+			html += '<span class="varname">' + fieldName + '</span>: ';
+		}
+		for (let i in data) {
+			html += '<a href="' + subdir + '/' + data[i] + '">';
+			html += data[i] + '</a> ';
+		}
+	}
+
+	return html;
+}
+
+
 
 function parseImages(data, subdir, fieldName) {
 	let html = '';
@@ -685,6 +706,7 @@ function fillpopup(data) {
 		entries += parseImages(person['images'], 'images');
 		entries += parseTextField(person['birthplace'], 'Birthplace', ['_', ' ']);
 		entries += parseTextField(person['year_born'], 'Born');
+		entries += parseLinkArray(person['other_media'], 'other_media', 'Additional Media');
 		entries += '</p>';
 	}
 	if (names === '' && entries === '') {
