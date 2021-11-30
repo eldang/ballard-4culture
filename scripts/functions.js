@@ -654,11 +654,6 @@ function parseLink(data, subdir, fieldName) {
 
 function parseLinkArray(data, subdir, fieldName) {
 	let html = '';
-	if (data !== '') {
-		html += '<a href="' + subdir + '/' + data + '">'
-		html += fieldName ? fieldName : 'Link';
-		html += '</a><br />';
-	}
 	if (data.length > 0) {
 		if (fieldName !== undefined) {
 			html += '<span class="varname">' + fieldName + '</span>: ';
