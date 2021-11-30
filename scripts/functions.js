@@ -624,6 +624,22 @@ function parseTextField(data, fieldName, replacements=[]) {
 };
 
 
+function parseAudioArray(data, fieldName) {
+	let html = '';
+	if (data.length > 0) {
+		if (fieldName !== '') {
+			html += '<span class="varname">' + fieldName + '</span>: ';
+		}
+		for (let i in data) {
+			html += '<audio controls preload="auto" src="mp3/' + data[i] + '" type="audio/mpeg">';
+			html += '<a href="mp3/' + data[i] + '">' + data[i] + '</a>'; // this part serves as a fallback: if someone's browser can't play the audio inline they'll see a download link instead
+			html += '</audio>';
+		}
+	}
+	return html;
+}
+
+
 
 // Popups for a place, also listing all the people at that place
 function fillpopup(data) {
@@ -637,6 +653,7 @@ function fillpopup(data) {
 		names += '<li><a href="#person-' + i + '">' + person.name + '</a></li>';
 		entries += '<p id="person-' + i + '">';
 		entries += parseTextField(person['description'], '');
+		entries += parseAudioArray(person['mp3'], 'Audio');
 		entries += parseTextField(person['birthplace'], 'Birthplace', ['_', ' ']);
 		entries += parseTextField(person['year_born'], 'Born');
 		entries += '</p>';
