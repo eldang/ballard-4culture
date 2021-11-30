@@ -627,13 +627,40 @@ function parseTextField(data, fieldName, replacements=[]) {
 function parseAudioArray(data, fieldName) {
 	let html = '';
 	if (data.length > 0) {
-		if (fieldName !== '') {
+		if (fieldName !== undefined) {
 			html += '<span class="varname">' + fieldName + '</span>: ';
 		}
 		for (let i in data) {
 			html += '<audio controls preload="auto" src="mp3/' + data[i] + '" type="audio/mpeg">';
 			html += '<a href="mp3/' + data[i] + '">' + data[i] + '</a>'; // this part serves as a fallback: if someone's browser can't play the audio inline they'll see a download link instead
 			html += '</audio>';
+		}
+	}
+	return html;
+}
+
+
+
+function parseLink(data, subdir, fieldName) {
+	let html = '';
+	if (data !== '') {
+		html += '<a href="' + subdir + '/' + data + '">'
+		html += fieldName ? fieldName : 'Link';
+		html += '</a><br />';
+	}
+	return html;
+}
+
+
+
+function parseImages(data, subdir, fieldName) {
+	let html = '';
+	if (data.length > 0) {
+		if (fieldName !== undefined) {
+			html += '<span class="varname">' + fieldName + '</span>: ';
+		}
+		for (let i in data) {
+			html += '<img src="' + subdir + '/' + data[i] + '" />';
 		}
 	}
 	return html;
@@ -654,6 +681,8 @@ function fillpopup(data) {
 		entries += '<p id="person-' + i + '">';
 		entries += parseTextField(person['description'], '');
 		entries += parseAudioArray(person['mp3'], 'Audio');
+		entries += parseLink(person['transcripts'][0], 'transcripts', 'Transcript');
+		entries += parseImages(person['images'], 'images');
 		entries += parseTextField(person['birthplace'], 'Birthplace', ['_', ' ']);
 		entries += parseTextField(person['year_born'], 'Born');
 		entries += '</p>';
