@@ -27,7 +27,9 @@
 		"transcripts": [
 			"01_Anderson_Doris_transcript.pdf"
 		],
-		"images": [],
+		"images": [
+			"01_Anderson_Doris_photo_PetesPlace.jpg"
+		],
 		"other_media": [],
 		"places": [
 			101,
@@ -507,7 +509,8 @@
 			"12_Denend_Ray_house summary.pdf"
 		],
 		"places": [
-			118
+			118,
+			169
 		],
 		"employers": [
 			"Seattle_Cedar"
@@ -587,7 +590,8 @@
 		],
 		"places": [
 			120,
-			121
+			121,
+			169
 		],
 		"employers": [
 			"Club_Tavern",
@@ -1002,6 +1006,7 @@
 			"24_Matsuda_Sakaye_photo_05.JPG"
 		],
 		"other_media": [
+			"Fighting-the-Enemy-Abroad-and-at-Home.pdf",
 			"24_Matsuda_Sakaye_Article_01.pdf",
 			"24_Matsuda_Sakaye_Article_02.pdf",
 			"24_Matsuda_Sakaye_Article_03.pdf",
@@ -1396,7 +1401,7 @@
 	},
 	"37": {
 		"name": "Frank Thompson_HelenCahill",
-		"description": "Born at home to fishing families they stayed Ballard.",
+		"description": "Born at home to fishing families they stayed in Ballard.",
 		"year_born": 1914,
 		"gender": "M",
 		"other_names": "Hansen",
