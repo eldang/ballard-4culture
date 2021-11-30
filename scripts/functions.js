@@ -635,13 +635,13 @@ function fillpopup(data) {
 		let person = people[ids[i]];
 		console.log(person);
 		names += '<li><a href="#person-' + i + '">' + person.name + '</a></li>';
-		entries += '<span id="person-' + i + '">';
+		entries += '<p id="person-' + i + '">';
 		entries += parseTextField(person['description'], '');
 		entries += parseTextField(person['birthplace'], 'Birthplace', ['_', ' ']);
 		entries += parseTextField(person['year_born'], 'Born');
-		entries += '</span>';
+		entries += '</p>';
 	}
-	if (names === '' || entries === '') {
+	if (names === '' && entries === '') {
 		console.log('Missing data for popup', ids, data);
 		html += '<p>No records found.</p>';
 	} else {
