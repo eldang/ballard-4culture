@@ -81,12 +81,15 @@ map.on('click', 'places-layer', (e) => {
 		coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
 	}
 
- //right now p.address is a placeholder for will ultimately be the Person's name
- //similarly, all other attributes will be styled with h4 in the css
+	// if there's an existing popup, explicitly remove it first.  Otherwise jQuery UI has trouble attaching the tabs widget to the right object.
+	$('.mapboxgl-popup').remove();
+	// Fill a popup with info about all the person records found for this location
 	new mapboxgl.Popup()
 		.setLngLat(coordinates)
 		.setHTML(fillpopup(p))
 		.addTo(map);
+	// now attach the tabs widget to the new popup
+	$('#personTabs').tabs();
 });
 
 // Change the cursor to a pointer when the mouse is over the places layer.

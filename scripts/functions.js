@@ -629,16 +629,26 @@ function parseTextField(data, fieldName, replacements=[]) {
 function fillpopup(data) {
 	let ids = JSON.parse(data.people);
 	let html = "<h3>" + data.address + '</h3>';
+	let names = '';
+	let entries = '';
 	for (i in ids) {
 		let person = people[ids[i]];
 		console.log(person);
-		html += '<h4>' + person.name + '</h4>';
-		html += '<p>';
-		html += parseTextField(person['description'], '');
-		html += parseTextField(person['birthplace'], 'Birthplace', ['_', ' ']);
-		html += parseTextField(person['year_born'], 'Born');
-		html += '</p>';
-		// 	'<p><h4>'  + p.id + '</h4></p>';
+		names += '<li><a href="#person-' + i + '">' + person.name + '</a></li>';
+		entries += '<span id="person-' + i + '">';
+		entries += parseTextField(person['description'], '');
+		entries += parseTextField(person['birthplace'], 'Birthplace', ['_', ' ']);
+		entries += parseTextField(person['year_born'], 'Born');
+		entries += '</span>';
+	}
+	if (names === '' || entries === '') {
+		console.log('Missing data for popup', ids, data);
+		html += '<p>No records found.</p>';
+	} else {
+		html += '<div id="personTabs">';
+		html += '<ul>' + names + '</ul>';
+		html += entries;
+		html += '</div>';
 	}
 
 	return html; //this will return the string to the calling function
