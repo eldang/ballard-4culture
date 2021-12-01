@@ -611,11 +611,11 @@ function addVectorLayer(map, params) {
 
 
 function parseBooleanField(data, ifTrue, ifFalse) {
-	let html = '';
-	if (typeof(data) !== undefined && data !== null && data !== '') {
-		html += '<span class="varname">' + (data ? ifTrue : ifFalse) + '</span><br />';
+	if (typeof(data) === undefined || data === null || data === '' || (!data && ifFalse === '')) {
+		return '';
+	} else {
+		return '<span class="varname">' + (data ? ifTrue : ifFalse) + '</span><br />';
 	}
-	return html;
 }
 
 
