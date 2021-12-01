@@ -736,7 +736,7 @@ function fillpopup(data) {
 		entries += parseTextArray(person['family_professions'], 'Family trade');
 		entries += parseTextArray(person['employers'], 'Employer[s]');
 		entries += parseTextField(person['legacy_business_connection'], 'Legacy business connection');
-		entries += parseTextField(person['association'], 'Association inolvement');
+		entries += parseTextField(person['association'], 'Association involvement');
 		entries += parseBooleanField(person['bhs_grad'], 'Ballard High School graduate', '');
 		entries += parseTextField(person['bhs_year'], 'Graduation year');
 		entries += parseAudioArray(person['mp3'], 'Audio');
