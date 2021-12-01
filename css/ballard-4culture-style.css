@@ -17,11 +17,18 @@ div#map {
 	  bottom:0;
 }
 
-/* This formatting is for straight GL JS and may be superseded by EG's super cool fillpopup_ function down the road */
+.mapboxgl-popup {
+	min-width: 400px;
+	width: 50vw;
+}
+
 .mapboxgl-popup-content {
   font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
-  padding: 0;
-  width: 180px;
+  padding: 1em 0;
+  min-width: 400px;
+	max-height: 50vh;
+  overflow-x: auto;
+	overflow-y: auto;
 }
 
 .mapboxgl-popup-close-button {
@@ -54,6 +61,19 @@ div#map {
 
 .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
   border-bottom-color: #91c949;
+}
+
+/* tabs in popups */
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+	padding: 2px !important;
+}
+
+.mapboxgl-popup a:link {
+	text-decoration: underline;
+}
+
+.mapboxgl-popup a:hover {
+	text-decoration: none;
 }
 
 /*This formatting is for the  name of the fields in the pop-up if they are put in place using EGs fillpopup_ function in onload.js*/

@@ -656,7 +656,7 @@ function parseAudioArray(data, fieldName) {
 	let html = '';
 	if (data.length > 0) {
 		if (fieldName !== undefined) {
-			html += '<span class="varname">' + fieldName + '</span>: ';
+			html += '<span class="varname">' + fieldName + '</span>:<br />';
 		}
 		for (let i in data) {
 			html += '<audio controls preload="auto" src="mp3/' + data[i] + '" type="audio/mpeg">';
@@ -684,7 +684,7 @@ function parseLinkArray(data, subdir, fieldName) {
 	let html = '';
 	if (data.length > 0) {
 		if (fieldName !== undefined) {
-			html += '<span class="varname">' + fieldName + '</span>: ';
+			html += '<span class="varname">' + fieldName + '</span>:<br />';
 		}
 		for (let i in data) {
 			html += '<a href="' + subdir + '/' + data[i] + '">';
