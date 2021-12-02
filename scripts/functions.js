@@ -659,7 +659,7 @@ function parseAudioArray(data, fieldName) {
 			html += '<span class="varname">' + fieldName + '</span>:<br />';
 		}
 		for (let i in data) {
-			html += '<audio controls preload="auto" src="mp3/' + data[i] + '" type="audio/mpeg">';
+			html += '<audio controls src="mp3/' + data[i] + '" type="audio/mpeg">';
 			html += '<a href="mp3/' + data[i] + '">' + data[i] + '</a>'; // this part serves as a fallback: if someone's browser can't play the audio inline they'll see a download link instead
 			html += '</audio>';
 		}
