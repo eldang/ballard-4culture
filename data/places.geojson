@@ -1174,7 +1174,10 @@
 				"id": 169,
 				"type": "",
 				"address": "5140 Ballard Avenue NW, Seattle, WA 98107",
-				"people": []
+				"people": [
+					12,
+					14
+				]
 			},
 			"geometry": {
 				"type": "Point",

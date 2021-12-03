@@ -69,7 +69,6 @@ def _processPeople(people: []) -> {}:
             'other_names': row['other names'],
             'birthplace': row['place of birth'],
             'occupation': row['occupation'],
-            'employer': row['employer'],
             'born_in_ballard': False,
             'profession': row['Profession'].replace('_', ' '),
             'ballard_childhood': False,

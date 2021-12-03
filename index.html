@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-<!--
-	WHERE THINGS ARE DEFINED IN THIS FILE:
-
-	Layers are added in the map.on('load') call towards the end.
-
-	For a layer to appear in the legend, it must have a corresponding <li> in <ul class='legend-labels'>, and the id for that item has to be given to addPointLayer() or addVectorLayer() as the legendID property.
-	For a legend item to show the right icon, there must be a corresponding rule set in css/ryht-legislative-style.css
-
-	For a layer to appear in the Zoom to Districts control, it must have a polygon layer (even if that's kept invisible) and have two corresponding definitions:
-		1) a <select> element defined in the section of <div id="mySidenav"> that's labelled with the comment: !--Drop down controls--
-		2) a populateZoomControl() line in the runWhenLoadComplete() function
--->
-
 	<head>
 		<meta charset='utf-8' />
 		<title>Ballard 4Culture Oral History Map</title>
@@ -34,6 +21,11 @@
 <!-- load functions & object definitions that we'll call later -->
 		<script src='scripts/functions.js'></script>
 
+<!-- jQuery UI.  A custom build of it including only the tabs widget and dependencies of that -->
+	<link rel="stylesheet" href="jquery-ui-1.13.0.custom/jquery-ui.min.css" />
+	<script src="scripts/jquery-3.6.0.min.js"></script>
+	<script src="jquery-ui-1.13.0.custom/jquery-ui.min.js"></script>
+
 	</head>
 
 	<body>
@@ -46,10 +38,10 @@
 			</p>
 			<p class="moreinfo">
 				This map shows the location of places associated with the personal and oral histories of 40 Ballard residents. Click on a point to see the people associated with a place, or choose a name from the drop-down menu below to see the places associated with that person.</p>
-				
+
 			<p class="moreinfo">
 				Pan the map by clicking and dragging. Use the mouse wheel to zoom in/out or use the +/- controls on the bottom left. Rotate the map by click-holding the double-headed arrow on the bottom left. </p>
-				
+
 				<br /><br />
 
 				<!--Drop down controls-->
@@ -107,7 +99,7 @@
 
 
 			<div id='map'></div>
-			
+
 			<div class='legend'>
 				<div class='legend-title'>Click on a layer name below to toggle its visibility</div>
 				<div class='legend-scale'>
