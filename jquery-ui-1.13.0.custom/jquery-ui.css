@@ -135,7 +135,7 @@
 /* Component containers
 ----------------------------------*/
 .ui-widget {
-	font-family: Arial,Helvetica,sans-serif;
+	font-family: "Open Sans",Arial,Helvetica,sans-serif;
 	font-size: 1em;
 }
 .ui-widget .ui-widget {
@@ -161,7 +161,7 @@
 }
 .ui-widget-header {
 	border: 1px solid #dddddd;
-	background: #e9e9e9;
+	background: #ffffff;
 	color: #333333;
 	font-weight: bold;
 }
@@ -181,9 +181,10 @@ works properly when clicked or hovered */
 html .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active {
 	border: 1px solid #c5c5c5;
-	background: #f6f6f6;
+/*this is the color for the background of the inactive tabs*/	
+	background: #dddddd;
 	font-weight: normal;
-	color: #454545;
+	color: #a5a5a5;
 }
 .ui-state-default a,
 .ui-state-default a:link,
@@ -193,6 +194,9 @@ a:link.ui-button,
 a:visited.ui-button,
 .ui-button {
 	color: #454545;
+	font-family:"Oswald",Sans-serif,Arial;
+	font-size:14px;
+	font-weight:400;
 	text-decoration: none;
 }
 .ui-state-hover,
@@ -203,10 +207,10 @@ a:visited.ui-button,
 .ui-widget-header .ui-state-focus,
 .ui-button:hover,
 .ui-button:focus {
-	border: 1px solid #cccccc;
+	border: 1px solid #f6f6f6;
 	background: #ededed;
 	font-weight: normal;
-	color: #2b2b2b;
+	color: #b2b2b2;
 }
 .ui-state-hover a,
 .ui-state-hover a:hover,
@@ -225,14 +229,19 @@ a.ui-button:focus {
 .ui-visual-focus {
 	box-shadow: 0 0 3px 1px rgb(94, 158, 214);
 }
+
+
 .ui-state-active,
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active,
 a.ui-button:active,
 .ui-button:active,
 .ui-button.ui-state-active:hover {
-	border: 1px solid #003eff;
-	background: #007fff;
+/* this is the border for the active tab*/
+	border: 1px solid #dddddd;
+	background: #ffffff;
+	font-family:"Oswald",sans-serif,Arial;
+	font-size:16px;
 	font-weight: normal;
 	color: #ffffff;
 }
@@ -244,7 +253,7 @@ a.ui-button:active,
 .ui-state-active a,
 .ui-state-active a:link,
 .ui-state-active a:visited {
-	color: #ffffff;
+	color: #333333
 	text-decoration: none;
 }
 
