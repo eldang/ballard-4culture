@@ -3,13 +3,13 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiY29yZS1naXMiLCJhIjoiaUxqQS1zQSJ9.mDT5nb8l_dWI
 //set bounds to Ballard neighborhood
 var bounds = [
 		[-122.455244,47.649373], // southwest coords
-		[-122.299805,47.702542] // northeast coords
+		[-122.299805,47.722542] // northeast coords
 	];
 var map = new mapboxgl.Map({
 	container: 'map', // container id
 	style: 'mapbox://styles/core-gis/ckqihj7aj2f1y18nvyhumtlwm', // stylesheet location for BHS map
-	center: [-122.388446,47.672930], // starting position [lng, lat]
-	zoom: 14.5, // starting zoom
+	center: [-122.376779,47.679511], // starting position [lng, lat]
+	zoom: 13, // starting zoom
 	maxBounds: bounds // sets bounds as max
 });
 
