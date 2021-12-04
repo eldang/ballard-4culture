@@ -610,18 +610,151 @@ function addVectorLayer(map, params) {
 
 
 
+function parseBooleanField(data, ifTrue, ifFalse) {
+	if (typeof(data) === undefined || data === null || data === '' || (!data && ifFalse === '')) {
+		return '';
+	} else {
+		return '<span class="varname">' + (data ? ifTrue : ifFalse) + '</span><br />';
+	}
+}
 
-// These are the popups for the polygon district layers, using Eldan's House/Senate 'show' logic
-// When a click event occurs on a feature in the unioned districts layer, open a popup for
-// the correct district type at the location of the click, with description HTML from its properties.
+
+function parseTextField(data, fieldName, replacements=[]) {
+	let html = '';
+	if (typeof(data) !== undefined && data !== null && data !== '') {
+		if (fieldName !== '') {
+			html += '<span class="varname">' + fieldName + '</span>: ';
+		}
+		if (replacements.length > 0) {
+			data = data.replaceAll(replacements[0], replacements[1]);
+		}
+		html += data + '<br />';
+	}
+	return html;
+};
+
+
+function parseTextArray(data, fieldName) {
+	let html = '';
+	if (data.length > 0) {
+		if (fieldName !== undefined) {
+			html += '<span class="varname">' + fieldName + '</span>: ';
+		}
+		for (let i in data) {
+			if (i > 0) {
+				html += ', ';
+			}
+			html += data[i];
+		}
+		html += '<br />';
+	}
+	return html;
+}
+
+
+function parseAudioArray(data, fieldName) {
+	let html = '';
+	if (data.length > 0) {
+		if (fieldName !== undefined) {
+			html += '<span class="varname">' + fieldName + '</span>:<br />';
+		}
+		for (let i in data) {
+			html += '<audio controls src="mp3/' + data[i] + '" type="audio/mpeg">';
+			html += '<a href="mp3/' + data[i] + '">' + data[i] + '</a>'; // this part serves as a fallback: if someone's browser can't play the audio inline they'll see a download link instead
+			html += '</audio>';
+		}
+	}
+	return html;
+}
+
+
+
+function parseLink(data, subdir, fieldName) {
+	let html = '';
+	if (data !== '') {
+		html += '<a href="' + subdir + '/' + data + '">'
+		html += fieldName ? fieldName : 'Link';
+		html += '</a><br />';
+	}
+	return html;
+}
+
+
+function parseLinkArray(data, subdir, fieldName) {
+	let html = '';
+	if (data.length > 0) {
+		if (fieldName !== undefined) {
+			html += '<span class="varname">' + fieldName + '</span>:<br />';
+		}
+		for (let i in data) {
+			html += '<a href="' + subdir + '/' + data[i] + '">';
+			html += data[i] + '</a> ';
+		}
+		html += '<br />';
+	}
+	return html;
+}
+
+
+
+function parseImages(data, subdir, fieldName) {
+	let html = '';
+	if (data.length > 0) {
+		if (fieldName !== undefined) {
+			html += '<span class="varname">' + fieldName + '</span>: ';
+		}
+		for (let i in data) {
+			html += '<img src="' + subdir + '/' + data[i] + '" />';
+		}
+	}
+	return html;
+}
+
+
+
+// Popups for a place, also listing all the people at that place
 function fillpopup(data) {
-	var html = "<span class='varname'>";
-// the shorthand in this next line is just a compressed if...then.
-// "if showHouseDistricts is true then use the first string, else the second"
-	html += showHouseDistricts ? "House District: " : "Senate District: ";
-	html += "</span><span class='attribute'>";
-	html += showHouseDistricts ? data.HseDistNum : data.SenDistNum;
-	html += "</span>";
+	let ids = JSON.parse(data.people);
+	let html = "<h3>" + data.address + '</h3>';
+	let names = '';
+	let entries = '';
+	for (i in ids) {
+		let person = people[ids[i]];
+		console.log(person);
+		names += '<li><a href="#person-' + i + '">' + person.name + '</a></li>';
+		entries += '<p id="person-' + i + '">';
+		entries += parseTextField(person['other_names'], 'Other names', ['_', ' ']);
+		entries += parseTextField(person['description'], '');
+		entries += parseTextField(person['birthplace'], 'Birthplace', ['_', ' ']);
+		// born_in_ballard field intentionally skipped because it's redundant with the above
+		entries += parseTextArray(person['heritage'], 'Family heritage');
+		entries += parseTextField(person['year_born'], 'Born');
+		entries += parseBooleanField(person['ballard_childhood'], 'Childhood in Ballard', 'Childhood not in Ballard');
+		entries += parseTextField(person['gender'], 'Gender');
+		entries += parseTextField(person['profession'], 'Profession');
+		// occupation field skipped because it looks like a messier version of the above
+		entries += parseTextArray(person['family_professions'], 'Family trade');
+		entries += parseTextArray(person['employers'], 'Employer[s]');
+		entries += parseTextField(person['legacy_business_connection'], 'Legacy business connection');
+		entries += parseTextField(person['association'], 'Association involvement');
+		entries += parseBooleanField(person['bhs_grad'], 'Ballard High School graduate', '');
+		entries += parseTextField(person['bhs_year'], 'Graduation year');
+		entries += parseAudioArray(person['mp3'], 'Audio');
+		entries += parseLink(person['transcripts'][0], 'transcripts', 'Transcript');
+		entries += parseImages(person['images'], 'images');
+		entries += parseLinkArray(person['other_media'], 'other_media', 'Additional Media');
+		entries += '</p>';
+	}
+	if (names === '' && entries === '') {
+		console.log('Missing data for popup', ids, data);
+		html += '<p>No records found.</p>';
+	} else {
+		html += '<div id="personTabs">';
+		html += '<ul>' + names + '</ul>';
+		html += entries;
+		html += '</div>';
+	}
+
 	return html; //this will return the string to the calling function
 }
 
