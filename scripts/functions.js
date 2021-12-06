@@ -619,6 +619,21 @@ function parseBooleanField(data, ifTrue, ifFalse) {
 }
 
 
+
+// workaround for Github Pages not support LFS objects, based on
+// https://github.com/git-lfs/git-lfs/issues/1342#issuecomment-467321479
+function fixLink(link, subdir='') {
+	if (subdir !== '') {
+		link = subdir + '/' + link;
+	}
+	if ((window.location.hostname).includes('github')) {
+		link = 'https://github.com/eldang/ballard-4culture/raw/main/' + link;
+	}
+	console.log(link);
+	return link;
+}
+
+
 function parseTextField(data, fieldName, replacements=[]) {
 	let html = '';
 	if (typeof(data) !== undefined && data !== null && data !== '') {
@@ -660,7 +675,7 @@ function parseAudioArray(data, fieldName) {
 		}
 		for (let i in data) {
 			html += '<audio controls src="mp3/' + data[i] + '" type="audio/mpeg">';
-			html += '<a href="mp3/' + data[i] + '">' + data[i] + '</a>'; // this part serves as a fallback: if someone's browser can't play the audio inline they'll see a download link instead
+			html += '<a href="' + fixLink(data[i], 'mp3') + '">' + data[i] + '</a>'; // this part serves as a fallback: if someone's browser can't play the audio inline they'll see a download link instead
 			html += '</audio>';
 		}
 	}
@@ -672,7 +687,7 @@ function parseAudioArray(data, fieldName) {
 function parseLink(data, subdir, fieldName) {
 	let html = '';
 	if (data !== '') {
-		html += '<a href="' + subdir + '/' + data + '">'
+		html += '<a href="' + fixLink(data, subdir) + '">'
 		html += fieldName ? fieldName : 'Link';
 		html += '</a><br />';
 	}
