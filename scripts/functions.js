@@ -679,6 +679,7 @@ function parseAudioArray(data, fieldName) {
 			html += '<a href="' + fixLink(data[i], 'mp3') + '">' + data[i] + '</a>'; // this part serves as a fallback: if someone's browser can't play the audio inline they'll see a download link instead
 			html += '</audio>';
 		}
+		html += '<br />';
 	}
 	return html;
 }
