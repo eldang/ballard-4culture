@@ -619,6 +619,22 @@ function parseBooleanField(data, ifTrue, ifFalse) {
 }
 
 
+
+// workaround for Github Pages not support LFS objects, based on
+// https://github.com/git-lfs/git-lfs/issues/1342#issuecomment-467321479
+// https://media.githubusercontent.com/media/_Username_/_Project_/_Branch_/_Path_to_file_
+function fixLink(link, subdir='') {
+	if (subdir !== '') {
+		link = subdir + '/' + link;
+	}
+	if ((window.location.hostname).includes('github')) {
+		link = 'https://media.githubusercontent.com/media/eldang/ballard-4culture/main/' + link;
+	}
+	console.log(link);
+	return link;
+}
+
+
 function parseTextField(data, fieldName, replacements=[]) {
 	let html = '';
 	if (typeof(data) !== undefined && data !== null && data !== '') {
@@ -659,8 +675,8 @@ function parseAudioArray(data, fieldName) {
 			html += '<span class="varname">' + fieldName + '</span>:<br />';
 		}
 		for (let i in data) {
-			html += '<audio controls src="mp3/' + data[i] + '" type="audio/mpeg">';
-			html += '<a href="mp3/' + data[i] + '">' + data[i] + '</a>'; // this part serves as a fallback: if someone's browser can't play the audio inline they'll see a download link instead
+			html += '<audio controls src="' + fixLink(data[i], 'mp3') + '" type="audio/mpeg">';
+			html += '<a href="' + fixLink(data[i], 'mp3') + '">' + data[i] + '</a>'; // this part serves as a fallback: if someone's browser can't play the audio inline they'll see a download link instead
 			html += '</audio>';
 		}
 	}
@@ -672,7 +688,7 @@ function parseAudioArray(data, fieldName) {
 function parseLink(data, subdir, fieldName) {
 	let html = '';
 	if (data !== '') {
-		html += '<a href="' + subdir + '/' + data + '">'
+		html += '<a href="' + fixLink(data, subdir) + '">'
 		html += fieldName ? fieldName : 'Link';
 		html += '</a><br />';
 	}
@@ -687,7 +703,7 @@ function parseLinkArray(data, subdir, fieldName) {
 			html += '<span class="varname">' + fieldName + '</span>:<br />';
 		}
 		for (let i in data) {
-			html += '<a href="' + subdir + '/' + data[i] + '">';
+			html += '<a href="' + fixLink(data[i], subdir) + '">';
 			html += data[i] + '</a> ';
 		}
 		html += '<br />';
