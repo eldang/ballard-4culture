@@ -628,7 +628,7 @@ function fixLink(link, subdir='') {
 		link = subdir + '/' + link;
 	}
 	if ((window.location.hostname).includes('github')) {
-		link = 'https://githubusercontent.com/media/eldang/ballard-4culture/main/' + link;
+		link = 'https://media.githubusercontent.com/media/eldang/ballard-4culture/main/' + link;
 	}
 	console.log(link);
 	return link;
