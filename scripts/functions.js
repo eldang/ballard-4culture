@@ -622,12 +622,13 @@ function parseBooleanField(data, ifTrue, ifFalse) {
 
 // workaround for Github Pages not support LFS objects, based on
 // https://github.com/git-lfs/git-lfs/issues/1342#issuecomment-467321479
+// https://media.githubusercontent.com/media/_Username_/_Project_/_Branch_/_Path_to_file_
 function fixLink(link, subdir='') {
 	if (subdir !== '') {
 		link = subdir + '/' + link;
 	}
 	if ((window.location.hostname).includes('github')) {
-		link = 'https://github.com/eldang/ballard-4culture/raw/main/' + link;
+		link = 'https://githubusercontent.com/media/eldang/ballard-4culture/main/' + link;
 	}
 	console.log(link);
 	return link;
