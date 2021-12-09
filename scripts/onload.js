@@ -40,21 +40,37 @@ map.on('load', () => {
 });
 
 /* load the derived people.json and make it available as a global data structure */
-var people = {};
-var request = new XMLHttpRequest();
-request.open('GET', 'data/people.json', true);
-request.onreadystatechange = function() {
-	if (request.readyState === 4) { // 4 = "ready".  This event will also fire on 2 and 3, which we just ignore.
-		if (request.status === 200) { // https://httpstatusdogs.com/200-ok
-			people = JSON.parse(request.response);
+let people = {};
+const peopleRequest = new XMLHttpRequest();
+peopleRequest.open('GET', 'data/people.json', true);
+peopleRequest.onreadystatechange = function() {
+	if (peopleRequest.readyState === 4) { // 4 = "ready".  This event will also fire on 2 and 3, which we just ignore.
+		if (peopleRequest.status === 200) { // https://httpstatusdogs.com/200-ok
+			people = JSON.parse(peopleRequest.response);
 			populatePeopleDropdown(people, 'people-control');
 		} else {
-			console.log('request failed:', request)
+			console.log('people request failed:', peopleRequest)
 		}
 	}
 };
-request.send(null);
+peopleRequest.send(null);
 
+/* load places.json and populate the relevant dropdown from it */
+let places = {}
+const placesRequest = new XMLHttpRequest();
+placesRequest.open('GET', 'data/places.geojson', true);
+placesRequest.onreadystatechange = function() {
+	if (placesRequest.readyState === 4) { // 4 = "ready".  This event will also fire on 2 and 3, which we just ignore.
+		if (placesRequest.status === 200) { // https://httpstatusdogs.com/200-ok
+			places = JSON.parse(placesRequest.response).features;
+			console.log(places);
+			populatePlacesDropdown(places, 'places-control');
+		} else {
+			console.log('places request failed:', placesRequest)
+		}
+	}
+};
+placesRequest.send(null);
 
 
 /*

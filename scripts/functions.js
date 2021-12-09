@@ -25,38 +25,32 @@ function populatePeopleDropdown(people, selectID) {
 	select.options[0] = new Option('Select a person', null);
 	for (i in people) {
 		let person = people[i];
-		console.log(i, person);
-		select.options[select.options.length] = new Option(
-			person.name,
-			i
-		);
-	}
-}
-
-
-function populateZoomControl(selectID, sourceID, fieldName, layerName) {
-	polygons = getPolygons(sourceID, fieldName);
-	var select = document.getElementById(selectID);
-	select.options[0] = new Option(layerName, "-108,25,-88,37,0");
-	updateURL();
-	for (i in polygons) {
-		select.options[select.options.length] = new Option(
-			polygons[i].name,
-			polygons[i].bbox.toString() + ',' + polygons[i].name
-		);
-		if (urlParams["zoomto"] && urlParams["zoomto"].toString() === polygons[i].name.toString()) {
-			if (showHouseDistricts) {
-				zoomToPolygon(sourceID, polygons[i].bbox.toString() + ',' + polygons[i].name, 'house_dist');
-			} else if (showSenateDistricts) {
-				zoomToPolygon(sourceID, polygons[i].bbox.toString() + ',' + polygons[i].name, 'senate_dist');
-			}
+		if (person.places.length > 0) {
+			console.log(i, select.options.length, person);
+			select.options[select.options.length] = new Option(
+				person.name,
+				person.places
+			);
 		}
 	}
-	map.setLayoutProperty(sourceID + '-poly', 'visibility', 'none');
-// IMPORTANT: these paint properties define the appearance of the mask layer that deemphasises districts outside the one we've zoomed to.  They will overrule anything that's set when that mask layer was loaded.
-	map.setPaintProperty(sourceID + '-poly', 'fill-color', 'rgba(200, 200, 200, 0.7)');
-	map.setPaintProperty(sourceID + '-poly', 'fill-outline-color', 'rgba(200, 200, 200, 0.1)');
 }
+
+
+function populatePlacesDropdown(places, selectID) {
+	var select = document.getElementById(selectID);
+	select.options[0] = new Option('Select a place', null);
+	for (i in places) {
+		let place = places[i];
+		if (place.properties.people.length > 0) {
+			select.options[select.options.length] = new Option(
+				place.properties.address,
+				place.geometry.coordinates
+			);
+		}
+	}
+}
+
+
 
 
 
