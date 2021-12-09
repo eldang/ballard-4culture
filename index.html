@@ -46,7 +46,7 @@
 
 				<!--Drop down controls-->
 
-				<select id="people-control" onchange="zoomToPolygon('state-house-districts', this.value, 'house_dist');"></select>
+				<select id="people-control" onchange="filterByPerson(this.value, this);"></select>
 				<br />
 				<select id="places-control" onchange="zoomToPolygon('state-senate-districts', this.value, 'senate_dist');"></select>
 

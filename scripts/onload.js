@@ -63,7 +63,6 @@ placesRequest.onreadystatechange = function() {
 	if (placesRequest.readyState === 4) { // 4 = "ready".  This event will also fire on 2 and 3, which we just ignore.
 		if (placesRequest.status === 200) { // https://httpstatusdogs.com/200-ok
 			places = JSON.parse(placesRequest.response).features;
-			console.log(places);
 			populatePlacesDropdown(places, 'places-control');
 		} else {
 			console.log('places request failed:', placesRequest)

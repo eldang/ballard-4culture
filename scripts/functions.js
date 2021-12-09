@@ -22,17 +22,17 @@ function showHideLayer(layerName, markerNames, showOnly=false, hideOnly=false) {
 
 function populatePeopleDropdown(people, selectID) {
 	var select = document.getElementById(selectID);
-	select.options[0] = new Option('Select a person', null);
+	select.options[0] = new Option('Select a person', '');
 	for (i in people) {
 		let person = people[i];
 		if (person.places.length > 0) {
-			console.log(i, select.options.length, person);
 			select.options[select.options.length] = new Option(
 				person.name,
 				person.places
 			);
 		}
 	}
+	select.options[select.options.length] = new Option("Show all", '');
 }
 
 
@@ -51,25 +51,18 @@ function populatePlacesDropdown(places, selectID) {
 }
 
 
-
-
-
-// from https://www.mapbox.com/mapbox-gl-js/example/filter-features-within-map-view/
-// Because features come from tiled vector data, feature geometries may be split
-// or duplicated across tile boundaries and, as a result, features may appear
-// multiple times in query results.
-function getUniqueFeatures(array, comparatorProperty) {
-	var existingFeatureKeys = {};
-	var uniqueFeatures = array.filter(function(el) {
-		if (existingFeatureKeys[el.properties[comparatorProperty]]) {
-			return false;
-		} else {
-			existingFeatureKeys[el.properties[comparatorProperty]] = true;
-			return true;
-		}
-	});
-
-	return uniqueFeatures;
+function filterByPerson(places, select) {
+	console.log(map.getLayer('places-layer'));
+	if (places === '') {
+		map.setFilter('places-layer', null);
+		select.selectedIndex = 0;
+	} else {
+		placeIDs = places.split(',');
+		map.setFilter(
+			'places-layer',
+			['<', 0, ['index-of', ['to-string', ['get', 'id']], ['literal', placeIDs]]]
+		);
+	}
 }
 
 // apply map filters persistently
