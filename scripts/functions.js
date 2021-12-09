@@ -36,20 +36,6 @@ function populatePeopleDropdown(people, selectID) {
 }
 
 
-function populatePlacesDropdown(places, selectID) {
-	var select = document.getElementById(selectID);
-	select.options[0] = new Option('Select a place', null);
-	for (i in places) {
-		let place = places[i];
-		if (place.properties.people.length > 0) {
-			select.options[select.options.length] = new Option(
-				place.properties.address,
-				place.geometry.coordinates
-			);
-		}
-	}
-}
-
 
 function filterByPerson(placesList, select) {
 	map.fitBounds(bounds);

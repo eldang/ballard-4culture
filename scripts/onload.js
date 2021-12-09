@@ -39,7 +39,7 @@ map.on('load', () => {
 	});
 });
 
-/* load the derived people.json and make it available as a global data structure */
+/* load the derived people.json ,make it available as a global data structure and populate the dropdown from it */
 let people = {};
 const peopleRequest = new XMLHttpRequest();
 peopleRequest.open('GET', 'data/people.json', true);
@@ -55,7 +55,7 @@ peopleRequest.onreadystatechange = function() {
 };
 peopleRequest.send(null);
 
-/* load places.json and populate the relevant dropdown from it */
+/* load places.json and make it available as a global data structure */
 let places = {}
 const placesRequest = new XMLHttpRequest();
 placesRequest.open('GET', 'data/places.geojson', true);
@@ -63,7 +63,6 @@ placesRequest.onreadystatechange = function() {
 	if (placesRequest.readyState === 4) { // 4 = "ready".  This event will also fire on 2 and 3, which we just ignore.
 		if (placesRequest.status === 200) { // https://httpstatusdogs.com/200-ok
 			places = JSON.parse(placesRequest.response).features;
-			populatePlacesDropdown(places, 'places-control');
 		} else {
 			console.log('places request failed:', placesRequest)
 		}
