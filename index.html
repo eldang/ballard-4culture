@@ -40,7 +40,7 @@
 				This map shows the location of places associated with the personal and oral histories of 40 Ballard residents (circa 1988). Click on a point to see the people associated with a place, or choose a name from the drop-down menu below to see the places associated with that person.</p>
 
 			<p class="moreinfo">
-				Pan the map by clicking and dragging. Use the mouse wheel to zoom in/out or use the +/- controls on the bottom left. Rotate the map by click-holding the double-headed arrow on the bottom left.</p>
+				Pan the map by clicking and dragging. Use the mouse wheel to zoom in/out or use the +/- controls on the bottom left. Rotate the map by click-holding the double-headed arrow on the bottom left.
 
 				<br /><br />
 
@@ -48,9 +48,11 @@
 
 				<select id="people-control" onchange="filterByPerson(this.value, this);"></select>
 
-				<p onClick='map.fitBounds(bounds);'><span id="ballard-4culture-style_icon" style="cursor:pointer"></span>Zoom to all of Ballard
-				</p>
 			</p>
+	
+				
+				<p onClick='map.fitBounds(bounds);' class="zoomoutlink"><span id="ballard-4culture-style_icon" style="cursor:pointer"></span>Zoom to all of Ballard
+				</p>
 
 			<!--Program logos and descriptions-->
 
