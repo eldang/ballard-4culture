@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 function showHideLayer(layerName, markerNames, showOnly=false, hideOnly=false) {
 	var visibility = map.getLayoutProperty(layerName, 'visibility');
 		if ((visibility === 'visible' || hideOnly) && !showOnly) {
@@ -27,7 +20,18 @@ function showHideLayer(layerName, markerNames, showOnly=false, hideOnly=false) {
 }
 
 
-
+function populatePeopleDropdown(people, selectID) {
+	var select = document.getElementById(selectID);
+	select.options[0] = new Option('Select a person', null);
+	for (i in people) {
+		let person = people[i];
+		console.log(i, person);
+		select.options[select.options.length] = new Option(
+			person.name,
+			i
+		);
+	}
+}
 
 
 function populateZoomControl(selectID, sourceID, fieldName, layerName) {

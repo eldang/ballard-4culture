@@ -47,6 +47,7 @@ request.onreadystatechange = function() {
 	if (request.readyState === 4) { // 4 = "ready".  This event will also fire on 2 and 3, which we just ignore.
 		if (request.status === 200) { // https://httpstatusdogs.com/200-ok
 			people = JSON.parse(request.response);
+			populatePeopleDropdown(people, 'people-control');
 		} else {
 			console.log('request failed:', request)
 		}
@@ -73,6 +74,7 @@ map.on('click', 'places-layer', (e) => {
 	/*const address = e.features[0].properties.address;
 	const id = e.features[0].properties.id;*/
 	let p = e.features[0].properties;
+	console.log(e.features);
 
 	// Ensure that if the map is zoomed out such that multiple
 	// copies of the feature are visible, the popup appears
