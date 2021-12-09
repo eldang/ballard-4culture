@@ -51,18 +51,40 @@ function populatePlacesDropdown(places, selectID) {
 }
 
 
-function filterByPerson(places, select) {
-	console.log(map.getLayer('places-layer'));
-	if (places === '') {
+function filterByPerson(placesList, select) {
+	map.fitBounds(bounds);
+	if (placesList === '') {
 		map.setFilter('places-layer', null);
 		select.selectedIndex = 0;
-		map.fitBounds(bounds);
 	} else {
-		placeIDs = places.split(',');
+		const placeIDs = placesList.split(',');
+		const filter = [
+			'<', 0, [
+				'index-of',
+				['to-string', ['get', 'id']], ['literal', placeIDs]
+			]
+		];
 		map.setFilter(
 			'places-layer',
-			['<', 0, ['index-of', ['to-string', ['get', 'id']], ['literal', placeIDs]]]
+			filter
 		);
+		console.log(placeIDs);
+		let bbox = []; // to be [[W,S], [E,N]] aka [[minX, minY], [maxX, maxY]]
+		for (i in places) {
+			place = places[i]
+			if (placeIDs.includes(place.properties.id.toString())) {
+				let coords = place.geometry.coordinates;
+				if (bbox.length < 2) {
+					bbox = [coords, coords];
+				} else {
+					bbox[0][0] = Math.min(bbox[0][0], coords[0]);
+					bbox[0][1] = Math.min(bbox[0][1], coords[1]);
+					bbox[1][0] = Math.max(bbox[1][0], coords[0]);
+					bbox[1][1] = Math.max(bbox[1][1], coords[1]);
+				}
+			}
+		}
+		console.log(bbox);
 	}
 }
 
