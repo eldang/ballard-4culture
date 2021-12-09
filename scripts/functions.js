@@ -44,7 +44,6 @@ function filterByPerson(placesList, select) {
 		select.selectedIndex = 0;
 	} else {
 		const placeIDs = placesList.split(',');
-		console.log(placeIDs);
 		let filter = null;
 		if (placeIDs.length > 1) {
 			filter = [
@@ -56,17 +55,14 @@ function filterByPerson(placesList, select) {
 		} else if (placeIDs.length > 0) {
 			filter = ['==', placeIDs[0], ['to-string', ['get', 'id']]];
 		}
-		console.log(filter);
 		map.setFilter(
 			'places-layer',
 			filter
 		);
-		console.log(placeIDs);
 		let bbox = []; // to be [[W,S], [E,N]] aka [[minX, minY], [maxX, maxY]]
 		for (i in places) {
 			place = places[i]
 			if (placeIDs.includes(place.properties.id.toString())) {
-				console.log(place);
 				let coords = place.geometry.coordinates;
 				if (bbox.length < 2) {
 					bbox = [
@@ -81,7 +77,6 @@ function filterByPerson(placesList, select) {
 				}
 			}
 		}
-		console.log(bbox, bbox[0][0]);
 		map.fitBounds(bbox, {padding: 150});
 	}
 }

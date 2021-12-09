@@ -88,7 +88,6 @@ map.on('click', 'places-layer', (e) => {
 	/*const address = e.features[0].properties.address;
 	const id = e.features[0].properties.id;*/
 	let p = e.features[0].properties;
-	console.log(e.features);
 
 	// Ensure that if the map is zoomed out such that multiple
 	// copies of the feature are visible, the popup appears
