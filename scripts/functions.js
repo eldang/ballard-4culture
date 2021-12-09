@@ -56,6 +56,7 @@ function filterByPerson(places, select) {
 	if (places === '') {
 		map.setFilter('places-layer', null);
 		select.selectedIndex = 0;
+		map.fitBounds(bounds);
 	} else {
 		placeIDs = places.split(',');
 		map.setFilter(
