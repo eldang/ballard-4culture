@@ -40,40 +40,19 @@
 				This map shows the location of places associated with the personal and oral histories of 40 Ballard residents (circa 1988). Click on a point to see the people associated with a place, or choose a name from the drop-down menu below to see the places associated with that person.</p>
 
 			<p class="moreinfo">
-				Pan the map by clicking and dragging. Use the mouse wheel to zoom in/out or use the +/- controls on the bottom left. Rotate the map by click-holding the double-headed arrow on the bottom left.</p>
+				Pan the map by clicking and dragging. Use the mouse wheel to zoom in/out or use the +/- controls on the bottom left. Rotate the map by click-holding the double-headed arrow on the bottom left.
 
 				<br /><br />
 
 				<!--Drop down controls-->
 
-				<select id="people-control" onchange="zoomToPolygon('state-house-districts', this.value, 'house_dist');"></select>
-				<select id="places-control" onchange="zoomToPolygon('state-senate-districts', this.value, 'senate_dist');"></select>
+				<select id="people-control" onchange="filterByPerson(this.value, this);"></select>
 
-				<!-- People/Places switcher -->
-
-				<p onClick="zoomToPolygon('', '-108,25,-88,37,0', '');" class="zoomoutlink"><span id="ballard-4culture-style_icon" style="cursor:pointer"></span>Zoom to all of Ballard
-				</p>
-
-				<p id="switch-to-senate-districts" class="districtswitcher">
-					<input type="radio" checked="true">
-						<span class="checkmark"></span>Texas <b>House</b> Districts.
-
-					<br />
-
-					<a href="index.html?districts=senate"><input type="radio"  style="cursor:pointer" onclick="javascript:window.location.href='index.html?districts=senate'; return false;"/>
-						<span class="checkmark"></span>Texas <b>Senate</b> Districts.</a>
-				</p>
-
-				<p id="switch-to-house-districts" class="districtswitcher">
-					<input type="radio" checked="true">
-						<span class="checkmark"></span>Texas <b>Senate</b> Districts.
-
-					<br />
-
-					<a href="index.html?districts=house"><input type="radio"  style="cursor:pointer" onclick="javascript:window.location.href='index.html?districts=house'; return false;"/>
-						<span class="checkmark"></span>Texas <b>House</b> Districts.</a>
-				</p>
 			</p>
+	
+				
+				<p onClick='map.fitBounds(bounds);' class="zoomoutlink"><span id="ballard-4culture-style_icon" style="cursor:pointer"></span>Zoom to all of Ballard
+				</p>
 
 			<!--Program logos and descriptions-->
 

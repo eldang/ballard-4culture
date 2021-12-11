@@ -17,6 +17,14 @@ div#map {
 	  bottom:0;
 }
 
+#ballard-4culture-style_icon{
+	background:url(../images/ballard-4culture-style_icon.png) left center;
+	width:26px;
+	height:22px;
+	display: block;
+	float: left;
+}
+
 .mapboxgl-popup {
 	min-width: 400px;
 	width: 50vw;
