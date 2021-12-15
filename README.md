@@ -17,3 +17,7 @@ If the map does not appear, check the javascript console.  If CSP is the issue, 
 
 1. If the web server is Apache, directly copy the [.htaccess](.htaccess) file in this project to the same directory as [index.html](index.html).  If it's a different server, apply the same CSP directives in that server's syntax.
 2. That should dramatically reduce the number of errors.  But there may still be complaints about a `blob:https:DOMAINNAME/RANDOMSTRING` worker file.  In that instance, set the Content Security Policy `"worker-src 'self' blob:;"` *for the entire site*.  This is necessary because Mapbox spawns workers which appear to be at the site's root directory, even if this map is hosted in a subdirectory.
+
+## XML parsing errors in the Javascript Console
+
+Firefox will sometimes put `XML Parsing Error: not well-formed` in the console about `places.geojson`, because without a `.json` file extension it doesn't recognise the file as being JSON.  This error appears to be harmless--probably because the code in `onload.js` that parses that file explicitly uses `JSON.parse()` to do it--but looks alarming.  It can be silenced by setting the MIME type for `.geojson` files to `application/json`.  The included [.htaccess](.htaccess) file does this for Apache servers.
