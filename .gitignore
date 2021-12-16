@@ -5,3 +5,5 @@ datasync/client_secret*.json
 datasync/credentials.json
 datasync/tokens/*
 datasync/temp_*
+desktop.ini
+*/desktop.ini
