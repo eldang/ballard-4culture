@@ -62,12 +62,6 @@ function filterByPerson(placesList, select) {
 
 
 
-function zoomOut() {
-	filterByPerson('', $('#people-control'));
-}
-
-
-
 
 
 function parseBooleanField(data, ifTrue, ifFalse) {
