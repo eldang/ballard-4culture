@@ -184,7 +184,7 @@ function parseImages(data, subdir, fieldName) {
 // Popups for a place, also listing all the people at that place
 function fillpopup(data) {
 	let ids = JSON.parse(data.people);
-	let html = "<h3>" + data.address + '</h3>';
+	let html = "<h3>" + data.name + '</h3>';
 	let names = '';
 	let entries = '';
 	for (i in ids) {
