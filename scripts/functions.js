@@ -21,7 +21,8 @@ function filterByPerson(placesList, select) {
 		map.setFilter('places-layer', null);
 		select.selectedIndex = 0;
 	} else {
-		const placeIDs = placesList.split(',');
+		// ugly hack here: sometimes the Mapbox filter seems to ignore the first item in the array, so by prepending a null value we can make sure all the real values get included
+		const placeIDs = ('-1,' + placesList).split(',');
 		let filter = null;
 		if (placeIDs.length > 1) {
 			filter = [
