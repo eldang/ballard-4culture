@@ -9,7 +9,8 @@
 				"address": "6518 26 Ave NW, Seattle WA, 98107",
 				"people": [
 					1
-				]
+				],
+				"name": "6518 26 Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -27,7 +28,8 @@
 				"address": "5445 Ballard Ave NW, Seattle WA,",
 				"people": [
 					1
-				]
+				],
+				"name": "Petes Place"
 			},
 			"geometry": {
 				"type": "Point",
@@ -45,7 +47,8 @@
 				"address": "1752 NW 57 St., Seattle WA, 98107",
 				"people": [
 					2
-				]
+				],
+				"name": "1752 NW 57 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -63,7 +66,8 @@
 				"address": "4455 Shilshole Ave NW, Seattle WA, 98107",
 				"people": [
 					2
-				]
+				],
+				"name": "Phoenix Shingle Mill"
 			},
 			"geometry": {
 				"type": "Point",
@@ -81,7 +85,8 @@
 				"address": "7339 25 Ave NW, Seattle WA, 98117",
 				"people": [
 					3
-				]
+				],
+				"name": "7339 25 Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -99,7 +104,8 @@
 				"address": "2852 NW 56 St., Seattle WA, 98107",
 				"people": [
 					3
-				]
+				],
+				"name": "2852 NW 56 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -117,7 +123,8 @@
 				"address": "6550 16 Ave NW, Seattle WA, 98117",
 				"people": [
 					4
-				]
+				],
+				"name": "6550 16 Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -135,7 +142,8 @@
 				"address": "3002 NW 60 St., Seattle WA, 98107",
 				"people": [
 					5
-				]
+				],
+				"name": "3002 NW 60 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -153,7 +161,8 @@
 				"address": "3018 NW 59 St., Seattle WA, 98107",
 				"people": [
 					5
-				]
+				],
+				"name": "3018 NW 59 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -171,7 +180,8 @@
 				"address": "8024 27 Ave NW, Seattle WA 98117",
 				"people": [
 					6
-				]
+				],
+				"name": "8024 27 Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -189,7 +199,8 @@
 				"address": "3615 NW 62 St., Seattle WA, 98107",
 				"people": [
 					7
-				]
+				],
+				"name": "3615 NW 62 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -207,7 +218,8 @@
 				"address": "6001 Seaview Ave NW, Seattle WA, 98107",
 				"people": [
 					7
-				]
+				],
+				"name": "Rays Boathouse"
 			},
 			"geometry": {
 				"type": "Point",
@@ -225,7 +237,8 @@
 				"address": "9732 12 Ave NW, Seattle WA, 98117",
 				"people": [
 					8
-				]
+				],
+				"name": "9732 12 Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -243,7 +256,8 @@
 				"address": "2235 NW 61 St., Seattle WA, 98107",
 				"people": [
 					9
-				]
+				],
+				"name": "2235 NW 61 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -261,7 +275,8 @@
 				"address": "7752 20 Ave NW, Seattle WA, 98117",
 				"people": [
 					10
-				]
+				],
+				"name": "7752 20 Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -279,7 +294,8 @@
 				"address": "2430 NW 64 St., Seattle WA, 98107",
 				"people": [
 					11
-				]
+				],
+				"name": "2430 NW 64 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -297,7 +313,8 @@
 				"address": "4739 Ballard Ave NW, Seattle WA, 98107",
 				"people": [
 					11
-				]
+				],
+				"name": "4739 Ballard Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -315,7 +332,8 @@
 				"address": "1723 NW 64 St., Seattle WA, 98107",
 				"people": [
 					12
-				]
+				],
+				"name": "also shown as 1725 NW 64th in MHB ID 40"
 			},
 			"geometry": {
 				"type": "Point",
@@ -333,7 +351,8 @@
 				"address": "6019 6th Ave NW, Seattle WA, 98107",
 				"people": [
 					14
-				]
+				],
+				"name": "6019 6th Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -351,7 +370,8 @@
 				"address": "5144 Ballard Ave NW, Seattle WA, 98107",
 				"people": [
 					14
-				]
+				],
+				"name": "5144 Ballard Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -369,7 +389,8 @@
 				"address": "1810 NW 65 St., Seattle WA, 98117",
 				"people": [
 					15
-				]
+				],
+				"name": "1810 NW 65 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -387,7 +408,8 @@
 				"address": "1418 NW 65 St., Seattle WA, 98117",
 				"people": [
 					15
-				]
+				],
+				"name": "1418 NW 65 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -405,7 +427,8 @@
 				"address": "6734 12th NW, Seattle WA, 98117",
 				"people": [
 					16
-				]
+				],
+				"name": "6734 12th NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -423,7 +446,8 @@
 				"address": "7334 12th NW, Seattle WA, 98117",
 				"people": [
 					17
-				]
+				],
+				"name": "7334 12th NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -441,7 +465,8 @@
 				"address": "2832 NW 63 St., Seattle WA, 98107",
 				"people": [
 					18
-				]
+				],
+				"name": "2832 NW 63 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -459,7 +484,8 @@
 				"address": "6552 Earl Ave NW, Seattle WA, 98117",
 				"people": [
 					18
-				]
+				],
+				"name": "6552 Earl Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -477,7 +503,8 @@
 				"address": "3038 NW 64 St., Seattle WA, 98107",
 				"people": [
 					18
-				]
+				],
+				"name": "3038 NW 64 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -495,7 +522,8 @@
 				"address": "7044 Jones Ave NW, Seattle WA, 98117",
 				"people": [
 					19
-				]
+				],
+				"name": "7044 Jones Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -513,7 +541,8 @@
 				"address": "8353 21 Ave NW, Seattle WA, 98117",
 				"people": [
 					19
-				]
+				],
+				"name": "8353 21 Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -531,7 +560,8 @@
 				"address": "8025 25 Ave NW, Seattle WA, 98117",
 				"people": [
 					20
-				]
+				],
+				"name": "8025 25 Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -549,7 +579,8 @@
 				"address": "3208 NW 59 St., Seattle WA, 98107",
 				"people": [
 					20
-				]
+				],
+				"name": "3208 NW 59 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -567,7 +598,8 @@
 				"address": "1429 NW 51 St., Seattle WA, 98107",
 				"people": [
 					21
-				]
+				],
+				"name": "1429 NW 51 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -585,7 +617,8 @@
 				"address": "1031 NW 65 St., Seattle WA, 98107",
 				"people": [
 					22
-				]
+				],
+				"name": "1031 NW 65 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -603,7 +636,8 @@
 				"address": "326 NW 51 St., Seattle WA, 98107",
 				"people": [
 					23
-				]
+				],
+				"name": "326 NW 51 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -621,7 +655,8 @@
 				"address": "2840 NW 69 St., Seattle WA, 98117",
 				"people": [
 					24
-				]
+				],
+				"name": "2840 NW 69 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -639,7 +674,8 @@
 				"address": "6403 32 Ave NW, Seattle WA, 98107",
 				"people": [
 					24
-				]
+				],
+				"name": "6403 32 Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -657,7 +693,8 @@
 				"address": "8031 32 Ave NW, Seattle WA, 98117",
 				"people": [
 					24
-				]
+				],
+				"name": "8031 32 Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -675,7 +712,8 @@
 				"address": "2853 NW 69 St., Seattle. WA, 98117",
 				"people": [
 					24
-				]
+				],
+				"name": "2853 NW 69 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -693,7 +731,8 @@
 				"address": "8500 Greenwood Ave N, Seattle WA",
 				"people": [
 					25
-				]
+				],
+				"name": "8500 Greenwood Ave N"
 			},
 			"geometry": {
 				"type": "Point",
@@ -711,7 +750,8 @@
 				"address": "8830 31 Ave NW, Seattle WA, 98117",
 				"people": [
 					26
-				]
+				],
+				"name": "8830 31 Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -729,7 +769,8 @@
 				"address": "6756 22 Ave NW, Seattle WA, 98117",
 				"people": [
 					27
-				]
+				],
+				"name": "6756 22 Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -747,7 +788,8 @@
 				"address": "2025 NW 62nd Street, Seattle WA, 98107",
 				"people": [
 					27
-				]
+				],
+				"name": "2025 NW 62nd Street"
 			},
 			"geometry": {
 				"type": "Point",
@@ -765,7 +807,8 @@
 				"address": "1734 NW Market St., Seattle WA, 98107",
 				"people": [
 					28
-				]
+				],
+				"name": "1734 NW Market St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -783,7 +826,8 @@
 				"address": "7710 31 Ave NW, Seattle WA, 98117",
 				"people": [
 					30
-				]
+				],
+				"name": "7710 31 Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -801,7 +845,8 @@
 				"address": "2249 NW 62 St., Seattle WA, 98107",
 				"people": [
 					34
-				]
+				],
+				"name": "2249 NW 62 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -819,7 +864,8 @@
 				"address": "7346 21 Ave NW, Seattle WA, 98117",
 				"people": [
 					33
-				]
+				],
+				"name": "7346 21 Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -837,7 +883,8 @@
 				"address": "357 NW 77 St., Seattle WA, 98117",
 				"people": [
 					34
-				]
+				],
+				"name": "357 NW 77 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -855,7 +902,8 @@
 				"address": "7351 24 Ave NW, Seattle WA, 98117",
 				"people": [
 					35
-				]
+				],
+				"name": "7351 24 Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -873,7 +921,8 @@
 				"address": "1027 NW 65 St., Seattle WA, 98107",
 				"people": [
 					36
-				]
+				],
+				"name": "1027 NW 65 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -891,7 +940,8 @@
 				"address": "2637 NW 59 St., Seattle WA, 98107",
 				"people": [
 					37
-				]
+				],
+				"name": "2637 NW 59 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -909,7 +959,8 @@
 				"address": "2848 NW 60 St., Seattle WA 98107",
 				"people": [
 					37
-				]
+				],
+				"name": "2848 NW 60 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -927,7 +978,8 @@
 				"address": "367 NW 58 St., Seattle WA, 98107",
 				"people": [
 					38
-				]
+				],
+				"name": "367 NW 58 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -945,7 +997,8 @@
 				"address": "6212 NW 63 St., Seattle WA, 98107",
 				"people": [
 					41
-				]
+				],
+				"name": "6212 NW 63 St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -963,7 +1016,8 @@
 				"address": "6513 32 Ave NW, Seattle WA, 98117",
 				"people": [
 					41
-				]
+				],
+				"name": "6513 32 Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -981,7 +1035,8 @@
 				"address": "8041 32 Ave NW, Seattle WA, 98117",
 				"people": [
 					24
-				]
+				],
+				"name": "8041 32 Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -999,7 +1054,8 @@
 				"address": "938 NW 51st St., Seattle WA,  98107",
 				"people": [
 					38
-				]
+				],
+				"name": "938 NW 51st St."
 			},
 			"geometry": {
 				"type": "Point",
@@ -1022,7 +1078,8 @@
 					30,
 					34,
 					35
-				]
+				],
+				"name": "Golden Gardens"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1040,7 +1097,8 @@
 				"address": "2026 NW Market St., Seattle, WA 98107",
 				"people": [
 					17
-				]
+				],
+				"name": "Carnegie"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1058,7 +1116,8 @@
 				"address": "3015 NW 68 St., Seattle, WA 98117",
 				"people": [
 					19
-				]
+				],
+				"name": "Webster"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1082,7 +1141,8 @@
 					18,
 					30,
 					34
-				]
+				],
+				"name": "Ballard Beach"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1101,7 +1161,8 @@
 				"people": [
 					3,
 					7
-				]
+				],
+				"name": "Rays Boathouse"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1122,7 +1183,8 @@
 					23,
 					34,
 					38
-				]
+				],
+				"name": "St. Alphonsus"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1140,7 +1202,8 @@
 				"address": "5400 Ballard Ave NW, Seattle, WA 98107",
 				"people": [
 					30
-				]
+				],
+				"name": "Ballard Bell"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1158,7 +1221,8 @@
 				"address": "7023 27 Ave NW, Seattle, WA 98117",
 				"people": [
 					37
-				]
+				],
+				"name": "7023 27 Ave NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1177,7 +1241,8 @@
 				"people": [
 					12,
 					14
-				]
+				],
+				"name": "Owl Conor Byrne"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1195,7 +1260,8 @@
 				"address": "6739 26th Ave NW, Seattle, WA 98117",
 				"people": [
 					40
-				]
+				],
+				"name": "Bjornson father"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1213,7 +1279,8 @@
 				"address": "7307 27th NW, Seattle, WA 98117",
 				"people": [
 					40
-				]
+				],
+				"name": "7307 27th NW"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1232,7 +1299,8 @@
 				"people": [
 					4,
 					34
-				]
+				],
+				"name": "Sunset Hill CC"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1251,7 +1319,8 @@
 				"people": [
 					3,
 					5
-				]
+				],
+				"name": "Lockhaven"
 			},
 			"geometry": {
 				"type": "Point",
@@ -1269,7 +1338,8 @@
 				"address": "9715 8th Ave NW, Seattle, WA 98117",
 				"people": [
 					8
-				]
+				],
+				"name": "Landmarked Farmhouse"
 			},
 			"geometry": {
 				"type": "Point",
