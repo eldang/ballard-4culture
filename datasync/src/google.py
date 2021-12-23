@@ -57,6 +57,12 @@ def _auth():
                     logger.debug('Deleting stale Google login token')
                     os.remove(tokenFile)
                     creds = _authNewSession(credsFile)
+                else:
+                    logger.error(
+                        'Google auth is failing with error response: ' +
+                        str(err)
+                    )
+                    exit(-1)
             else:
                 logger.debug('Refresh successful')
         else:
