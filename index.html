@@ -49,9 +49,9 @@
 				<select id="people-control" onchange="filterByPerson(this.value, this);"></select>
 
 			</p>
-	
-				
-				<p onClick='map.fitBounds(bounds);' class="zoomoutlink"><span id="ballard-4culture-style_icon" style="cursor:pointer"></span>Zoom to all of Ballard
+
+
+				<p onClick="filterByPerson('', $('#people-control'));" class="zoomoutlink"><span id="ballard-4culture-style_icon" style="cursor:pointer"></span>Zoom to all of Ballard
 				</p>
 
 			<!--Program logos and descriptions-->
@@ -79,22 +79,7 @@
 
 			<div id='map'></div>
 
-<!--commenting out the layer switcher for now
-			<div class='legend'>
-				<div class='legend-title'>Click on a layer name below to toggle its visibility</div>
-				<div class='legend-scale'>
-					<ul class='legend-labels'>
-						<li onClick="showHideLayer('people-points', markerNames=['people_locations']);"><span id="raising_blended_learners_campuses"></span>People</li>
-						<li onClick="showHideLayer('raising-school-leaders-points', markerNames=['raising_school_leaders']);"><span id="raising_school_leaders"></span>Places</li>
-					</ul>
 
-
-				</div> <!-- end of div class='legend-scale' -->
-
-				<div class='legend-source'>Source: <a href="https://www.ballardhistory.org/" target="_blank">Ballard Historical Society</a></div>
-				<div class='map-credit'>Map design by <a href="http://www.coregis.net/" target="_blank">CORE GIS</a></div>
-			</div> <!-- end of div id="legend" -->
-		</div> <!-- end of div id="main" -->
 
 <!-- JS that needs the above elements to be declared before it runs -->
 		<script src='scripts/onload.js'></script>

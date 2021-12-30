@@ -16,9 +16,14 @@ function populatePeopleDropdown(people, selectID) {
 
 
 function filterByPerson(placesList, select) {
+	// clear any open popup
+	$('.mapboxgl-popup').remove();
+	// zoom out first, to make sure we have all places loaded
 	map.fitBounds(bounds);
-	if (placesList === '') {
+	if (placesList === '') { // if we have a null list of places
+		// remove the filter
 		map.setFilter('places-layer', null);
+		// and restore the dropdown to its starting state
 		select.selectedIndex = 0;
 	} else {
 		// ugly hack here: sometimes the Mapbox filter seems to ignore the first item in the array, so by prepending a null value we can make sure all the real values get included
@@ -56,6 +61,7 @@ function filterByPerson(placesList, select) {
 				}
 			}
 		}
+		// zoom in to the filtered set of places
 		map.fitBounds(bbox, {padding: 150});
 	}
 }
