@@ -134,6 +134,8 @@ def _processPlaces(places: []) -> {}:
             'name': row['place name'].replace('_', ' '),
             'people': []
         }
+        if place['name'] == '':
+            place['name'] = place['address'].split(',')[0]
         result[int(float(row['place_id']))] = place
     logger.info('Processed ' + str(len(result)) + ' place entries')
     return result
@@ -211,7 +213,8 @@ def _makeGeoJSON(places: {}) -> {}:
             'id': i,
             'type': place['type'],
             'address': place['address'],
-            'people': place['people']
+            'people': place['people'],
+            'name': place['name']
         }
         features.append({
             'type': 'Feature',
