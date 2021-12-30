@@ -27,6 +27,15 @@ SHEETS = [
 logger = logging.getLogger(__name__)
 
 
+def _authNewSession(credsFile):
+    logger.info(
+        'No existing Google login session found, so you\'ll be ' +
+        'redirected to a browser window to log in.  ' +
+        'Or go to the URL below if it doesn\'t happen automatically.'
+    )
+    flow = InstalledAppFlow.from_client_secrets_file(credsFile, SCOPES)
+    return flow.run_local_server(port=0)
+
 
 
 # from https://developers.google.com/drive/api/v3/quickstart/python
@@ -41,15 +50,23 @@ def _auth():
     else:
         if creds and creds.expired and creds.refresh_token:
             logger.debug('Refreshing existing Google login')
-            creds.refresh(Request())
+            try:
+                creds.refresh(Request())
+            except Exception as err:
+                if 'invalid_grant' in str(err):
+                    logger.debug('Deleting stale Google login token')
+                    os.remove(tokenFile)
+                    creds = _authNewSession(credsFile)
+                else:
+                    logger.error(
+                        'Google auth is failing with error response: ' +
+                        str(err)
+                    )
+                    exit(-1)
+            else:
+                logger.debug('Refresh successful')
         else:
-            logger.info(
-                'No existing Google login session found, so you\'ll be ' +
-                'redirected to a browser window to log in.  ' +
-                'Or go to the URL below if it doesn\'t happen automatically.'
-            )
-            flow = InstalledAppFlow.from_client_secrets_file(credsFile, SCOPES)
-            creds = flow.run_local_server(port=0)
+            creds = _authNewSession(credsFile)
         with open(tokenFile, 'w') as token:
             token.write(creds.to_json())
     service = build('drive', 'v3', credentials=creds)

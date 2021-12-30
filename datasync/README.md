@@ -24,8 +24,6 @@
 
 You may be asked to log in to Google Drive, if this is the first time you're running the script or if it's been a while.
 
-If you get the error `google.auth.exceptions.RefreshError: ('invalid_grant: Bad Request', {'error': 'invalid_grant', 'error_description': 'Bad Request'})`  or `google.auth.exceptions.RefreshError: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})` try deleting `tokens/token.json` to force it to redo the Google auth.
-
 ## Development
 
 ### Adding a package to pipenv
