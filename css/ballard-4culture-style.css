@@ -31,11 +31,11 @@ div#map {
 }
 
 .mapboxgl-popup-content {
-  font: 400 12px/22px 'Oswald', 'Helvetica Neue', sans-serif;
-  padding: 1em 0;
-  min-width: 400px;
+	font: 400 12px/22px 'Oswald', 'Helvetica Neue', sans-serif;
+	padding: 1em 0;
+	min-width: 400px;
 	max-height: 50vh;
-  overflow-x: auto;
+	overflow-x: auto;
 	overflow-y: auto;
 }
 
@@ -65,12 +65,33 @@ div#map {
 }
 
 .mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
-  margin-top: 15px;
+  margin-top: 0px;
 }
 
+/* there are multiple classes for the popup tip because each unique position has to be specified*/
+.mapboxgl-popup-anchor-top .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip {
+    border-bottom-color: #cca71a;
+    }
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip,
+.mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip {
+    border-top-color: #ffffff;
+    }
+.mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
+    border-right-color: #ffffff;
+    }
+.mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+    border-left-color: #ffffff;
+    }
+
+/* commenting this out so I can experiment with using multiple classes to ensure uniform color for the popup pointer
 .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
-  border-bottom-color: #333333;
+	border-bottom-color: #333333;
+	border-top-color: #cca71a;
 }
+*/
 
 /* tabs in popups */
 /*
@@ -514,6 +535,16 @@ p.programs  {
     z-index:2;
     background:#cca71a;
 	overflow: auto;
+}
+
+#header {
+	/*this holds the title and prevents the text from scrolling underneath*/
+	width: 260px;
+	height: 60px;
+	position: fixed;
+	padding: 0;
+	z-index: 1;
+	background: #ffffff;
 }
 
 .collapsible {
