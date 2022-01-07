@@ -17,7 +17,7 @@ function populatePeopleDropdown(people, selectID) {
 
 function filterByPerson(placesList, select) {
 	// clear any open popup
-	$('.mapboxgl-popup').remove();
+	$('#popup').dialog('close');
 	// zoom out first, to make sure we have all places loaded
 	map.fitBounds(bounds);
 	if (placesList === '') { // if we have a null list of places

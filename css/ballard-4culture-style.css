@@ -33,6 +33,10 @@ div#map {
 	border: none;
 }
 
+.hidden {
+	opacity: 0 !important;
+}
+
 .ui-dialog-titlebar {
   background: #cca71a !important;
   color: #fff !important;
