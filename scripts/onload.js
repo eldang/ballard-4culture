@@ -88,7 +88,7 @@ $("#popup").dialog({
 	draggable: true,
 	hide: 300,
 	show: 100,
-	minWidth: w < 350 ? w : Math.min(Math.max(300, w * 0.5), 600),
+	minWidth: w < 350 ? w : Math.min(Math.max(300, w * 0.5), 500),
 	maxWidth: w * 0.9,
 	maxHeight: h / 2,
 	resizable: true
