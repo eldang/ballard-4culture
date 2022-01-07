@@ -191,7 +191,7 @@ function parseImages(data, subdir, fieldName) {
 // Popups for a place, also listing all the people at that place
 function fillpopup(data) {
 	let ids = JSON.parse(data.people);
-	let html = "<h3>" + data.name + '</h3>';
+	let html = '';
 	let names = '';
 	let entries = '';
 	for (i in ids) {
@@ -227,10 +227,8 @@ function fillpopup(data) {
 		console.log('Missing data for popup', ids, data);
 		html += '<p>No records found.</p>';
 	} else {
-		html += '<div id="personTabs">';
 		html += '<ul>' + names + '</ul>';
 		html += entries;
-		html += '</div>';
 	}
 
 	return html; //this will return the string to the calling function
