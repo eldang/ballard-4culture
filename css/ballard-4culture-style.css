@@ -2,8 +2,8 @@
 body {
 	padding:0;
 	margin:0;
-	font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif;
-    overflow: hidden;
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+	overflow: hidden;
 }
 
 div#map {
@@ -26,19 +26,11 @@ div#map {
 }
 
 #popup-content {
-  font: 400 12px/22px 'Oswald', 'Helvetica Neue', sans-serif;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 22px;
   padding: 0px 0px 1em 0px;
   overflow-x: auto;
-}
-
-.mapboxgl-popup-content {
-	font: 400 12px/22px 'Oswald', 'Helvetica Neue', sans-serif;
-	padding: 1em 0;
-	min-width: 400px;
-	max-height: 50vh;
-	overflow-x: auto;
-	overflow-y: auto;
-	border: none;
 }
 
 .hidden {
@@ -153,7 +145,6 @@ html .ui-button.ui-state-disabled:active {
 /*This formatting is for the  name of the fields in the pop-up if they are put in place using EGs fillpopup_ function in onload.js*/
 span.varname{
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
-	font-size: 12px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: bold;
@@ -163,7 +154,6 @@ span.varname{
 /*This is formatting for the text that follows the label*/
 span.attribute {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
-	font-size: 12px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
@@ -202,7 +192,7 @@ img {
 	z-index : 1;
     left: 0;
 	bottom: 0;
-	font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 	font-weight: normal;
 	color: #363635;
 	text-decoration: none;
