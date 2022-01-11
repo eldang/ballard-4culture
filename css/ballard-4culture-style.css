@@ -33,6 +33,16 @@ div#map {
   overflow-x: auto;
 }
 
+.ui-tabs-tab {
+	font: 500 14px/22px 'Oswald', 'Helvetica Neue', sans-serif;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+	background: #454545 !important;
+	border: #222222 !important;
+	font-weight: 500 !important;
+}
+
 .hidden {
 	opacity: 0 !important;
 }
