@@ -2,8 +2,8 @@
 body {
 	padding:0;
 	margin:0;
-	font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif;
-    overflow: hidden;
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+	overflow: hidden;
 }
 
 div#map {
@@ -25,117 +25,55 @@ div#map {
 	float: left;
 }
 
-.mapboxgl-popup {
-	min-width: 400px;
-	width: 50vw;
-}
-
-.mapboxgl-popup-content {
-  font: 400 12px/22px 'Oswald', 'Helvetica Neue', sans-serif;
-  padding: 1em 0;
-  min-width: 400px;
-	max-height: 50vh;
+#popup-content {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 22px;
+  padding: 0px 0px 1em 0px;
   overflow-x: auto;
-	overflow-y: auto;
 }
 
-.mapboxgl-popup-close-button {
-  display: true;
-  color:#ffffff;
+.ui-tabs-tab {
+	font: 500 14px/22px 'Oswald', 'Helvetica Neue', sans-serif;
 }
 
-.mapboxgl-popup-content h3 {
-  background: #cca71a;
-  color: #fff;
-  margin: 0;
-  padding: 10px;
-  border-radius: 3px 3px 0 0;
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+	background: #454545 !important;
+	border: #222222 !important;
+	font-weight: 500 !important;
+}
+
+.hidden {
+	opacity: 0 !important;
+}
+
+.ui-dialog-titlebar {
+  background: #cca71a !important;
+  color: #fff !important;
   font-weight: 700;
-  margin-top: -15px;
 }
 
-.mapboxgl-popup-content h4 {
+#popup-content h4 {
   margin: 0;
   padding: 10px;
   font-weight: 600;
 }
 
-.mapboxgl-popup-content p {
+#popup-content p {
   padding: 10px;
 }
 
-.mapboxgl-popup-anchor-top > .mapboxgl-popup-content {
-  margin-top: 15px;
-}
-
-.mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
-  border-bottom-color: #333333;
-}
-
-/* tabs in popups */
-/*
-.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
-	padding: 2px !important;
-	font-family:"Oswald",Arial,Helvetica,sans-serif;
-	font-size:16px;
-	color:#f4f402;
-	border: 1px solid #333333;
-	background-color:#333333;
-}
-
-.ui-tabs-tab.ui-corner-top.ui-state-default.ui-tab.ui-state-hover{
-	border: 1px solid #333333;
-	background: #f6f6f6;
-	font-weight: normal;
-	color: #a4aaa7;
-	outline:0px;
-}
-
-.ui-state-active,
-.ui-widget-content .ui-state-active,
-.ui-widget-header .ui-state-active,
-a.ui-button:active,
-.ui-button:active,
-.ui-button.ui-state-active:hover {
-	border: 0px solid #333333;
-	background: #007fff;
-	font-weight: normal;
-	color: #a4aaa7;
-}
-
-.ui-icon-background,
-.ui-state-active .ui-icon-background {
-	border: #333333;
-	background-color: #ffffff;
-}
-
-.ui-tabs-nav.ui-corner-all.ui-helper-reset.ui-helper-clearfix.ui-widget-header {
-	outline:0px;
-	background-color:#ffffff;
-}
-
-html .ui-button.ui-state-disabled:hover,
-html .ui-button.ui-state-disabled:active {
-	border: 1px solid #333333;
-	background: #f9ed02;
-	font-weight: normal;
-	color: #ffffff;
-	outline:0px;
-}
-*/
-
-.mapboxgl-popup a:link {
+#popup-content p a:link {
 	text-decoration: underline;
 }
 
-.mapboxgl-popup a:hover {
+#popup-content p a:hover {
 	text-decoration: none;
 }
 
 /*This formatting is for the  name of the fields in the pop-up if they are put in place using EGs fillpopup_ function in onload.js*/
 span.varname{
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
-	font-size: 12px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: bold;
@@ -145,7 +83,6 @@ span.varname{
 /*This is formatting for the text that follows the label*/
 span.attribute {
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
-	font-size: 12px;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
@@ -173,158 +110,14 @@ img {
 	max-width: 300px;
 }
 
-.zoom {
-	background-color: #ffffff;
-	opacity:.8;
-	border: 1px solid #989797;
-	width: 225px;
-	text-align: left;
-	padding: 10px;
-    position: fixed;
-	z-index : 1;
-    left: 0;
-	bottom: 0;
-	font-family: "Helvetica Neue", helvetica, arial, sans-serif;
-	font-weight: normal;
-	color: #363635;
-	text-decoration: none;
-	margin-right: 10px;
-	margin-bottom: 20px;
-	overflow: hidden; /*planning ahead to clear floats*/
-}
 
-.legend, .stats {
-	background-color: rgba(255, 255, 255, 0.7);
-	border: 1px solid rgba(190, 188, 188, 1);
-	color: rgba(82, 82, 80, 1);
-	width: 225px;
-	font-weight: normal;
-	text-decoration: none;
-	overflow: hidden; /*planning ahead to clear floats*/
-	font-family: "Open Sans", helvetica, arial, sans-serif;
-	text-align: left;
-}
-
-.legend {
-	padding: 10px;
-  position: fixed;
-	z-index: 1;
-  right: 0;
-	bottom: 0;
-	margin-right: 10px;
-	margin-bottom: 20px;
-}
-
-.stats {
-	opacity: 0;
-	transition: opacity 1.5s;
-	-webkit-transition: opacity 1.5s;
-	padding: 10px;
-	padding-right: 0px;
-  position: fixed;
-	z-index : 1;
-  right: 0;
-	bottom: 10;
-	margin-right: 10px;
-	margin-top: 10px;
-/*	margin-bottom: 20px; */
-}
-
-.stats-title {
-	position:relative;
-	bottom:0;
-	right:0;
-  text-align: left;
-  margin-bottom: 5px;
-	font-family: "Open Sans", helvetica, arial, sans-serif;
-  font-weight: bold;
-  font-size: 90%;
-}
-.stats .stats-scale ul {
-   margin: 0;
-   margin-bottom: 5px;
-   padding: 0;
-   float: left;
-   list-style: none;
-}
-  .stats .stats-scale ul li {
-    font-size: 75%;
-    list-style: none;
-    margin-left: 0;
-    line-height: 22px;
-    margin-bottom: 2px;
-    }
-  .stats ul.stats-labels li span {
-    display: block;
-    float: right;
-    height: 14px;
-    width: 24px;
-    margin-right: 0px;
-    margin-left: 10px;
-    border: 0px solid #999;
-    }
 
 ul{
 	list-style-type:none;
 	font-size:
 }
 
-.legend-title {
-	position:relative;
-	bottom:0;
-	right:0;
-    text-align: left;
-    margin-bottom: 5px;
-	font-family: "Open Sans", helvetica, arial, sans-serif;
-    font-weight: bold;
-    font-size: 90%;
-    }
-  .legend .legend-scale ul {
-    margin: 0;
-    margin-bottom: 5px;
-    padding: 0;
-    float: left;
-    list-style: none;
-    }
-  .legend .legend-scale ul li {
-    font-size: 13px;
-    list-style: none;
-    margin-left: 0;
-    line-height: 20px;
-    margin-bottom: 2px;
-    }
-  .legend ul.legend-labels li span {
-    display: block;
-    float: left;
-    height: 14px;
-    width: 24px;
-    margin-right: 5px;
-    margin-left: 0px;
-    border: 0px solid #999;
-    }
-  .legend ul.legend-labels li ul { /* to indent nested lists in the legend */
-  	margin-left: 1em;
-  }
 
-	.inactive {
-		opacity: 0.25;
-	}
-
-  .legend .legend-source {
-    font-size: 70%;
-    color: #999;
-    clear: both;
-    }
-
-  .legend .map-credit {
-    font-size: 70%;
-    color: #999;
-    clear: both;
-    }
-
-  .legend a {
-    color: #777;
-    }
 
 	a:link {
     text-decoration: none;
@@ -504,16 +297,27 @@ p.programs  {
     padding: 16px;*/
 	font-family: "Open Sans", Arial, Helvetica, sans-serif;
 	font-weight: 700;
+	width: 260px;
 	color: #ffff;
 	filter: alpha(opacity = 0);
     position:fixed;
-	padding:5px 5px 5px 5px;
-	left:20px;
+	padding:5px 0px 5px 0px;
+	text-align:center;
 	top:20px;
     display:block;
     z-index:2;
     background:#cca71a;
 	overflow: auto;
+}
+
+#header {
+	/*this holds the title and prevents the text from scrolling underneath*/
+	width: 260px;
+	height: 60px;
+	position: fixed;
+	padding: 0;
+	z-index: 1;
+	background: #ffffff;
 }
 
 .collapsible {

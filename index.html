@@ -21,7 +21,7 @@
 <!-- load functions & object definitions that we'll call later -->
 		<script src='scripts/functions.js'></script>
 
-<!-- jQuery UI.  A custom build of it including only the tabs widget and dependencies of that -->
+<!-- jQuery UI.  A custom build of it including only the tabs and dialog widgets and dependencies of those -->
 	<link rel="stylesheet" href="jquery-ui-1.13.0.custom/jquery-ui.css" />
 	<script src="scripts/jquery-3.6.0.min.js"></script>
 	<script src="jquery-ui-1.13.0.custom/jquery-ui.min.js"></script>
@@ -34,7 +34,7 @@
 
 		<div id="mySidenav" class="sidenav">
 			<p>
-			<br><br>
+			<br>
 			</p>
 			<p class="moreinfo">
 				This map shows the location of places associated with the personal and oral histories of 40 Ballard residents (circa 1988). Click on a point to see the people associated with a place, or choose a name from the drop-down menu below to see the places associated with that person.</p>
@@ -59,7 +59,7 @@
 			<br />
 			<br>
 
-			<p class="moreinfo"><a href="https://www.ballardhistory.org/contact/" target="_blank">Contact</a> the <a href="https://www.ballardhistory.org/" target="_blank">Ballard Historical Society</a>
+			<p class="moreinfo"><a href="https://www.ballardhistory.org/contact/" target="_blank">Contact</a> the Ballard Historical Society
 				<br/><br/>
 				<a href="https://www.ballardhistory.org/" target="_blank"><img src="images/bhs_logo.svg"  width="150" height="77"/></a>
 				<br/><br/>
@@ -69,15 +69,23 @@
 
 		<div id="main">
 
+	<div id="header">
 			<div id="about">
-				<span style="font-size:16px;">An Audio History of Ballard</span>
+				<span style="font-size:16px;">Revisiting Early Ballard</span>
 			</div>
+	</div>
 
 		<!--END FLYOUT FOR 'ZOOM TO LAYERS'-->
 
 
 
 			<div id='map'></div>
+
+			<div id="popup">
+				<div id="popup-content"></div>
+			</div>
+
+		</div>
 
 
 

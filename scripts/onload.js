@@ -79,10 +79,34 @@ the location of the click, with description HTML from its properties
 *****************************************************
 */
 
+// placeholder for popups
+const w = $('#map').innerWidth();
+const h = $('#map').innerHeight();
+$("#popup").dialog({
+	autoOpen: false,
+	closeOnEscape: true,
+	draggable: true,
+	hide: 300,
+	show: 100,
+	minWidth: w < 350 ? w : Math.min(Math.max(300, w * 0.5), 500),
+	maxWidth: w * 0.9,
+	maxHeight: h / 2,
+	resizable: true
+});
+$("#popup").parent().addClass('popup-container');
+
 // When a click event occurs on a feature in the places layer, open a popup at the
 // location of the feature, with description HTML from its properties.
 
+// clear popup with click on map away from points
+map.on('click', function() {
+	$(".popup-container").addClass('hidden');
+	$('#popup').dialog('close');
+});
+
 map.on('click', 'places-layer', (e) => {
+	$(".popup-container").addClass('hidden');
+	$('#popup').dialog('close');
 	// Copy coordinates array.
 	const coordinates = e.features[0].geometry.coordinates.slice();
 	/*const address = e.features[0].properties.address;
@@ -96,15 +120,28 @@ map.on('click', 'places-layer', (e) => {
 		coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
 	}
 
-	// if there's an existing popup, explicitly remove it first.  Otherwise jQuery UI has trouble attaching the tabs widget to the right object.
-	$('.mapboxgl-popup').remove();
+	// if there's an existing popup, explicitly remove its tabs first so that the tabs widget will attach to the right div.
+	if ($("#popup-content").tabs("instance") !== undefined) {
+		$("#popup-content").tabs("destroy");
+	}
 	// Fill a popup with info about all the person records found for this location
-	new mapboxgl.Popup()
-		.setLngLat(coordinates)
-		.setHTML(fillpopup(p))
-		.addTo(map);
-	// now attach the tabs widget to the new popup
-	$('#personTabs').tabs();
+	$("#popup").dialog("option", "title", p.name);
+	$("#popup-content").html(fillpopup(p));
+	// open it from jQuery's perspective
+	$('#popup').dialog('open');
+	// attempt to position it sensibly relative to the click
+	$("#popup").dialog("widget").position({
+		my: "left bottom",
+		at: "left+" + (e.point.x + 10) + " top+" + e.point.y,
+		of: "#map",
+		collision: "fit",
+		within: "#map"
+	});
+	// attach the tabs widget to the new popup
+	$('#popup-content').tabs();
+	// $('#popup-content').tabs("load", 0);
+	// make it visible
+	$(".popup-container").removeClass('hidden');
 });
 
 // Change the cursor to a pointer when the mouse is over the places layer.
