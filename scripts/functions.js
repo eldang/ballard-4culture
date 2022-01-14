@@ -134,7 +134,7 @@ function parseAudioArray(data, fieldName) {
 			html += '<span class="varname">' + fieldName + '</span>:<br />';
 		}
 		for (let i in data) {
-			html += '<audio controls src="' + fixLink(data[i], 'mp3') + '" type="audio/mpeg">';
+			html += '<audio controls=true src="' + fixLink(data[i], 'mp3') + '" type="audio/mpeg">';
 			html += '<a href="' + fixLink(data[i], 'mp3') + '">' + data[i] + '</a>'; // this part serves as a fallback: if someone's browser can't play the audio inline they'll see a download link instead
 			html += '</audio>';
 		}
@@ -235,4 +235,12 @@ function fillpopup(data) {
 }
 
 
+
+
+function pauseAllAudio() {
+	const players = $('audio');
+	for (let i=0; i<players.length; i++) {
+		players[i].pause();
+	}
+}
 

@@ -140,9 +140,23 @@ map.on('click', 'places-layer', (e) => {
 	// attach the tabs widget to the new popup
 	$('#popup-content').tabs();
 	// $('#popup-content').tabs("load", 0);
+	// make changing tabs or closing the popup pause all playing audio
+	$('.ui-tabs-tab').click(function(){pauseAllAudio();});
+	$("#popup").on('dialogclose', function(){pauseAllAudio();});
 	// make it visible
 	$(".popup-container").removeClass('hidden');
 });
+
+// make starting one audio player pause all the others
+document.addEventListener('play', function(e){
+	var audios = $('audio');
+	for (let i=0; i<audios.length; i++){
+		if (audios[i] != e.target){
+			audios[i].pause();
+		}
+	}
+}, true);
+
 
 // Change the cursor to a pointer when the mouse is over the places layer.
 map.on('mouseenter', 'places-layer', () => {
