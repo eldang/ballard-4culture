@@ -147,6 +147,17 @@ map.on('click', 'places-layer', (e) => {
 	$(".popup-container").removeClass('hidden');
 });
 
+// make starting one audio player pause all the others
+document.addEventListener('play', function(e){
+	var audios = $('audio');
+	for (let i=0; i<audios.length; i++){
+		if (audios[i] != e.target){
+			audios[i].pause();
+		}
+	}
+}, true);
+
+
 // Change the cursor to a pointer when the mouse is over the places layer.
 map.on('mouseenter', 'places-layer', () => {
 	map.getCanvas().style.cursor = 'pointer';
