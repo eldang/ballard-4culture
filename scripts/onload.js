@@ -140,6 +140,9 @@ map.on('click', 'places-layer', (e) => {
 	// attach the tabs widget to the new popup
 	$('#popup-content').tabs();
 	// $('#popup-content').tabs("load", 0);
+	// make changing tabs or closing the popup pause all playing audio
+	$('.ui-tabs-tab').click(function(){pauseAllAudio();});
+	$("#popup").on('dialogclose', function(){pauseAllAudio();});
 	// make it visible
 	$(".popup-container").removeClass('hidden');
 });
