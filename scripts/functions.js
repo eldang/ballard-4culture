@@ -196,9 +196,9 @@ function fillpopup(data) {
 	let entries = '';
 	for (i in ids) {
 		let person = people[ids[i]];
-		if ((window.location.hostname).includes('localhost')) {
-			console.log(person);
-		}
+//		if ((window.location.hostname).includes('localhost')) {
+//			console.log(person);
+//		}
 		names += '<li><a href="#person-' + i + '">' + person.name + '</a></li>';
 		entries += '<p id="person-' + i + '">';
 		entries += parseTextField(person['other_names'], 'Other names', ['_', ' ']);
