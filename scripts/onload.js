@@ -127,7 +127,6 @@ map.on('click', 'places-layer', (e) => {
 	// Fill a popup with info about all the person records found for this location
 	$("#popup").dialog("option", "title", p.name);
 	let contents = fillpopup(p);
-	console.log(contents);
 	$("#popup-content").html(contents.text);
 	// open it from jQuery's perspective
 	$('#popup').dialog('open');
