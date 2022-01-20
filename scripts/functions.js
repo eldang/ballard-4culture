@@ -1,3 +1,5 @@
+var selectedPerson = 'Show all';
+
 function populatePeopleDropdown(people, selectID) {
 	var select = document.getElementById(selectID);
 	select.options[0] = new Option('Select a person', '');
@@ -16,6 +18,11 @@ function populatePeopleDropdown(people, selectID) {
 
 
 function filterByPerson(placesList, select) {
+	if (select.options) {
+		selectedPerson = select.options[select.selectedIndex].text;
+	} else {
+		selectedPerson = 'Show all';
+	}
 	// clear any open popup
 	$('#popup').dialog('close');
 	// zoom out first, to make sure we have all places loaded
@@ -194,10 +201,14 @@ function fillpopup(data) {
 	let html = '';
 	let names = '';
 	let entries = '';
+	let activeTab = 0;
 	for (i in ids) {
 		let person = people[ids[i]];
-		if ((window.location.hostname).includes('localhost')) {
-			console.log(person);
+//		if ((window.location.hostname).includes('localhost')) {
+//			console.log(person);
+//		}
+		if (person.name === selectedPerson) {
+			activeTab = i;
 		}
 		names += '<li><a href="#person-' + i + '">' + person.name + '</a></li>';
 		entries += '<p id="person-' + i + '">';
@@ -231,7 +242,10 @@ function fillpopup(data) {
 		html += entries;
 	}
 
-	return html; //this will return the string to the calling function
+	return {
+		text: html,
+		idx: activeTab
+	}; //this will return the string to the calling function
 }
 
 

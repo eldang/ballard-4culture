@@ -126,7 +126,9 @@ map.on('click', 'places-layer', (e) => {
 	}
 	// Fill a popup with info about all the person records found for this location
 	$("#popup").dialog("option", "title", p.name);
-	$("#popup-content").html(fillpopup(p));
+	let contents = fillpopup(p);
+	console.log(contents);
+	$("#popup-content").html(contents.text);
 	// open it from jQuery's perspective
 	$('#popup').dialog('open');
 	// attempt to position it sensibly relative to the click
@@ -138,8 +140,7 @@ map.on('click', 'places-layer', (e) => {
 		within: "#map"
 	});
 	// attach the tabs widget to the new popup
-	$('#popup-content').tabs();
-	// $('#popup-content').tabs("load", 0);
+	$('#popup-content').tabs({active: parseInt(contents.idx)});
 	// make it visible
 	$(".popup-container").removeClass('hidden');
 });
